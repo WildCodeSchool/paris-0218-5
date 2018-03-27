@@ -1,13 +1,13 @@
-#Project 2
+# Project 2
 
 Back to Front
 
 
-##Objective
+## Objective
 
 Réaliser un site complet avec un serveur NodeJS, une persistence de données, et un joli client responsive. Vous présenterez vos travaux en situation de live demo devant le client, entrainez vous donc également à ‘pitcher’.
 
-##Dates
+## Dates
 20/03/18 -> 02/05/18
 
 
@@ -22,7 +22,7 @@ Un site repertoriant les restaurants et autres endroits où manger autour de la 
 
 
 
-##Technologies utlisées
+## Technologies utlisées
 
 HTML
 CSS
@@ -35,7 +35,7 @@ Git
 Express
 
 
-##Guidelines
+## Guidelines
 
 
 groupe 5/6 personnes (random)
@@ -49,7 +49,7 @@ responsive
 user authentication & roles
 admin interface (CRUD)
 
-##Participants
+## Participants
 
 Sophie Michaudel
 Capucine Leclerc
