@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,33 @@
     <link rel="stylesheet" type="text/css" href="css/import.css">
     <title>Wild and Hungry</title>
 </head>
-<body>
-    <h1>titre 1</h1>
-    <a class="button" href="#">Default Button</a>
 
+<body>
+    <header class="row">
+        <div class="column">
+            <div class="logo-wrapper">
+                <a href="index.html">
+                    <img src="images/logo.svg" />
+                </a>
+            </div>
+            <h1>On mange où ?</h1>
+        </div>
+        <div class="column choice-wrapper">
+            <form>
+                <input type="text" class="search" placeholder="Chercher un restaurant">
+                <input type="submit">
+            </form>
+            <a href="#">
+                <img href="images/dice.svg">
+                <span>Randomeal</span>
+            </a>
+        </div>
+        <a class="connexion column" href="#">
+            <img href="images/dice.svg">
+            <span>Connexion</span>
+        </a>
+    </header>
     <script src="js/script.js"></script>
 </body>
+
 </html>
