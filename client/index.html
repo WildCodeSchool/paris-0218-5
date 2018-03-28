@@ -11,7 +11,7 @@
 
 <body>
     <header class="row">
-        <div class="column">
+        <div class="column flex">
             <div class="logo-wrapper">
                 <a href="index.html">
                     <img src="images/logo.svg" />
@@ -19,18 +19,18 @@
             </div>
             <h1>On mange où ?</h1>
         </div>
-        <div class="column choice-wrapper">
-            <form>
-                <input type="text" class="search" placeholder="Chercher un restaurant">
-                <input type="submit">
+        <div class="column choice-wrapper flex">
+            <form class="search">
+                <input type="text" placeholder="Chercher un restaurant">
+                <input type="submit" value="ok">
             </form>
             <a href="#">
-                <img href="images/dice.svg">
+                <span class="icn icn-dice"></span>
                 <span>Randomeal</span>
             </a>
         </div>
         <a class="connexion column" href="#">
-            <img href="images/dice.svg">
+            <span class="icn icn-profile"></span>
             <span>Connexion</span>
         </a>
     </header>
