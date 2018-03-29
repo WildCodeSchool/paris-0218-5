@@ -1,0 +1,23 @@
+{
+  "name": "wildandhungry-server",
+  "version": "1.0.0",
+  "description": "backend for wildandhungry project 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WildCodeSchool/paris-0218-les-tontons-fringale.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WildCodeSchool/paris-0218-les-tontons-fringale/issues"
+  },
+  "homepage": "https://github.com/WildCodeSchool/paris-0218-les-tontons-fringale#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
