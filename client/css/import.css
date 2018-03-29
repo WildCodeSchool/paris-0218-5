@@ -1,5 +1,6 @@
-@import url('normalize.css');
 @import url('milligram.min.css');
+@import url('normalize.css');
+@import url('fonts.css');
 @import url('common.css');
 @import url('header.css');
 @import url('home.css');
