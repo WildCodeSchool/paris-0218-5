@@ -8,7 +8,7 @@ body{
     line-height : 1.5;
 }
 
-/****CODE POUR MILLIGRAM DE MERDE******/
+/****CODE POUR RESET MILLIGRAM******/
 .row .column{
     padding : 0;
 }
@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6{
 blockquote, dl, figure, form, ol, p, pre, table, ul{
     margin : 0;
 }
-/****CODE POUR MILLIGRAM DE MERDE******/
+/****FIN CODE POUR RESET MILLIGRAM******/
 
 .column.flex{
     display : flex;
