@@ -1,5 +1,6 @@
 fetch('http://localhost:3333/catego')
     .then(res => res.json())
     .then(catego => {
-        console.log(catego)
+        const categoElement = document.getElementById('categories')
+        categoElement.innerHTML = JSON.stringify(catego)
     })
