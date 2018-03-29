@@ -1,5 +1,33 @@
-{
-    "id" :  1,
-    "titre" : "Asiatique",
-    "url" : "images/categories/asiat4.jpg"
-}
+[
+    {
+        "id" :  1,
+        "titre" : "Asiatique",
+        "url" : "images/categories/asiat4.jpg"
+    },
+    {
+        "id" :  2,
+        "titre" : "Burger",
+        "url" : "images/categories/burger.jpg"
+    },
+    {
+        "id" :  3,
+        "titre" : "French",
+        "url" : "images/categories/french2.jpg"
+    },
+    {
+        "id" :  4,
+        "titre" : "Healthy",
+        "url" : "images/categories/healthy2.jpg"
+    },
+    {
+        "id" :  5,
+        "titre" : "Pizza",
+        "url" : "images/categories/pizza.jpg"
+    },
+    {
+        "id" :  1,
+        "titre" : "Snack",
+        "url" : "images/categories/snack.jpg"
+    }
+]
+

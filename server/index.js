@@ -1,7 +1,7 @@
 const express = require('express')
 const categorie1 = require('../mocks/categories.json')
 // tableau des categories
-const catego = [categorie1]
+const catego = categorie1
 
 const app = express()
 
