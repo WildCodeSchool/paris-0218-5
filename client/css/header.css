@@ -9,6 +9,9 @@ header.row{
 header a{
     color : #fff;
 }
+.row .column{
+    padding : 0;
+}
 .logo-wrapper{
     position : relative;
     width: 180px;
@@ -91,10 +94,12 @@ header .icn{
     width: 25px;
     height: 25px;
 }
+.connexion-wrapper{
+    justify-content: flex-end;
+    align-items: center;
+}
+.connexion{
+    padding : 10px 20px;
+    background-color : #ca3045;
+}
 
-.icn-dice{
-    background-image: url('../images/icones/dice.svg')
-}
-.icn-profile{
-    background-image: url('../images/icones/profile.svg')
-}
