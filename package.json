@@ -1,0 +1,19 @@
+{
+  "name": "paris-0218-les-tontons-fringale",
+  "version": "1.0.0",
+  "description": "Back to Front",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WildCodeSchool/paris-0218-les-tontons-fringale.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WildCodeSchool/paris-0218-les-tontons-fringale/issues"
+  },
+  "homepage": "https://github.com/WildCodeSchool/paris-0218-les-tontons-fringale#readme"
+}
