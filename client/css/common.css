@@ -29,10 +29,5 @@ blockquote, dl, figure, form, ol, p, pre, table, ul{
     display : flex;
 }
 
-.icn-dice{
-    background-image: url('../images/icones/dice.svg')
-}
-.icn-profile{
-    background-image: url('../images/icones/profile-white.svg')
-}
+
 
