@@ -12,7 +12,7 @@ app.use((request, response, next) => {
     next()
 })
 
-app.get('/', (request, response)=> {
+app.get('/', (request, response) => {
     response.send('ok')
 })
 

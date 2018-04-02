@@ -6,11 +6,16 @@ html{
 body{
     font-size : 1.4rem;
     line-height : 1.5;
+    font-family: 'montserrat-bold', arial;
 }
 
 /****CODE POUR RESET MILLIGRAM******/
 .row .column{
     padding : 0;
+}
+body .row{
+    margin : 0;
+    width : 100%;
 }
 h1, h2, h3, h4, h5, h6{
     margin-bottom: 0;
