@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <header class="row">
-        <div class="column flex">
+    <header class="row row-responsive">
+        <div class="column column-40 flex">
             <div class="logo-wrapper">
                 <a href="index.html">
                     <img src="images/logo.svg" />
@@ -19,7 +19,7 @@
             </div>
             <h1>On mange où ?</h1>
         </div>
-        <div class="column choice-wrapper flex">
+        <div class="column column-40 choice-wrapper flex">
             <form class="search">
                 <input type="text" placeholder="Chercher un restaurant">
                 <input type="submit" value="ok">
@@ -29,7 +29,7 @@
                 <span class='randomeal'>Randomeal</span>
             </a>
         </div>
-        <div class="column flex connexion-wrapper">
+        <div class="column column-20 flex connexion-wrapper">
             <a class="connexion" href="#">
                 <span class="icn icn-profile"></span>
                 <span>Connexion</span>
@@ -37,7 +37,7 @@
         </div>
     </header>
     
-    <div id="categories"></div>
+    <div class="row row-responsive" id="categories"></div>
     <script type="module" src="/js/app.js"></script>
     <script src="js/script.js"></script>
 </body>
