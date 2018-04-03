@@ -1,0 +1,22 @@
+#categories{
+    max-width : 1200px;
+    margin : 0 auto;
+}
+
+#categories img{
+    border-radius : 15px;
+}
+#categories .column{
+    padding : 10px;
+    position : relative;
+}
+#categories h4{
+    position : absolute;
+    left : 0;
+    right : 0;
+    top : calc(50% - 20px);
+    font-family : 'playtone';
+    font-size : 3.4rem;
+    text-align: center;
+    color : #fff;
+}

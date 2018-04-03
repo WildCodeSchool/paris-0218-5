@@ -1,29 +1,12 @@
-
-html{
-    font-size : 62.5%;
-}
-
 body{
-    font-size : 1.4rem;
     line-height : 1.5;
+    font-family: 'montserrat-bold', arial;
 }
 
-/****CODE POUR RESET MILLIGRAM******/
-.row .column{
-    padding : 0;
-}
-h1, h2, h3, h4, h5, h6{
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-.button, button, input[type='button'], input[type='reset'], input[type='submit']{
-    border : none;
-}
-blockquote, dl, figure, form, ol, p, pre, table, ul{
+body .row{
     margin : 0;
+    width : 100%;
 }
-/****FIN CODE POUR RESET MILLIGRAM******/
 
 .column.flex{
     display : flex;
