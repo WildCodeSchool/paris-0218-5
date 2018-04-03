@@ -3,14 +3,18 @@ body{
     font-family: 'montserrat-bold', arial;
 }
 
-body .row{
-    margin : 0;
-    width : 100%;
-}
 
 .column.flex{
     display : flex;
 }
 
+/*reset milligram*/
+body .row{
+    margin : 0;
+    width : 100%;
+}
+blockquote, dl, figure, form, ol, p, pre, table, ul{
+    margin : 0;
+}
 
 
