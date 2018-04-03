@@ -3,6 +3,11 @@ body{
     font-family: 'montserrat-bold', arial;
 }
 
+body .row{
+    margin : 0;
+    width : 100%;
+}
+
 .column.flex{
     display : flex;
 }
