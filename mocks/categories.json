@@ -25,9 +25,8 @@
         "url" : "images/categories/pizza.jpg"
     },
     {
-        "id" :  1,
+        "id" :  6,
         "titre" : "Snack",
         "url" : "images/categories/snack.jpg"
     }
 ]
-
