@@ -92,11 +92,7 @@ header span{
     font-size : 1.6rem;
     margin-right : 10px;
 }
-.icn{
-    background-repeat: no-repeat;
-    width: 25px;
-    height: 25px;
-}
+
 header #connexion-wrapper{
     justify-content: flex-end;
     align-items: center;
@@ -104,16 +100,5 @@ header #connexion-wrapper{
 header .connexion{
     padding : 10px 20px;
     background-color : #ca3045;
-    border-bottom : 2px solid #B0002C
-}
-
-.icn.icn-dice{
-    background-image: url('../images/icones/dice-white.svg');
-    width: 18px;
-    height: 18px;
-    transform: rotate(45deg);
-}
-
-.icn-profile{
-    background-image: url('../images/icones/profile-white.svg')
+    border-bottom : 2px solid #B0002C;
 }
