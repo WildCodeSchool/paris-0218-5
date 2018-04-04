@@ -19,5 +19,8 @@ app.get('/', (request, response)=> {
 app.get('/categorie1', (request, response) => {
     response.json(categorie1)
 })
+app.get('/header', (request, response) => {
+    response.json(header)
+})
 // port ecouter 
 app.listen(3333, () => console.log("jecoute sur le port 3333"))
