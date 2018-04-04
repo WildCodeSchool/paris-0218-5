@@ -23,7 +23,7 @@ header a{
 .row .column{
     padding : 0;
 }
-.logo-wrapper{
+#logo-wrapper{
     position : relative;
     width: 180px;
     height : 200px;
@@ -35,7 +35,7 @@ header a{
     margin-right: 30px;
     z-index : 10;
 }
-.logo-wrapper::after{
+#logo-wrapper::after{
     content: '';
     position : absolute;
     width : 0;
@@ -55,11 +55,8 @@ h1{
     font-size : 3rem;
     align-self: center;
 }
-.content-wrapper{
-    display : flex;
-    align-items: center;
-}
-.choice-wrapper{
+
+#choice-wrapper{
     display : flex;
     justify-content: space-around;
     align-items: center;
@@ -95,28 +92,13 @@ header span{
     font-size : 1.6rem;
     margin-right : 10px;
 }
-.icn{
-    background-repeat: no-repeat;
-    width: 25px;
-    height: 25px;
-}
-.connexion-wrapper{
+
+header #connexion-wrapper{
     justify-content: flex-end;
     align-items: center;
 }
-.connexion{
+header .connexion{
     padding : 10px 20px;
     background-color : #ca3045;
-    border-bottom : 2px solid #B0002C
-}
-
-.icn.icn-dice{
-    background-image: url('../images/icones/dice-white.svg');
-    width: 18px;
-    height: 18px;
-    transform: rotate(45deg);
-}
-
-.icn-profile{
-    background-image: url('../images/icones/profile-white.svg')
+    border-bottom : 2px solid #B0002C;
 }
