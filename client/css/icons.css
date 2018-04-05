@@ -1,0 +1,28 @@
+.icn{
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.icn.icn-dice{
+    background-image: url('../images/icones/dice-white.svg');
+    width: 18px;
+    height: 18px;
+    transform: rotate(45deg);
+}
+
+.icn.icn-profile{
+    background-image: url('../images/icones/profile-white.svg')
+}
+.icn.icn-cook{
+    background-image: url('../images/icones/hat-cook.svg')
+}
+.icn.icn-budget{
+    background-image: url('../images/icones/pig.svg')
+}
+.icn.icn-like{
+    background-image: url('../images/icones/like.svg')
+}
+/* .icn.icn-add{
+
+} */
