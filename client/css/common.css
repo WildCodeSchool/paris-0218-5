@@ -33,15 +33,11 @@ body{
 
 .button-general:hover {
     background-color: #0ddbd5;
-
 }
 /*reset milligram*/
 body .row{
     margin : 0;
     width : 100%;
-}
-blockquote, dl, figure, form, ol, p, pre, table, ul{
-    margin : 0;
 }
 .row .column{
     margin : 0;
