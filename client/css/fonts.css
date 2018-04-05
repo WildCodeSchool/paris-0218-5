@@ -1,10 +1,8 @@
 @font-face {
     font-family: 'montserrat-medium';
     src: url('fonts/montserrat-medium.eot');
-    src: url('fonts/montserrat-medium.eot?#iefix') format('embedded-opentype'),
-         url('fonts/montserrat-medium.woff2') format('woff2'),
-         url('fonts/montserrat-medium.woff') format('woff'),
-         url('fonts/montserrat-medium.svg#montserrat-medium') format('svg');
+    src: url('fonts/montserrat-medium.woff2') format('woff2'),
+         url('fonts/montserrat-medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -12,10 +10,8 @@
 @font-face {
     font-family: 'montserrat-bold';
     src: url('fonts/montserrat-bold.eot');
-    src: url('fonts/montserrat-bold.eot?#iefix') format('embedded-opentype'),
-         url('fonts/montserrat-bold.woff2') format('woff2'),
-         url('fonts/montserrat-bold.woff') format('woff'),
-         url('fonts/montserrat-bold.svg#montserrat-bold') format('svg');
+    src: url('fonts/montserrat-bold.woff2') format('woff2'),
+         url('fonts/montserrat-bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,10 +20,8 @@
 @font-face {
     font-family: 'playtone';
     src: url('fonts/playtone.eot');
-    src: url('fonts/playtone.eot?#iefix') format('embedded-opentype'),
-         url('fonts/playtone.woff2') format('woff2'),
-         url('fonts/playtone.woff') format('woff'),
-         url('fonts/playtone.svg#paytone_oneregular') format('svg');
+    src: url('fonts/playtone.woff2') format('woff2'),
+         url('fonts/playtone.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
