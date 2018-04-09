@@ -1,20 +1,49 @@
 body{
     line-height : 1.5;
     font-family: 'montserrat-bold', arial;
+    background-color: #eee;
 }
 
 
 .column.flex{
     display : flex;
 }
+.button-general {
+    margin:0 auto;
+    border-radius: 15px;
+    background-color: #0cc3bd;
+    box-shadow: inset 0px -3px 0 0 rgba(0, 0, 0, 0.09);
+    padding : 10px 20px;
+}
+.button-general span{
+    color : #fff;
+    display : inline-block;
+    vertical-align: middle;
 
+}
+ .add-circle {
+    width: 25px;
+    height: 25px;
+    background-color: #0cb4af;
+    border-radius: 12px;
+    text-align: center;
+    margin-right: 5px;
+    font-size: 1.9rem;
+} 
+
+.button-general:hover {
+    background-color: #0ddbd5;
+}
 /*reset milligram*/
 body .row{
     margin : 0;
     width : 100%;
 }
-blockquote, dl, figure, form, ol, p, pre, table, ul{
+.row .column{
     margin : 0;
 }
 
+.button, button, input[type='button'], input[type='reset'], input[type='submit']{
+    border : none;
+}
 

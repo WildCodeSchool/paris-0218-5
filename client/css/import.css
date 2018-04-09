@@ -1,4 +1,4 @@
-@import url('milligram.min.css');
+@import url('milligram-custom.css');
 @import url('normalize.css');
 @import url('fonts.css');
 @import url('common.css');
@@ -9,3 +9,5 @@
 @import url('add-restaurant.css');
 @import url('contact.css');
 @import url('footer.css');
+@import url('icons.css');
+
