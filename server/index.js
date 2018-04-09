@@ -16,7 +16,7 @@ app.get('/', (request, response)=> {
     response.send('ok')
 })
 
-app.get('/categorie1', (request, response) => {
+app.get('/categories', (request, response) => {
     response.json(categorie1)
 })
 app.get('/header', (request, response) => {
