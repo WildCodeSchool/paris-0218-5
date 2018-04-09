@@ -1,13 +1,13 @@
 import { categoriesElement } from './composants/categories.js'
 // import { tabFilter } from './tab-filter.js'
 
-// import { searchElement } from './composants/search.js'
-// import { randomeal } from './composants/randomeal.js'
-// import { connexion } from './composants/connexion.js'
+    import { searchElement } from './composants/search.js'
+    import { randomeal } from './composants/randomeal.js'
+    import { connexion } from './composants/connexion.js'
 
-// document.querySelector('#search-wrapper').innerHTML = searchElement
-// document.querySelector('#randomeal-wrapper').innerHTML = randomeal
-// document.querySelector('#connexion-wrapper').innerHTML = connexion
+    document.querySelector('#search-wrapper').innerHTML = searchElement
+    document.querySelector('#randomeal-wrapper').innerHTML = randomeal
+    document.querySelector('#connexion-wrapper').innerHTML = connexion
 const categoElement = document.getElementById('categories')
 
 fetch('http://localhost:3333/categories')
