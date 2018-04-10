@@ -162,7 +162,7 @@
 		"budget" : "5-10",
 		"description" : "Offrant une décoration chaleureuse et familiale, ce petit restaurant bio sert des plats végétariens maison.",
 		"carte" : true,
-	P	"vegetarien" : true
+		"vegetarien" : true
 	},
 	{
 		"id" : 16,
