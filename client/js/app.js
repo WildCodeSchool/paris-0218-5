@@ -6,7 +6,7 @@ import { footer } from './composants/footer.js'
 import { searchElement } from './composants/search.js'
 import { connexion } from './composants/connexion.js'
 
-document.getElementsByTagName('footer').innerHTML = footer
+document.querySelector('footer').innerHTML = footer
 document.getElementById('search-wrapper').innerHTML = searchElement
 document.getElementById('randomeal-wrapper').innerHTML = randomeal
 document.getElementById('connexion-wrapper').innerHTML = connexion

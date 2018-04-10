@@ -170,7 +170,7 @@ input[type='checkbox'], input[type='radio'] {
 
 .row {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0;
     width: 100%
 }
@@ -316,11 +316,9 @@ input[type='checkbox'], input[type='radio'] {
     align-self: center
 }
 
+
 @media (min-width: 40rem) {
-    .row {
-        flex-direction: row;
-        width: 100%;
-    }
+   
     .row .column {
         margin-bottom: inherit;
         padding: 0 1.0rem

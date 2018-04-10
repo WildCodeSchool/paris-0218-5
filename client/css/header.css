@@ -82,6 +82,14 @@ header form.search input[type='submit']{
     background-color : #ca3045;
     border-radius : 0px 20px 20px 0px
 }
+/*boutton ok hover*/
+header form.search input[type='submit']:hover{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color : #B0002C;
+    border-radius : 0px 20px 20px 0px
+}
 
 form.search::after{
     width : 1px;
