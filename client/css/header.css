@@ -17,9 +17,11 @@ header::after{
     bottom: 0px;
 }
 
-header a{
+header a,
+header a:hover{
     color : #fff;
 }
+
 .row .column{
     padding : 0;
 }
@@ -69,6 +71,7 @@ header form{
 header form.search input[type='text']{
     border-radius : 20px;
     background : #fff;
+    font-size : 1.3rem;
 }
 header form.search input[type='submit']{
     position: absolute;
@@ -91,7 +94,14 @@ header span{
     font-size : 1.6rem;
     margin-right : 10px;
 }
-
+header #randomeal-wrapper{
+    width: 220px;
+    border-left: 1px solid #fff;
+    padding-left: 40px;
+}
+header #randomeal-wrapper span:hover{
+    text-decoration: underline
+}
 header #connexion-wrapper{
     justify-content: flex-end;
     align-items: center;
@@ -100,4 +110,7 @@ header .connexion{
     padding : 10px 20px;
     background-color : #ca3045;
     border-bottom : 2px solid #B0002C;
+}
+header .connexion:hover{
+    background-color : #B0002C;
 }

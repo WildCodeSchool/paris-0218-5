@@ -1,7 +1,7 @@
 window.addEventListener("load", function() {
     const itemsFilter = document.querySelectorAll('.item-filter')
 
-    for(item of itemsFilter){
+    for(let item of itemsFilter){
         item.addEventListener("click", (e) => {
             for(item of itemsFilter){
                 if(item.classList.contains('active')){
