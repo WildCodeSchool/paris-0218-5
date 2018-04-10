@@ -9,5 +9,3 @@ jobs:
 include:
 - stage: style
 script: npm run lint
-- stage: test
-script: npm run test
