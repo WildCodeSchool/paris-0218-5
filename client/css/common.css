@@ -2,9 +2,16 @@ body{
     line-height : 1.5;
     font-family: 'montserrat-bold', arial;
     background-color: #eee;
+    position : relative;
+    padding-bottom : 70px;
 }
 
-
+a{
+    color : #ed3851
+}
+a:hover{
+    color : #ca3045;
+}
 .column.flex{
     display : flex;
 }
