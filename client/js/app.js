@@ -14,10 +14,10 @@ const categoElement = document.getElementById('categories')
 fetch('http://localhost:3333/categories')
     .then(res => res.json())
     .then(categories => {
-        document.querySelector('#budget').addEventListener('click', () => {
+        document.getElementById('budget').addEventListener('click', () => {
             filterCat(categories, 'budget')
         })
-        document.querySelector('#cuisine').addEventListener('click', () => {
+        document.getElementById('cuisine').addEventListener('click', () => {
             filterCat(categories)
         })
         filterCat(categories)
