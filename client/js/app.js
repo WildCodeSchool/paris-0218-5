@@ -2,12 +2,14 @@ import { categoriesElement } from './composants/categories.js'
 // import { tabFilter } from './tab-filter.js'
 
 import { randomeal } from './composants/randomeal.js'
+import { footer } from './composants/footer.js'
 import { searchElement } from './composants/search.js'
 import { connexion } from './composants/connexion.js'
 
-document.querySelector('#search-wrapper').innerHTML = searchElement
-document.querySelector('#randomeal-wrapper').innerHTML = randomeal
-document.querySelector('#connexion-wrapper').innerHTML = connexion
+document.getElementsByTagName('footer').innerHTML = footer
+document.getElementById('search-wrapper').innerHTML = searchElement
+document.getElementById('randomeal-wrapper').innerHTML = randomeal
+document.getElementById('connexion-wrapper').innerHTML = connexion
 
 const categoElement = document.getElementById('categories')
 
