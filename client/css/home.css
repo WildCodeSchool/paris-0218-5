@@ -3,9 +3,17 @@
     margin : 0 auto;
 }
 
-#categories img{
+.category img{
     border-radius : 15px;
+    display: block;
+    opacity: 0.7;
+    transition: opacity 0.1s ease;
 }
+.category:hover img{
+    opacity: 1;
+}
+
+
 #categories .column{
     padding : 10px;
     position : relative;
@@ -19,9 +27,12 @@
     font-size : 3.4rem;
     text-align: center;
     color : #fff;
+    z-index: 10;
 }
-
-
+.image-wrapper{
+    background-color: black;
+    border-radius : 15px; 
+}
 #filter-simple{
     font-family : 'playtone';
     max-width : 750px;

@@ -1,0 +1,6 @@
+@media (max-width: 480px)  {
+    #filter-simple .item-filter span{
+        display: block;
+        margin: 0 auto;
+    }
+}
