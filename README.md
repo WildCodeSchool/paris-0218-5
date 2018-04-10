@@ -1,8 +1,8 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 
-[![Travis master](https://img.shields.io/travis/WildCodeSchool/paris-0218-les-tontons-fringale.svg)](https://travis-ci.org/WildCodeSchool/paris-0218-les-tontons-fringale)
-[![Travis dev](https://img.shields.io/travis/WildCodeSchool/paris-0218-les-tontons-fringale/dev.svg)](https://travis-ci.org/WildCodeSchool/paris-0218-les-tontons-fringale/branches)
+[![Build Status](https://travis-ci.org/WildCodeSchool/paris-0218-les-tontons-fringale.svg?branch=dev)](https://travis-ci.org/WildCodeSchool/paris-0218-les-tontons-fringale)
+[![Build Status](https://travis-ci.org/WildCodeSchool/paris-0218-les-tontons-fringale.svg?branch=dev)](https://travis-ci.org/WildCodeSchool/paris-0218-les-tontons-fringale)
 
 
 # Project 2

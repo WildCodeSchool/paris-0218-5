@@ -23,7 +23,7 @@
     left : 0;
     right : 0;
     top : calc(50% - 20px);
-    font-family : 'playtone';
+    font-family : 'Paytone One', sans-serif;
     font-size : 3.4rem;
     text-align: center;
     color : #fff;
@@ -34,7 +34,7 @@
     border-radius : 15px; 
 }
 #filter-simple{
-    font-family : 'playtone';
+    font-family : 'Paytone One', sans-serif;
     max-width : 750px;
     margin : 30px auto;
     justify-content: center;

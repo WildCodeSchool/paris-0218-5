@@ -6,6 +6,8 @@ header.row.row-responsive{
     margin : 0;
     color : #fff;
     position : relative;
+    font-weight : 700;
+
 }
 
 header::after{
@@ -51,7 +53,7 @@ header a:hover{
     max-width : 155px;
 }
 h1{
-    font-family: 'playtone';
+    font-family: 'Paytone One', sans-serif;
     color : #fff;
     font-size : 3rem;
     align-self: center;
@@ -98,7 +100,6 @@ form.search::after{
 header span{
     display : inline-block;
     vertical-align: middle;
-    font-family : "montserrat-bold";
     font-size : 1.6rem;
     margin-right : 10px;
 }

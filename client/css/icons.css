@@ -23,6 +23,24 @@
 .icn.icn-like{
     background-image: url('../images/icones/like.svg')
 }
-/* .icn.icn-add{
-
-} */
+.icn.icn-profile{
+    background-image: url('../images/icones/profile-white.svg')
+}
+.icn.icn-cook{
+    background-image: url('../images/icones/hat-cook-red.svg')
+}
+.icn.icn-budget{
+    background-image: url('../images/icones/pig-red.svg')
+}
+.icn.icn-like{
+    background-image: url('../images/icones/like-red.svg')
+}
+.active .icn.icn-cook{
+    background-image: url('../images/icones/hat-cook-white.svg')
+}
+.active .icn.icn-budget{
+    background-image: url('../images/icones/pig-white.svg')
+}
+.active .icn.icn-like{
+    background-image: url('../images/icones/like-white.svg')
+}

@@ -1,13 +1,14 @@
 @import url('milligram-custom.css');
 @import url('normalize.css');
-@import url('fonts.css');
+@import url('icons.css');
 @import url('common.css');
 @import url('header.css');
 @import url('home.css');
-@import url('account.css');
-@import url('result.css');
-@import url('add-restaurant.css');
-@import url('contact.css');
 @import url('footer.css');
+<<<<<<< HEAD
 @import url('icons.css');
 @import url('responsive.css')
+=======
+
+
+>>>>>>> d0a57e0ae756fa4c8e8c0a8a955f200749fa343a
