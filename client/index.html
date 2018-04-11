@@ -12,32 +12,35 @@
 <body>
     <header class="row row-responsive">
         <div class="column column-40 flex">
-            <div class="logo-wrapper">
+            <div id="logo-wrapper">
                 <a href="index.html">
                     <img src="images/logo.svg" />
                 </a>
             </div>
             <h1>On mange où ?</h1>
         </div>
-        <div class="column column-40 choice-wrapper flex">
-            <form class="search">
-                <input type="text" placeholder="Chercher un restaurant">
-                <input type="submit" value="ok">
-            </form>
-            <a href="#">
-                <span class="icn icn-dice"></span>
-                <span class='randomeal'>Randomeal</span>
-            </a>
+        
+        <div id="choice-wrapper" class="column column-40 flex">
+            <div id="randomeal-wrapper"></div>
+            <div id="search-wrapper"></div>
         </div>
-        <div class="column column-20 flex connexion-wrapper">
-            <a class="connexion" href="#">
-                <span class="icn icn-profile"></span>
-                <span>Connexion</span>
-            </a>
-        </div>
+        <div id="connexion-wrapper" class="column column-20 flex"></div>
     </header>
-    
+    <div class="row" id="filter-simple">
+        <div class="item-filter column active column-33" id="type">
+            <span class="icn icn-cook"></span>
+            <span>Par type</span></div> 
+        <div class="item-filter column column-33" id="budget">
+            <span class="icn icn-budget"></span>
+            <span>Par budget</span>
+        </div> 
+        <div class="item-filter column column-33" id="top">
+            <span class="icn icn-like"></span>
+            <span>Top</span>
+        </div> 
+    </div>
     <div class="row row-responsive" id="categories"></div>
+
     <script type="module" src="/js/app.js"></script>
     <script src="js/script.js"></script>
 

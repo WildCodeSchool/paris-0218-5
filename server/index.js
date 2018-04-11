@@ -1,7 +1,7 @@
 const express = require('express')
 const categorie1 = require('../mocks/categories.json')
 // tableau des categories
-const catego = categorie1
+
 
 const app = express()
 
@@ -11,13 +11,16 @@ app.use((request, response, next) => {
     response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
     next()
 })
-
-app.get('/', (request, response) => {
+// routes
+app.get('/', (request, response)=> {
     response.send('ok')
 })
 
-app.get('/catego', (request, response) => {
-    response.json(catego)
+app.get('/categorie1', (request, response) => {
+    response.json(categorie1)
+})
+app.get('/header', (request, response) => {
+    response.json(header)
 })
 // port ecouter 
 app.listen(3333, () => console.log("jecoute sur le port 3333"))
