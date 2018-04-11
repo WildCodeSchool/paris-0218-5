@@ -1,5 +1,5 @@
-window.addEventListener("load", function() {
-    const itemsFilter = document.querySelectorAll('.item-filter')
+window.addEventListener("load", () =>{
+    const itemsFilter = document.getElementsByClassName('item-filter')
 
     for(let item of itemsFilter){
         item.addEventListener("click", (e) => {
