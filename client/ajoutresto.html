@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-compatible" content ="IE=edge">
+	<title>Ajouter un nouveau restaurant</title>
+	<link rel="stylesheet" href="ajout_etab.css">
+</head>
+<body>
+
+	<h1>Ajouter un nouveau restaurant</h1>
+
+	<p>Remplissez les champs ci-dessous :</p>
+
+	<form id="form">
+		<div>
+			<label for "name">Nom : </label><input type="text" id="nameEtab" required name="nom" value="" />
+		</div>
+
+		<div>
+			<label for "adress">Adresse : </label><input type="text" id="adressEtab" name="adresse" value="" />
+		</div>
+
+		<div>
+			<label for "category">Catégorie : </label><select name="categorie" id="categoEtab" />
+			<option value="">Choisir</option>
+			<option value="asiatique">Asiatique</option>
+			<option value="burger">Burger</option>
+			<option value="francais">Français</option>
+			<option value="healthy">Healthy</option>
+			<option value="pizza">Pizza</option>
+			<option value="snack">Snack</option>
+		</select>
+	</div>
+
+	<div>
+		<label>Photo : </label> 
+		<input id="file" type="file" />
+	</div>
+
+
+	<div>
+		<label>Budget : </label><select name="budget" id="budgetEtab" />
+		<option value="">Choisir</option>
+		<option value="0-5">Entre 0 et 5 €</option>
+		<option value="5-10">Entre 5 et 10 €</option>
+		<option value="10-15">Entre 10 et 15 €</option>
+		<option value="+15">Plus de 15 €</option>
+	</select>
+</div>
+
+	<div>
+		<label for="description">Description : </label><textarea name="description" id="descriptionEtab"></textarea>
+	</div>
+
+	<div>
+		<label for="cb">Carte bleue acceptée : </label>
+       <input type="checkbox" name="cb" id="cbEtab" /> 
+	</div>
+
+	<div>
+		<label for="vege">Adapté pour les végétariens : </label>
+       <input type="checkbox" name="vege" id="vegeEtab" /> 
+	</div>	
+
+	<div class = "button">
+		<button type="submit" value="Envoyer"> Envoyer</button>
+	</div>
+</form>
+
+</body>
+</html>
