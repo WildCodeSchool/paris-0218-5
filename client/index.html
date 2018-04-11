@@ -2,11 +2,12 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/import.css">
-    <title>Wild and Hungry</title>
+    <title>wild and hungry</title>
 </head>
 
 <body>
@@ -14,42 +15,51 @@
         <div class="column column-40 flex">
             <div id="logo-wrapper">
                 <a href="index.html">
-                    <img src="images/logo.svg" />
+                    <img src="images/logo.svg" alt="logo" />
                 </a>
             </div>
             <h1>On mange où ?</h1>
         </div>
-        
+
         <div id="choice-wrapper" class="column column-40 flex">
-            <div id="randomeal-wrapper"></div>
             <div id="search-wrapper"></div>
+            <div id="randomeal-wrapper"></div>
         </div>
         <div id="connexion-wrapper" class="column column-20 flex"></div>
     </header>
-    <div class="row" id="filter-simple">
-        <div class="item-filter column active column-33" id="type">
-            <span class="icn icn-cook"></span>
-            <span>Par type</span></div> 
-        <div class="item-filter column column-33" id="budget">
-            <span class="icn icn-budget"></span>
-            <span>Par budget</span>
-        </div> 
-        <div class="item-filter column column-33" id="top">
-            <span class="icn icn-like"></span>
-            <span>Top</span>
-        </div> 
-    </div>
-    <div class="row row-responsive" id="categories"></div>
+
+    <main>
+        <div class="row" id="filter-simple">
+            <div class="item-filter column active column-33" id="cuisine">
+                <span class="icn icn-cook"></span>
+                <span>Par type</span>
+            </div>
+            <div class="item-filter column column-33" id="budget">
+                <span class="icn icn-budget"></span>
+                <span>Par budget</span>
+            </div>
+            <div class="item-filter column column-33" id="top">
+                <span class="icn icn-like"></span>
+                <span>Top</span>
+            </div>
+        </div>
+
+
+        <div class="row row-responsive" id="categories"></div>
+
+        <div class="row">
+            <a href="#" class="button-general">
+                <span class="add-circle">+</span>
+                <span>Ajouter un lieu</span>
+            </a>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
 
     <script type="module" src="/js/app.js"></script>
-    <script src="js/script.js"></script>
-
-     
-<div class="row row-responsive">
-     <button class= "add-rest">
-        <div class= "add-rest-circle">+</div>
-    Ajouter un lieu</button>
-</div>
+    <script src="js/tab-filter.js"></script>
 
 </body>
 

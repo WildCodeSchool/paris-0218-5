@@ -1,32 +1,53 @@
-[
-    {
-        "id" :  1,
-        "titre" : "Asiatique",
-        "url" : "images/categories/asiat4.jpg"
-    },
-    {
-        "id" :  2,
-        "titre" : "Burger",
-        "url" : "images/categories/burger.jpg"
-    },
-    {
-        "id" :  3,
-        "titre" : "French",
-        "url" : "images/categories/french2.jpg"
-    },
-    {
-        "id" :  4,
-        "titre" : "Healthy",
-        "url" : "images/categories/healthy2.jpg"
-    },
-    {
-        "id" :  5,
-        "titre" : "Pizza",
-        "url" : "images/categories/pizza.jpg"
-    },
-    {
-        "id" :  6,
-        "titre" : "Snack",
-        "url" : "images/categories/snack.jpg"
-    }
-]
+{
+    "cuisine" : 
+    [
+        {
+            "id" :  1,
+            "titre" : "Asiatique",
+            "url" : "images/categories/asiat4.jpg"
+        },
+        {
+            "id" :  2,
+            "titre" : "Burger",
+            "url" : "images/categories/burger.jpg"
+        },
+        {
+            "id" :  3,
+            "titre" : "French",
+            "url" : "images/categories/french2.jpg"
+        },
+        {
+            "id" :  4,
+            "titre" : "Healthy",
+            "url" : "images/categories/healthy2.jpg"
+        },
+        {
+            "id" :  5,
+            "titre" : "Pizza",
+            "url" : "images/categories/pizza.jpg"
+        },
+        {
+            "id" :  6,
+            "titre" : "Snack",
+            "url" : "images/categories/snack.jpg"
+        }
+    ],
+    "budget" : 
+    [
+        {
+            "id": 1, 
+            "titre" : "Moins de 5€",
+            "url" : "images/categories/snack.jpg"
+        },
+        {
+            "id": 2, 
+            "titre" : "De 5€ à 10€",
+            "url" : "images/categories/snack.jpg"
+        },
+        {
+            "id": 3, 
+            "titre" : "Plus de 10€",
+            "url" : "images/categories/snack.jpg"
+        }
+    ]
+}

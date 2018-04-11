@@ -1,5 +1,6 @@
 const express = require('express')
-const categorie1 = require('../mocks/categories.json')
+const categories = require('../mocks/categories.json')
+const restaurants = require('../mocks/restos.json')
 // tableau des categories
 
 
@@ -12,12 +13,14 @@ app.use((request, response, next) => {
     next()
 })
 // routes
-app.get('/', (request, response)=> {
+app.get('/', (request, response) => {
     response.send('ok')
 })
-
-app.get('/categorie1', (request, response) => {
-    response.json(categorie1)
+app.get('/categories/:title', (request, response) => {
+    response.json(request.params.title)
+})
+app.get('/categories', (request, response) => {
+    response.json(categories)
 })
 app.get('/header', (request, response) => {
     response.json(header)
