@@ -21,13 +21,12 @@ app.get('/', (request, response) => {
 })
 
 app.get('/restaurants', (request, response) => {
-    response.json(restaurants['categorie'])
-    console.log(restaurants['categorie'])
+    response.json(restaurants)
 })
 
 app.get('/restaurants/:category', (request, response) => {
     const cat = request.params.category
-    const restaurantsCat = restaurants.filter(restaurants => restaurants.categorie === cat);
+    const restaurantsCat = restaurants.filter(restaurants => restaurants.category === cat);
     response.json(restaurantsCat)
 })
 
