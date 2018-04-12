@@ -1,10 +1,13 @@
 const express = require('express')
 const categories = require('../mocks/categories.json')
 const restaurants = require('../mocks/restos.json')
-// tableau des categories
-
+const bodyParser = require('body-parser');
 
 const app = express()
+
+
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 // autorisation
 app.use((request, response, next) => {
@@ -16,9 +19,18 @@ app.use((request, response, next) => {
 app.get('/', (request, response) => {
     response.send('ok')
 })
-app.get('/categories/:title', (request, response) => {
-    response.json(request.params.title)
+
+app.get('/restaurants', (request, response) => {
+    response.json(restaurants['categorie'])
+    console.log(restaurants['categorie'])
 })
+
+app.get('/restaurants/:category', (request, response) => {
+    const cat = request.params.category
+    const restaurantsCat = restaurants.filter(restaurants => restaurants.categorie === cat);
+    response.json(restaurantsCat)
+})
+
 app.get('/categories', (request, response) => {
     response.json(categories)
 })

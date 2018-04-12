@@ -11,6 +11,7 @@
     "dependencies": {
         "htmllint-cli": "0.0.6",
         "http-server": "^0.11.1",
+        "jshint": "^2.9.5",
         "nodemon": "^1.17.3",
         "snazzy": "^7.1.1",
         "stylelint": "^9.2.0",
