@@ -13,6 +13,7 @@
         "http-server": "^0.11.1",
         "nodemon": "^1.17.3",
         "snazzy": "^7.1.1",
+        "standard": "^11.0.1",
         "stylelint": "^9.2.0",
         "stylelint-config-recommended": "^2.1.0"
     }

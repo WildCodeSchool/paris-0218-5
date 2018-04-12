@@ -1,4 +1,4 @@
-export const connexion = 
+export const connexion =
     `
     <a class="connexion" href="#">
         <span class="icn icn-profile"></span>
