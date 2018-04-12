@@ -1,8 +1,8 @@
 const getModal = document.getElementById('connexion-wrapper')
 
-const closePop = document.getElementById('closeModal')
+const closePop = document.getElementById('close-popup')
 
-const showModal = document.getElementById('id01')
+const showModal = document.getElementById('popup-cnx')
 
 
 

@@ -11,7 +11,7 @@ document.querySelector('footer').innerHTML = footer
 document.getElementById('search-wrapper').innerHTML = searchElement
 document.getElementById('randomeal-wrapper').innerHTML = randomeal
 document.getElementById('connexion-wrapper').innerHTML = connexion
-document.getElementById('id01').innerHTML = popup
+document.getElementById('popup-cnx').innerHTML = popup
 
 const categoElement = document.getElementById('categories')
 
