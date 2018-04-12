@@ -1,0 +1,53 @@
+{
+    "cuisine" : 
+    [
+        {
+            "id" :  1,
+            "title" : "Asiatique",
+            "url" : "images/categories/asiat4.jpg"
+        },
+        {
+            "id" :  2,
+            "title" : "Burger",
+            "url" : "images/categories/burger.jpg"
+        },
+        {
+            "id" :  3,
+            "title" : "French",
+            "url" : "images/categories/french2.jpg"
+        },
+        {
+            "id" :  4,
+            "title" : "Healthy",
+            "url" : "images/categories/healthy2.jpg"
+        },
+        {
+            "id" :  5,
+            "title" : "Pizza",
+            "url" : "images/categories/pizza.jpg"
+        },
+        {
+            "id" :  6,
+            "title" : "Snack",
+            "url" : "images/categories/snack.jpg"
+        }
+    ],
+    "budget" : 
+    [
+        {
+            "id": 1, 
+            "title" : "Moins de 5€",
+            "url" : "images/categories/snack.jpg"
+        },
+        {
+            "id": 2, 
+            "title" : "De 5€ à 10€",
+            "url" : "images/categories/snack.jpg"
+        },
+        {
+            "id": 3, 
+            "title" : "Plus de 10€",
+            "url" : "images/categories/snack.jpg"
+        }
+    ]
+}
