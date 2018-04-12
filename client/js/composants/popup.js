@@ -1,6 +1,6 @@
     export const popup = 
     `
-    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">x</span>
+    <span class="close" title="Close Modal" id= "closeModal">x</span>
       <div class="popup">
         <form class="modal-content">
 
@@ -16,8 +16,6 @@
 
             <a href="#" class="button-general" id="log-submit"><span>Se connecter</span></a>
         
-
-
         </form>
 
         <form class="modal-content">
