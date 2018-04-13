@@ -12,6 +12,15 @@ a{
 a:hover{
     color : #ca3045;
 }
+
+
+h2{
+    font-family: 'Paytone One', sans-serif;
+    color :#ed3851;
+    font-size: 3rem;
+}
+
+
 .column.flex{
     display : flex;
 }
@@ -30,7 +39,7 @@ a:hover{
     vertical-align: middle;
 
 }
- .add-circle {
+.add-circle {
     width: 25px;
     height: 25px;
     background-color: #0cb4af;

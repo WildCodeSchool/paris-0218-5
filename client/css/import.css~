@@ -6,5 +6,3 @@
 @import url('home.css');
 @import url('footer.css');
 @import url('responsive.css');
-@import url('popup.css');
-@import url('list-restos.css');
