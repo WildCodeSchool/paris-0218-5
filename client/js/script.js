@@ -1,13 +1,13 @@
-// window.addEventListener('load', () => {
-//   const getModal = document.getElementById('connexion-wrapper')
-//   const closePop = document.getElementById('close-popup')
-//   const showModal = document.getElementById('popup-cnx')
+const getModal = document.getElementById('connexion-wrapper')
 
-//   getModal.addEventListener('click', () => {
-//     showModal.style.display = 'block'
-//   })
+const showModal = document.getElementById('popup-cnx')
 
-//   closePop.addEventListener('click', () => {
-//     showModal.style.display = 'none'
-//   })
-// })
+const closePopup = document.getElementById('close-popup')
+
+closePopup.addEventListener('click', () => {
+  showModal.style.display = 'none'
+})
+
+getModal.addEventListener('click', () => {
+  showModal.style.display = 'block'
+})
