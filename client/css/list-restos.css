@@ -12,13 +12,10 @@ main h2::after {
     top: 56%;
     right: 0;
 }
-main{
-    padding : 100px 150px;
-}
-#list-restos .restaurant,
-#categories .restaurant{
+
+.restaurant{
     background-color: #fff;
-    padding : 5px;
+    padding : 15px;
 }
 
 
