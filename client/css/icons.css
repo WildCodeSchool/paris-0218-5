@@ -18,7 +18,8 @@
     background-image: url('../images/icones/pig-red.svg')
 }
 .icn.icn-like{
-    background-image: url('../images/icones/like-red.svg')
+    background-image: url('../images/icones/like-red.svg');
+    display: inline-block;
 }
 .icn.icn-profile{
     background-image: url('../images/icones/profile-white.svg')
