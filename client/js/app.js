@@ -4,5 +4,4 @@ import { popup } from './composants/popup.js'
 
 document.querySelector('footer').innerHTML = footer
 document.querySelector('header').innerHTML = header
-document.getElementById('popup-cnx').innerHTML= popup
-
+document.getElementById('popup-cnx').innerHTML = popup
