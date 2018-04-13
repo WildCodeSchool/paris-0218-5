@@ -2,7 +2,17 @@
     max-width : 1200px;
     margin : 0 auto;
 }
-
+.image-wrapper{
+    background-color: black;
+    border-radius : 15px; 
+    height: 100%;
+    max-height : 280px;
+}
+.image-wrapper img{
+    height : 100%;
+    width : 100%;
+    object-fit : cover;
+}
 .category img{
     border-radius : 15px;
     display: block;
@@ -24,17 +34,7 @@
     color : #fff;
     z-index: 10;
 }
-.image-wrapper{
-    background-color: black;
-    border-radius : 15px; 
-    height: 100%;
-    max-height : 280px;
-}
-.image-wrapper img{
-    height : 100%;
-    width : 100%;
-    object-fit : cover;
-}
+
 #filter-simple{
     font-family : 'Paytone One', sans-serif;
     max-width : 750px;
