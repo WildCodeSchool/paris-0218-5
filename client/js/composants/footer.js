@@ -1,10 +1,10 @@
-const date = new Date().getFullYear();
+const date = new Date().getFullYear()
 
-export const footer = 
+export const footer =
 `
-	<span>© Copyright - WildAndHungry -
-		<span id="year">${date}</span>
-		<a href="#">Mentions légales -</a>
-		<a href="#">Contact</a>
-	</span>
+  <span>© Copyright - WildAndHungry -
+    <span id="year">${date}</span>
+    <a href="#">Mentions légales -</a>
+    <a href="#">Contact</a>
+  </span>
 `
