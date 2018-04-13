@@ -1,15 +1,21 @@
 const getModal = document.getElementById('connexion-wrapper')
 
-const closePop = document.getElementById('close-popup')
 
 const showModal = document.getElementById('popup-cnx')
 
+const closePopup = document.getElementById('close-popup')
+
+console.log(closePopup)
+
+closePopup.addEventListener('click', () => {
+            showModal.style.display='none'
+        })
 
 
 getModal.addEventListener('click', () => {
             showModal.style.display='block'
         })
 
-closePop.addEventListener('click', () => {
-            showModal.style.display='none'
-        })
+
+
+

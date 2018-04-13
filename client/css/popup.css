@@ -1,10 +1,14 @@
 
-.close-popup{
-  display: block;
+#popup-cnx {
+  display:none;
+}
+
+#close-popup {
+  display:block;
 }
 
 /* The Modal (background) */
-#popup-cnx {
+.popup-outline {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 20; /* Sit on top */
@@ -44,6 +48,7 @@
   font-size: 40px;
   font-weight: bold;
   color: #f1f1f1;
+
 }
 
 .close-popup-btn:hover,
@@ -53,7 +58,7 @@
 }
 
 * {box-sizing: border-box}
-  input[type=text], input[type=password] {
+input[type=text], input[type=password] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;

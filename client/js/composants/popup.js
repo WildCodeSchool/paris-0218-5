@@ -1,6 +1,7 @@
+
     export const popup = 
     `
-    <span class="close-popup-btn" title="Close Modal" id= "close-popup">x</span>
+    <span class="close-popup-btn" title="Fermer la fenêtre" id="close-popup">x</span>
       <div class="popup-content">
         <form class="form-content">
 
