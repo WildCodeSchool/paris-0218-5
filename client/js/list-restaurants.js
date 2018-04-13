@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+/* global URLSearchParams */
 
 import { restaurantElement } from './composants/restaurant.js'
 
@@ -7,7 +7,6 @@ window.addEventListener('load', () => {
   const params = new URLSearchParams(window.location.search)
 
   //  On récupère le nom de la catégorie
-  // const params = searchParams(window.location.search)
   let cat = params.get('cat')
 
   //  On ajoute un h2 avec le nom de la catégorie (ou 'restaurants' si elle n'existe pas)
