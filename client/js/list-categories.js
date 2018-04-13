@@ -23,11 +23,16 @@ window.fetch('http://localhost:3333/categories')
 const filterCat = (categories, cat = 'cuisine') => {
   categoElement.innerHTML = categories[cat].map(categoriesElement).join('')
 }
-
+// classement des restaurants par plus likes et injection
 const displayTop = () => {
   window.fetch('http://localhost:3333/restaurants')
     .then(res => res.json())
     .then(restaurants => {
-      categoElement.innerHTML = restaurants.map(restaurantElement).join('')
+      let bestrestau = restaurants.sort(compareNombres)
+      bestrestau = bestrestau.slice(0, 12)
+      categoElement.innerHTML = bestrestau.map(restaurantElement).join('')
     })
+}
+const compareNombres = (a, b) => {
+  return b.like.length - a.like.length
 }
