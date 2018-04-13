@@ -20,6 +20,11 @@ h2{
     font-size: 3rem;
 }
 
+h3{
+    font-family: 'Paytone One', sans-serif;
+    color :#ed3851;
+    font-size: 3rem;
+}
 
 .column.flex{
     display : flex;

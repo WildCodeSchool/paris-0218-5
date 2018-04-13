@@ -4,7 +4,7 @@ export const popup =
     <div class="popup-content">
       <form class="form-content">
 
-        <h2>Connexion</h2>
+        <h3>Connexion</h3>
         <p>Déjà inscrit ? Connecte toi ici.</p>
 
         <input type="text" placeholder="Ton email" name="email" id="logemail" required>
@@ -18,7 +18,7 @@ export const popup =
       </form>
 
       <form class="form-content">
-        <h2>Créer un compte</h2>
+        <h3>Créer un compte</h3>
         <p>Pas encore inscrit ? Remplis le formulaire !</p>
 
         <input type="text" placeholder="Ton email" name="email" id="registemail" required>
