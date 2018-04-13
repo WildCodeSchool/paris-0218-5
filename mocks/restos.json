@@ -8,7 +8,7 @@
 		"budget" : "10-15",
 		"description" : "Restaurant basque généreux et gourmand.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
 		"like" : [1, 2, 3, 4, 5, 6]
 	},
 	{
@@ -189,7 +189,6 @@
 		"description" : "Trattoria aux accents d’ancien bistrot « brooklynisé » qui sent bon l’Italie conte une histoire dans ses assiettes, celle d’une gastronameie italienne de terroir.",
 		"cart" : true,
 		"vegetarian" : true,
-		"vegetarien" : true,
 		"like" : [1, 2, 3]
 	},
 	{
@@ -237,7 +236,7 @@
 		"budget" : "5-10",
 		"description" : "Kebab sur place ou pour emporter.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
 		"like" : [1, 2, 5, 6]
   
 	}
