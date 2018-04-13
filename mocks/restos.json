@@ -9,6 +9,7 @@
 		"description" : "Restaurant basque généreux et gourmand.",
 		"cart" : true,
 		"vegetarian" : true
+		"like" : [1, 2, 3, 4, 5, 6]
 	},
 	{
 		"id" : 2,
@@ -19,7 +20,8 @@
 		"budget" : "0-5",
 		"description" : "Snack paninis crêpes copieux et pas chers.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"like" : [1, 4, 5]
 	},
 	{
 		"id" : 3,
@@ -30,7 +32,8 @@
 		"budget" : "5-10",
 		"description" : "Boulangerie savoureuse proposant également plats chauds et salades. Propose tables pour manger sur place.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"like" : [5, 6]
 	},
 	{
 		"id" : 4,
@@ -41,7 +44,8 @@
 		"budget" : "10-15",
 		"description" : "Petit resto snack grec revisité style et contemporain.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"like" : [1, 2, 3, 4, 5, 6]
 	},
 	{
 		"id" : 5,
@@ -52,7 +56,8 @@
 		"budget" : "10-15",
 		"description" : "Café resto fusion français/asiatique proposant plats, sandwichs, desserts dans une déco soignée.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"like" : [1, 2, 3, 4, 5, 6]
 	},
 	{
 		"id" : 6,
@@ -63,7 +68,8 @@
 		"budget" : "5-10",
 		"description" : "Un cadre informel rappelant New-York avec ses briques rouges et sa façade pour des bagels sucrés et salés.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"like" : [1, 2, 3, 4, 5, 6]
 	},
 	{
 		"id" : 7,
@@ -74,7 +80,8 @@
 		"budget" : "5-10",
 		"description" : "Traiteur asiatique proposant bons plats et menus à moins de 10 €.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"like" : [1, 2, 3, 4, 5, 6]
 	},
 	{
 		"id" : 8,
@@ -85,7 +92,8 @@
 		"budget" : "5-10",
 		"description" : ".",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"like" : [1, 2, 3, 4, 5]
 	},
 	{
 		"id" : 9,
@@ -96,7 +104,8 @@
 		"budget" : "5-10",
 		"description" : "Restaurant de cuisine coréenne aux murs colorés spécialisé en barbecue et proposant des boissons typiques.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"like" : [1, 2, 3, 4 ]
 	},
 	{
 		"id" : 10,
@@ -107,7 +116,8 @@
 		"budget" : "5-10",
 		"description" : "Chinois Sichuan à la déco traditionnelle.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"like" : [1, 2, 3 ]
 	},
 	{
 		"id" : 11,
@@ -118,7 +128,8 @@
 		"budget" : "5-10",
 		"description" : "Ce restaurant vietnamien propose de fins plats typiques dans un cadre moderne et convivial aux murs en pierre.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"like" : [1, 2, 3, 4 ]
 	},
 	{
 		"id" : 12,
@@ -129,7 +140,8 @@
 		"budget" : "15+",
 		"description" : "Kitchen Ter(re), nouveau restaurant dont la partition se joue tout autour des pâtes et des bouillons.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"like" : [1, 2]
 	},
 	{
 		"id" : 13,
@@ -140,7 +152,8 @@
 		"budget" : "5-10",
 		"description" : "Ce restaurant et traiteur sert sandwiches de viande à la broche et spécialités grecques.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"like" : [4, 5, 6]
 	},
 	{
 		"id" : 14,
@@ -151,7 +164,8 @@
 		"budget" : "5-10",
 		"description" : "Chaîne de restauration rapide de pâtes fraîches sur mesure servies dans des lunchbox sur place ou à emporter.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"like" : [1, 2, 3, 4]
 	},
 	{
 		"id" : 15,
@@ -162,7 +176,8 @@
 		"budget" : "5-10",
 		"description" : "Offrant une décoration chaleureuse et familiale, ce petit restaurant bio sert des plats végétariens maison.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"like" : [1, 2]
 	},
 	{
 		"id" : 16,
@@ -173,7 +188,9 @@
 		"budget" : "15+",
 		"description" : "Trattoria aux accents d’ancien bistrot « brooklynisé » qui sent bon l’Italie conte une histoire dans ses assiettes, celle d’une gastronameie italienne de terroir.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"vegetarien" : true,
+		"like" : [1, 2, 3]
 	},
 	{
 		"id" : 17,
@@ -184,7 +201,8 @@
 		"budget" : "5-10",
 		"description" : "Les cupcakes, cheesecakes et cookies de cette petite boutique au décor vert et bois sont végétaliens et bio.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"like" : [1, 2]
 	},
 	{
 		"id" : 18,
@@ -195,7 +213,8 @@
 		"budget" : "5-10",
 		"description" : "Ce restaurant à l'ambiance de style années folles sert burgers et cheesecakes sur un fond de musique jazz.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"like" : [ 4, 5, 6]
 	},
 	{
 		"id" : 19,
@@ -206,7 +225,8 @@
 		"budget" : "5-10",
 		"description" : "Ce restaurant compact avec terrasse sert des burgers et spécialités américaines dans un décor tendance.",
 		"cart" : true,
-		"vegetarian" : true
+		"vegetarian" : true,
+		"like" : [ 3, 4, 5, 6]
 	},
 	{
 		"id" : 20,
@@ -218,6 +238,8 @@
 		"description" : "Kebab sur place ou pour emporter.",
 		"cart" : true,
 		"vegetarian" : true
+		"like" : [1, 2, 5, 6]
+  
 	}
 
 
