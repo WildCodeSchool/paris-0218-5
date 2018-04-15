@@ -19,14 +19,8 @@ app.get('/', (request, response) => {
   response.send('ok')
 })
 
-app.get('/restaurants', (request, response) => {
-  response.json(restaurants)
-})
-
-app.get('/restaurants/:category', (request, response) => {
-  const cat = request.params.category
-  const restaurantsCat = restaurants.filter(restaurants => restaurants.category === cat)
-  response.json(restaurantsCat)
+app.get('/restaurants', (req, res) => {
+  res.json(restaurants)
 })
 
 app.get('/categories', (request, response) => {

@@ -23,10 +23,10 @@ export const header =
             </a>
         </div>
     </div>
-    <div id="connexion-wrapper" class="column column-20 flex">
+    <div id="connexion-wrapper" class="column column-sm-20 column-xs-10 flex">
         <a class="connexion" href="#">
             <span class="icn icn-profile"></span>
-            <span>Connexion</span>
+            <span class="text">Connexion</span>
         </a>
     </div>
     `
