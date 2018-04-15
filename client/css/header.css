@@ -3,11 +3,11 @@ header.row.row-responsive{
     height : 170px;
     background-color:#ed3851;
     flex-direction: row;
+    justify-content: space-between;
     margin : 0;
     color : #fff;
     position : relative;
     font-weight : 700;
-
 }
 
 header::after{
@@ -101,7 +101,6 @@ header span{
     display : inline-block;
     vertical-align: middle;
     font-size : 1.6rem;
-    margin-right : 10px;
 }
 header #randomeal-wrapper{
     width: 220px;
@@ -122,4 +121,7 @@ header .connexion{
 }
 header .connexion:hover{
     background-color : #B0002C;
+}
+header .connexion .text{ 
+    margin-left : 10px;
 }
