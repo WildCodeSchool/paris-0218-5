@@ -1,5 +1,4 @@
 export const budgetElement = mybudget => {
-
   return `
   <div class='category column column-sm-33 column-xs-100'>
     <a href="list-restaurants.html?budget=${mybudget.title}">
