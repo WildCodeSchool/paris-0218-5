@@ -137,7 +137,7 @@
 		"location" : "26 Boulevard Saint-Germain 75005 Paris",
 		"category" : "French",
 		"url" : "",
-		"budget" : "15+",
+		"budget" : "10-50",
 		"description" : "Kitchen Ter(re), nouveau restaurant dont la partition se joue tout autour des pâtes et des bouillons.",
 		"cart" : true,
 		"vegetarian" : true,
@@ -185,7 +185,7 @@
 		"location" : "9 rue de Pontoise 75005 Paris",
 		"category" : "Italien",
 		"url" : "",
-		"budget" : "15+",
+		"budget" : "10-50",
 		"description" : "Trattoria aux accents d’ancien bistrot « brooklynisé » qui sent bon l’Italie conte une histoire dans ses assiettes, celle d’une gastronameie italienne de terroir.",
 		"cart" : true,
 		"vegetarian" : true,
@@ -238,7 +238,7 @@
 		"cart" : true,
 		"vegetarian" : true,
 		"like" : [1, 2, 5, 6]
-  
+
 	}
 
 

@@ -5,21 +5,31 @@ import { restaurantElement } from './composants/restaurant.js'
 window.addEventListener('load', () => {
   const listResto = document.getElementById('list-restos')
   const params = new URLSearchParams(window.location.search)
+  let restoCat = "test"
+
+  //  On ajoute un h2
+  const h2 = document.createElement('h2')
+  document.querySelector('main').insertBefore(h2, listResto)
 
   //  On récupère le nom de la catégorie
   let cat = params.get('cat')
+  let budget = params.get('budget')
 
-  //  On ajoute un h2 avec le nom de la catégorie (ou 'restaurants' si elle n'existe pas)
-  const h2 = document.createElement('h2')
-  document.querySelector('main').insertBefore(h2, listResto)
-  if (!cat) {
-    cat = 'Restaurants'
-  }
-  document.querySelector('h2').innerHTML = `<span>${cat}</span>`
-
-  window.fetch(`http://localhost:3333/restaurants/${cat}`)
+  window.fetch(`http://localhost:3333/restaurants/`)
     .then(res => res.json())
-    .then(restoCat => {
-      listResto.innerHTML = restoCat.map(restaurantElement).join('')
+    .then(restaurants => {
+      if (cat) {
+        document.querySelector('h2').innerHTML = `<span>${cat}</span>`
+        restoCat = restaurants.filter(restaurants => restaurants.category === cat)
+        return restoCat
+      }
+      else if (budget) {
+        document.querySelector('h2').innerHTML = `<span>${budget}</span>`
+        restoCat = restaurants.filter(restaurants => restaurants.budget === budget)
+        return restoCat
+      }
     })
-})
+    .then(restoCat => {
+      listResto.innerHTML = restoCat.map(restaurantElement).join('');
+    })
+  })

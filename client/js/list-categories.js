@@ -1,4 +1,5 @@
 import { categoriesElement } from './composants/categories.js'
+import { budgetElement } from './composants/budgets.js'
 import { restaurantElement } from './composants/restaurant.js'
 
 const categoElement = document.getElementById('categories')
@@ -8,21 +9,17 @@ window.fetch('http://localhost:3333/categories')
   .then(res => res.json())
   .then(categories => {
     document.getElementById('budget').addEventListener('click', () => {
-      filterCat(categories, 'budget')
+      categoElement.innerHTML = categories['budget'].map(budgetElement).join('')
     })
     document.getElementById('cuisine').addEventListener('click', () => {
-      filterCat(categories)
+      categoElement.innerHTML = categories['cuisine'].map(categoriesElement).join('')
     })
     document.getElementById('top').addEventListener('click', () => {
       displayTop()
-      console.log('object')
     })
-    filterCat(categories)
+    categoElement.innerHTML = categories['cuisine'].map(categoriesElement).join('')
   })
 
-const filterCat = (categories, cat = 'cuisine') => {
-  categoElement.innerHTML = categories[cat].map(categoriesElement).join('')
-}
 // classement des restaurants par plus likes et injection
 const displayTop = () => {
   window.fetch('http://localhost:3333/restaurants')

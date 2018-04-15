@@ -19,21 +19,29 @@ app.get('/', (request, response) => {
   response.send('ok')
 })
 
-app.get('/restaurants', (request, response) => {
-  response.json(restaurants)
+app.get('/restaurants', (req, res) => {
+    res.json(restaurants)
 })
 
-app.get('/restaurants/:category', (request, response) => {
-  const cat = request.params.category
-  const restaurantsCat = restaurants.filter(restaurants => restaurants.category === cat)
-  response.json(restaurantsCat)
-})
+// app.get('/restaurants/category=:category', (request, response, next) => {
+//   const cat = request.params.category
+//   const restaurantsCat = restaurants.filter(restaurants => restaurants.category === cat)
+//   response.json(restaurantsCat)
+// })
+
+// app.get('/restaurants/budget/:budget', (request, response, next) => {
+
+//   // const bugdet = request.params.budget
+//   // console.log(budget)
+//   // const restaurantsBudget = restaurants.filter(restaurants => restaurants.budget === budget)
+//   // response.send(restaurantsBudget)
+// })
 
 app.get('/categories', (request, response) => {
-  response.json(categories)
+    response.json(categories)
+  })
+app.get('/header', (request, response) => {
+  response.json(header)
 })
-// app.get('/header', (request, response) => {
-//   response.json(header)
-// })
 // port ecouter
 app.listen(3333, () => console.log('jecoute sur le port 3333'))
