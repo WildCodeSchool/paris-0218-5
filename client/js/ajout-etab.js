@@ -1,29 +1,35 @@
-import { addtEtab } from './composants/addrest.js
+import { addtEtab } from './composants/addrest.js'
 
 const form = document.getElementById('form')
-const nameEtab = document.getElementById('nameEtab')
-const adressEtab = document.getElementById('adressEtab')
-const categoEtab = document.getElementById('categoEtab')
-const budgetEtab = document.getElementById('budgetEtab')
-//const file = document.getElementById('file')
-const descriptionEtab = document.getElementById('descriptionEtab')
-const cbEtab = document.getElementById('cbEtab')
-const vegeEtab = document.getElementById('vegeEtab')
-
 
 form.addEventListener('submit', event => {
  event.preventDefault()
- console.log('toto')            /*
+ console.log('toto')
 
-console.log(`
-${nameEtab.value}
-${adressEtab.value}
-${categoEtab.value}
-file.value}
-${budgetEtab.value}
-${descriptionEtab.value}
-${cbEtab.value}
-${vegeEtab.value}`*/)
+const name = document.getElementById('name-etab').value
+const location = document.getElementById('adress-etab').value
+const category = document.getElementById('catego-etab').value
+const budget = document.getElementById('budget-etab').value
+/* const file = document.getElementById('file').value*/
+const description = document.getElementById('description-etab').value
+const cart = document.getElementById('cb-etab').value
+const vegetarian = document.getElementById('vege-etab').value
+
+
+fetch('http://localhost:3333/restaurants', {
+  method: 'post',
+  body: JSON.stringify({
+    name: name,
+    location: location,
+    category:category,
+    //file
+    budget:budget,
+    description:description,
+    cart:cart,
+    vegetarian:vegetarian,
+
+  })
+
+}).then(res => console.log(res.status))
 
         })
-

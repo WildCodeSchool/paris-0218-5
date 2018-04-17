@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-	<meta charset="utf-8">
-	<title>Ajouter un nouveau restaurant</title>
-	<link rel="stylesheet" href="css/import.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/import.css">
+    <title>Wild and Hungry</title>
 </head>
+
 <body>
-	<div id="add-resto">
+    <header class="row row-responsive">
+
+    </header>
+
+    <main>
+       	<div id="add-resto">
 
 		<h1>Ajouter un nouveau restaurant</h1>
 
@@ -50,17 +60,17 @@
 				</div>
 
 				<div>
-					<label>Description : <textarea name="description" id="description-etab"></textarea></label>
+					<label>Description : <textarea name="description" id="description-etab">deja rempli</textarea></label>
 				</div>
 
 				<div>
 					<label>Carte bleue acceptée : 
-						<input type="checkbox" name="cb" id="cb-etab" /></label>
+						<input type="radio" name="cb" id="cb-etab" />
 					</div>
 
 					<div>
 						<label>Adapté pour les végétariens : 
-							<input type="checkbox" name="vege" id="vege-etab" /></label>
+							<input type="radio" name="vege" id="vege-etab" /></label>
 						</div>	
 
 						<div class="button-wrapper">
@@ -70,5 +80,17 @@
 
 				</div>
 
-			</body>
-			</html>
+        <div id="popup-cnx" class="popup-outline">
+        </div>  
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <script type="module" src="/js/app.js"></script>
+    <script type="module" src="/js/ajout-etab.js"></script>
+    <script type="module" src="/js/script.js"></script>
+</body>
+
+</html>
