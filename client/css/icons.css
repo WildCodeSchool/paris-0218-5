@@ -1,0 +1,36 @@
+.icn{
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.icn.icn-dice{
+    background-image: url('../images/icones/dice-white.svg');
+    width: 18px;
+    height: 18px;
+    transform: rotate(45deg);
+    margin-right : 10px;
+}
+
+.icn.icn-cook{
+    background-image: url('../images/icones/hat-cook-red.svg')
+}
+.icn.icn-budget{
+    background-image: url('../images/icones/pig-red.svg')
+}
+.icn.icn-like{
+    background-image: url('../images/icones/like-red.svg');
+    display: inline-block;
+}
+.icn.icn-profile{
+    background-image: url('../images/icones/profile-white.svg')
+}
+.active .icn.icn-cook{
+    background-image: url('../images/icones/hat-cook-white.svg')
+}
+.active .icn.icn-budget{
+    background-image: url('../images/icones/pig-white.svg')
+}
+.active .icn.icn-like{
+    background-image: url('../images/icones/like-white.svg')
+}

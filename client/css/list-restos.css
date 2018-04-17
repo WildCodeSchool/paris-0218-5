@@ -1,0 +1,21 @@
+main h2{
+    font-family: 'Paytone One', sans-serif;
+    position: relative;
+    padding : 0 15px;
+}
+main h2::after {
+    content: '';
+    width: 82%;
+    height: 2px;
+    background-color: #ccc;
+    position: absolute;
+    top: 56%;
+    right: 0;
+}
+
+.restaurant{
+    background-color: #fff;
+    padding : 15px;
+}
+
+
