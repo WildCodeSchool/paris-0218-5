@@ -29,5 +29,11 @@ app.get('/categories', (request, response) => {
 // app.get('/header', (request, response) => {
 //   response.json(header)
 // })
+
+app.post('/restaurants', (request, response) => {
+  console.log(request.method, request.url)
+  response.json('ok')
+})
+
 // port ecouter
 app.listen(3333, () => console.log('jecoute sur le port 3333'))
