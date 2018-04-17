@@ -1,6 +1,6 @@
 export const header =
   `
-    <div class="column column-sm-60 column-md-40  flex">
+    <div class="first-column column column-md-40 column-xs-80  flex">
         <div id="logo-wrapper">
             <a href="index.html">
                 <img src="images/logo.svg" alt="logo" />
@@ -9,30 +9,30 @@ export const header =
         <h1>On mange où ?</h1>
     </div>
 
-    <div id="choice-wrapper" class="column column-sm-20 column-md-40 flex">
-        <div id="search-wrapper">
+    <div id="choice-wrapper" class="column column-xs-10 column-md-40 flex">
+        <div id="search-wrapper" class="">
             <form class="search">
                 <input type="text" placeholder="Chercher un restaurant">
                 <button class="btn-search" type="submit">
-                <span class="icn icn-dice"></span>
+                <span class="icn icn-search"></span>
                 </button>
             </form>
         </div>
-        <div id="randomeal-wrapper">
-            <a href="#">
-                <span class="icn icn-dice"></span>
-                <span class='randomeal'>Randomeal</span>
-            </a>
+        <div id="randomeal-btn" class="randomeal-wrapper desktop-only">
+              <span class="icn icn-dice"></span>
+              <span class='text-randomeal'>Randomeal</span>
         </div>
     </div>
-    <div class="last-column column column-sm-20 column-md-20 flex">
+    <div class="last-column column column-md-20 column-xs-10 flex">
         <div class="btn-red connexion-wrapper">
             <span class="icn icn-profile"></span>
             <span class="text">Connexion</span>
         </div>
-        <div id="btn-search-mobile" class="btn-red btn-search mobile-only">
-          <span class="icn icn-profile"></span>
+        <div id="randomeal-btn" class="btn-red btn-randomeal mobile-only">
+        <span class="icn icn-dice"></span>
       </div>
+        <div id="btn-search-mobile" class="btn-red btn-search mobile-only">
+          <span class="icn icn-search"></span>
+        </div>
     </div>
-    <span id="connexion-wrapper" class="icn icn-profile"></span>
     `

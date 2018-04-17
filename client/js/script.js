@@ -1,3 +1,4 @@
+window.addEventListener('load', () => {
 /****** GESTION MODAL ********/
 
 const getModal = document.getElementById('connexion-wrapper')
@@ -15,4 +16,15 @@ getModal.addEventListener('click', () => {
 })
 
 /****** GESTION SEARCH RESPONSIVE *****/
- document.getElementById('btn-search-mobile').addEventListener
+const  btnSearchMobile = document.getElementById('btn-search-mobile')
+const searchInput = document.getElementById('search-wrapper')
+
+btnSearchMobile.addEventListener('click', () => {
+  if(searchInput.classList.contains('visible')){
+    console.log('active')
+    searchInput.classList.remove('visible')
+  }else{
+    searchInput.classList.add('visible')
+  }
+ })
+})

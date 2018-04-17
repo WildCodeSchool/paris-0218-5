@@ -74,13 +74,9 @@ header form.search .btn-search{
     background-color : #ca3045;
     border-radius : 0px 20px 20px 0px
 }
-/*boutton ok hover*/
+
 header form.search .btn-search:hover{
-    position: absolute;
-    right: 0;
-    top: 0;
     background-color : #B0002C;
-    border-radius : 0px 20px 20px 0px
 }
 
 form.search::after{
@@ -94,14 +90,17 @@ header span{
     vertical-align: middle;
     font-size : 1.6rem;
 }
-header #randomeal-wrapper{
-    width: 220px;
+.randomeal-wrapper{
     border-left: 1px solid #fff;
     padding-left: 40px;
 }
-header #randomeal-wrapper span:hover{
+.randomeal-wrapper span:hover{
     text-decoration: underline
 }
+.randomeal-wrapper .text-randomeal{
+    margin-left : 15px;
+}
+
 header .last-column{
     flex-direction: column;
     align-items: flex-end;
@@ -109,6 +108,7 @@ header .last-column{
 }
 header .btn-red{
     padding : 10px 20px;
+    min-width: 65px;
     background-color : #ca3045;
     border-bottom : 2px solid #B0002C;
     cursor: pointer;
@@ -119,3 +119,4 @@ header .btn-red:hover{
 header .btn-red .text{ 
     margin-left : 10px;
 }
+
