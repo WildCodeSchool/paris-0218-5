@@ -2,6 +2,7 @@ const express = require('express')
 const categories = require('../mocks/categories.json')
 const restaurants = require('../mocks/restos.json')
 const bodyParser = require('body-parser')
+const users = require('../mocks/user.json')
 
 const app = express()
 
@@ -26,8 +27,16 @@ app.get('/restaurants', (req, res) => {
 app.get('/categories', (request, response) => {
   response.json(categories)
 })
+
+app.get('/profil/:id', (request, response) => {
+  const id = Number(request.params.id)
+  const profil = users.find( profil => profil.id === id)
+  response.json(profil)
+})
+
 // app.get('/header', (request, response) => {
 //   response.json(header)
 // })
+
 // port ecouter
 app.listen(3333, () => console.log('jecoute sur le port 3333'))
