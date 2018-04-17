@@ -1,6 +1,6 @@
 export const header =
   `
-    <div class="column column-40 flex">
+    <div class="column column-sm-60 column-md-40  flex">
         <div id="logo-wrapper">
             <a href="index.html">
                 <img src="images/logo.svg" alt="logo" />
@@ -9,7 +9,7 @@ export const header =
         <h1>On mange où ?</h1>
     </div>
 
-    <div id="choice-wrapper" class="column column-sm-50 column-md-40 flex">
+    <div id="choice-wrapper" class="column column-sm-20 column-md-40 flex">
         <div id="search-wrapper">
             <form class="search">
                 <input type="text" placeholder="Chercher un restaurant">
@@ -25,11 +25,14 @@ export const header =
             </a>
         </div>
     </div>
-    <div id="connexion-wrapper" class="column column-sm-10 column-md-20 flex">
-        <a class="btn-red" href="#">
+    <div class="last-column column column-sm-20 column-md-20 flex">
+        <div class="btn-red connexion-wrapper">
             <span class="icn icn-profile"></span>
             <span class="text">Connexion</span>
-        </a>
+        </div>
+        <div id="btn-search-mobile" class="btn-red btn-search mobile-only">
+          <span class="icn icn-profile"></span>
+      </div>
     </div>
     <span id="connexion-wrapper" class="icn icn-profile"></span>
     `

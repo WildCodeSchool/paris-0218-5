@@ -1,19 +1,32 @@
+@media (min-width: 1200px)  {
+    .mobile-only{
+        display : none;
+    }
+}
+
+
 @media (max-width: 1400px)  {
     header h1{
         font-size: 2.5rem;
     }
-    #connexion-wrapper .text{
+    .connexion-wrapper .text{
         display : none;
     }
 }
 @media (max-width: 1200px)  {
-    .search{
+    #search-wrapper{
         position: absolute;
-        right: 0;
-        bottom: -300px;
+        right: -300px;
+        bottom: 0;
     }
     header #randomeal-wrapper{
         border : none;
+    }
+    .mobile-only{
+        display : block;
+    }
+    header .last-column{
+    justify-content: space-evenly;
     }
     /* .randomeal{
         display : none;
