@@ -18,30 +18,36 @@
 	<main>
 		<div id="add-resto">
 
-		<h3>Ajouter un nouveau restaurant</h3>
+			<h3>Ajouter un nouveau restaurant</h3>
 
 			<p>Remplissez les champs ci-dessous :</p>
 
-		<form id="form">
-			<div>
-				<label>Nom : <input type="text" id="name-etab" name="nom" placeholder="Nom du restaurant" required/></label>
-			</div>
+			<form id="form">
+				<div>
+					<label>Nom :
+						<input type="text" id="name-etab" name="nom" placeholder="Nom du restaurant" required/>
+					</label>
+				</div>
 
-			<div>
-				<label>Adresse : <input type="text" id="adress-etab" name="adresse" placeholder="Adresse complète" required/></label>
-			</div>
+				<div>
+					<label>Adresse :
+						<input type="text" id="adress-etab" name="adresse" placeholder="Adresse complète" required/>
+					</label>
+				</div>
 
-			<div>
-				<label>Catégorie : <select name="category" id="catego-etab" required>
-					<option value="Choisir">Choisir</option>
-					<option value="Asiatique">Asiatique</option>
-					<option value="Burger">Burger</option>
-					<option value="French">French</option>
-					<option value="Healthy">Healthy</option>
-					<option value="Italien">Italien</option>
-					<option value="Snack">Snack</option>
-				</select></label>
-			</div>
+				<div>
+					<label>Catégorie :
+						<select name="category" id="catego-etab" required>
+							<option value="Choisir">Choisir</option>
+							<option value="Asiatique">Asiatique</option>
+							<option value="Burger">Burger</option>
+							<option value="French">French</option>
+							<option value="Healthy">Healthy</option>
+							<option value="Italien">Italien</option>
+							<option value="Snack">Snack</option>
+						</select>
+					</label>
+				</div>
 
 				<div>
 					<label>Photo :
@@ -51,16 +57,20 @@
 
 
 				<div>
-					<label>Budget : <select name="budget" id="budget-etab" required>
-						<option value="Choisir">Choisir</option>
-						<option value="0-5">Moins de 5€</option>
-						<option value="5-10">Entre 5 et 10€</option>
-						<option value="10-50">Plus de 10€</option>
-					</select></label>
+					<label>Budget :
+						<select name="budget" id="budget-etab" required>
+							<option value="Choisir">Choisir</option>
+							<option value="0-5">Moins de 5€</option>
+							<option value="5-10">Entre 5 et 10€</option>
+							<option value="10-50">Plus de 10€</option>
+						</select>
+					</label>
 				</div>
 
 				<div>
-					<label>Description : <textarea name="description" id="description-etab" required></textarea></label>
+					<label>Description :
+						<textarea name="description" id="description-etab" required></textarea>
+					</label>
 				</div>
 
 				<div>
@@ -69,23 +79,16 @@
 					</label>
 				</div>
 
-						<div>
-							<button class="button-general" type="submit" value="Envoyer"> Envoyer</button>
-						</div>
-					</form>
 				<div>
 					<label>Adapté pour les végétariens :
 						<input type="radio" name="vege" id="vege-etab" />
 					</label>
 				</div>
 
-				<div class="button-general">
-					<button type="submit" value="Envoyer"> Envoyer</button>
+				<div>
+					<button class="button-general" type="submit" value="Envoyer"> Envoyer</button>
 				</div>
-
-
 			</form>
-
 		</div>
 
 		<div id="popup-cnx" class="popup-outline">
