@@ -18,12 +18,12 @@ window.addEventListener('load', () => {
         let restoCat = restaurants.filter(restaurants => restaurants.category === cat)
         return restoCat
       } else if (budget) {
-        //budget = budget === '1' ? 'Moins de 5€' : budget === '2' ? 'De 5 à 10€' : budget === '3' ? 'Plus de 10€' :
-        if(budget === '1'){
+        // budget = budget === '1' ? 'Moins de 5€' : budget === '2' ? 'De 5 à 10€' : budget === '3' ? 'Plus de 10€' :
+        if (budget === '1') {
           budget = 'Moins de 5€'
-        }else if(budget === '2'){
+        } else if (budget === '2') {
           budget = 'De 5 à 10€'
-        }else if(budget === '3'){
+        } else if (budget === '3') {
           budget = 'Plus de 10€'
         }
         document.querySelector('h2').innerHTML = `${budget}`
