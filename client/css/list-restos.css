@@ -17,5 +17,10 @@ main h2::after {
     background-color: #fff;
     padding : 15px;
 }
-
+.restaurant img{
+    height : 215px;
+    width : 100%;
+    object-fit: cover;
+    object-position: top;
+}
 

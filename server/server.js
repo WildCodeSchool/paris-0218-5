@@ -1,10 +1,9 @@
 const express = require('express')
 const categories = require('../mocks/categories.json')
 const restaurants = require('../mocks/restos.json')
-const bodyParser = require('body-parser')
+const users = require('../mocks/user.json')
 
 const app = express()
-
 const fs = require('fs')
 const path = require('path')
 
@@ -12,9 +11,6 @@ const util = require('util')
 
 const writeFile = util.promisify(fs.writeFile)
 const readFile = util.promisify(fs.readFile)
-
-app.use(bodyParser.json()) // for parsing application/json
-app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
 // autorisation
 app.use((request, response, next) => {
@@ -54,9 +50,6 @@ app.get('/restaurants', (req, res) => {
 app.get('/categories', (request, response) => {
   response.json(categories)
 })
-// app.get('/header', (request, response) => {
-//   response.json(header)
-// })
 
 app.post('/restaurants', (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(11, '0')
@@ -100,6 +93,11 @@ app.post('/restaurants', (request, response, next) => {
 
     // le catch permet de montrer l'erreur s'il y en a une
     .catch(next)
+
+app.get('/profil/:id', (request, response) => {
+  const id = Number(request.params.id)
+  const profil = users.find(profil => profil.id === id)
+  response.json(profil)
 })
 
 // port ecouter
