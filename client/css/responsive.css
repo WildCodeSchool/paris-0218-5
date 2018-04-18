@@ -40,6 +40,9 @@
 
 }
 @media (max-width: 40rem)  {
+    main{
+        padding: 60px 20px 0 20px;
+    }
     header.row.row-responsive{
         height: 215px;
     }

@@ -24,7 +24,7 @@ export const header =
         </div>
     </div>
     <div class="last-column column column-md-20 column-xs-10 flex">
-        <div class="btn-red connexion-wrapper">
+        <div id="connexion-button" class="btn-red connexion-wrapper">
             <span class="icn icn-profile"></span>
             <span class="text">Connexion</span>
         </div>
