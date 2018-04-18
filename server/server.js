@@ -30,7 +30,7 @@ app.get('/categories', (request, response) => {
 
 app.get('/profil/:id', (request, response) => {
   const id = Number(request.params.id)
-  const profil = users.find( profil => profil.id === id)
+  const profil = users.find(profil => profil.id === id)
   response.json(profil)
 })
 

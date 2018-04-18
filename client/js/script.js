@@ -13,4 +13,3 @@ window.addEventListener('Load', () => {
     showModal.style.display = 'block'
   })
 })
-
