@@ -26,7 +26,7 @@ export const header =
     <div class="last-column column column-md-20 column-xs-10 flex">
         <div id="connexion-button" class="btn-red connexion-wrapper">
             <span class="icn icn-profile"></span>
-            <span class="text">Connexion</span>
+            <span class="text desktop-only">Connexion</span>
         </div>
         <div id="randomeal-btn" class="btn-red btn-randomeal mobile-only">
         <span class="icn icn-dice"></span>

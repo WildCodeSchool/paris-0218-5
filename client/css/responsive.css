@@ -14,9 +14,6 @@
     header h1{
         font-size: 2.5rem;
     }
-    .connexion-wrapper .text{
-        display : none;
-    }
     .desktop-only{
         display : none;
     }
@@ -31,7 +28,7 @@
     }
     #search-wrapper.visible{
         transition: all ease 0.3s;
-        right: 0;
+        right: 20px;
     }
 
     header .last-column{
@@ -41,7 +38,7 @@
 }
 @media (max-width: 40rem)  {
     main{
-        padding: 60px 20px 0 20px;
+        padding: 80px 20px 0 20px;
     }
     header.row.row-responsive{
         height: 215px;
