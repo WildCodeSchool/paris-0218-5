@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
 
   for (let item of itemsFilter) {
     item.addEventListener('click', (e) => {
-      for (item of itemsFilter) {
+      for (let item of itemsFilter) {
         if (item.classList.contains('active')) {
           item.classList.remove('active')
         }
