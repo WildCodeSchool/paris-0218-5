@@ -9,7 +9,7 @@ form.addEventListener('submit', event => {
   const name = document.getElementById('name-etab').value
   const location = document.getElementById('adress-etab').value
   const category = document.getElementById('catego-etab').value
-  const url = "images/categories/snack.jpg"
+  // const url = ''
   const budget = document.getElementById('budget-etab').value
   const description = document.getElementById('description-etab').value
   const cart = document.getElementById('cb-etab').value
@@ -21,11 +21,11 @@ form.addEventListener('submit', event => {
       name: name,
       location: location,
       category: category,
- //     url: url,
+      // url: url,
       budget: budget,
       description: description,
       cart: cart,
-      vegetarian: vegetarian,
+      vegetarian: vegetarian
     })
   }).then(res => console.log(res.status))
 })

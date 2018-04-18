@@ -75,7 +75,7 @@ app.post('/restaurants', (request, response, next) => {
         name: request.body.name,
         location: request.body.location,
         category: request.body.category,
-        url: "",
+        url: '',
         budget: request.body.budget,
         description: request.body.description,
         cart: request.body.cart,
