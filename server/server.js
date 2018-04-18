@@ -1,6 +1,7 @@
 const express = require('express')
 const categories = require('../mocks/categories.json')
 const restaurants = require('../mocks/restos.json')
+const users = require('../mocks/user.json')
 
 const app = express()
 
@@ -21,6 +22,12 @@ app.get('/restaurants', (req, res) => {
 
 app.get('/categories', (request, response) => {
   response.json(categories)
+})
+
+app.get('/profil/:id', (request, response) => {
+  const id = Number(request.params.id)
+  const profil = users.find(profil => profil.id === id)
+  response.json(profil)
 })
 
 // port ecouter
