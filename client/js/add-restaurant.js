@@ -1,6 +1,9 @@
 // import { addtEtab } from './composants/addrest.js'
 
 const form = document.getElementById('form')
+const sent = document.getElementById('add-restaurant-submit')
+
+
 
 form.addEventListener('submit', event => {
   event.preventDefault()
@@ -28,4 +31,6 @@ form.addEventListener('submit', event => {
       vegetarian: vegetarian
     })
   }).then(res => console.log(res.status))
+    .then(res => alert('Merci pour votre ajout, les restaurants ont été mis à jour.' ))
+    .then(res => window.location.href = 'index.html')
 })
