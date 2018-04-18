@@ -93,6 +93,7 @@ app.post('/restaurants', (request, response, next) => {
 
     // le catch permet de montrer l'erreur s'il y en a une
     .catch(next)
+})
 
 app.get('/profil/:id', (request, response) => {
   const id = Number(request.params.id)
