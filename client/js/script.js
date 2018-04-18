@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-  /****** GESTION MODAL ********/
+  /* ***** GESTION MODAL ******* */
 
   const getModal = document.getElementById('connexion-button')
 
@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
     showModal.style.display = 'block'
   })
 
-  /****** GESTION SEARCH RESPONSIVE *****/
+  /* ***** GESTION SEARCH RESPONSIVE **** */
   const btnSearchMobile = document.getElementById('btn-search-mobile')
   console.log(btnSearchMobile)
   const searchInput = document.getElementById('search-wrapper')
