@@ -24,15 +24,15 @@
 
 		<form id="form">
 			<div>
-				<label>Nom : <input type="text" id="name-etab" required name="nom" placeholder="Nom du restaurant"/></label>
+				<label>Nom : <input type="text" id="name-etab" required name="nom" placeholder="Nom du restaurant" required/></label>
 			</div>
 
 			<div>
-				<label>Adresse : <input type="text" id="adress-etab" name="adresse" placeholder="Adresse complète"/></label>
+				<label>Adresse : <input type="text" id="adress-etab" name="adresse" placeholder="Adresse complète" required/></label>
 			</div>
 
 			<div>
-				<label>Catégorie : <select name="category" id="catego-etab">
+				<label>Catégorie : <select name="category" id="catego-etab" required>
 					<option value="Choisir">Choisir</option>
 					<option value="asiatique">Asiatique</option>
 					<option value="burger">Burger</option>
@@ -50,7 +50,7 @@
 
 
 				<div>
-					<label>Budget : <select name="budget" id="budget-etab">
+					<label>Budget : <select name="budget" id="budget-etab" required>
 						<option value="Choisir">Choisir</option>
 						<option value="0-5">Entre 0 et 5 €</option>
 						<option value="5-10">Entre 5 et 10 €</option>
@@ -60,7 +60,7 @@
 				</div>
 
 				<div>
-					<label>Description : <textarea name="description" id="description-etab"></textarea></label>
+					<label>Description : <textarea name="description" id="description-etab" required></textarea></label>
 				</div>
 
 				<div>
