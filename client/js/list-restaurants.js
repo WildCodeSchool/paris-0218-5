@@ -20,6 +20,9 @@ window.addEventListener('load', () => {
       if (cat) {
         document.querySelector('h2').innerHTML = `<span>${cat}</span>`
         let restoCat = restaurants.filter(restaurants => restaurants.category === cat)
+
+        console.log(restoCat)
+
         return restoCat
       } else if (budget) {
         document.querySelector('h2').innerHTML = `<span>${budget}</span>`
