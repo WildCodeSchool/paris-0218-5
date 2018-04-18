@@ -9,7 +9,6 @@
     width: 18px;
     height: 18px;
     transform: rotate(45deg);
-    margin-right : 10px;
 }
 
 .icn.icn-cook{
@@ -24,6 +23,9 @@
 }
 .icn.icn-profile{
     background-image: url('../images/icones/profile-white.svg')
+}
+.icn.icn-search{
+    background-image: url('../images/icones/search.svg')
 }
 .active .icn.icn-cook{
     background-image: url('../images/icones/hat-cook-white.svg')

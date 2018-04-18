@@ -1,5 +1,7 @@
-window.addEventListener('Load', () => {
-  const getModal = document.getElementById('connexion-wrapper')
+window.addEventListener('load', () => {
+  /* ***** GESTION MODAL ******* */
+
+  const getModal = document.getElementById('connexion-button')
 
   const showModal = document.getElementById('popup-cnx')
 
@@ -11,5 +13,19 @@ window.addEventListener('Load', () => {
 
   getModal.addEventListener('click', () => {
     showModal.style.display = 'block'
+  })
+
+  /* ***** GESTION SEARCH RESPONSIVE **** */
+  const btnSearchMobile = document.getElementById('btn-search-mobile')
+  console.log(btnSearchMobile)
+  const searchInput = document.getElementById('search-wrapper')
+
+  btnSearchMobile.addEventListener('click', () => {
+    if (searchInput.classList.contains('visible')) {
+      console.log('active')
+      searchInput.classList.remove('visible')
+    } else {
+      searchInput.classList.add('visible')
+    }
   })
 })

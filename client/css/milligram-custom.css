@@ -265,6 +265,11 @@ input[type='checkbox'], input[type='radio'] {
     max-width: 25%
 }
 
+.row .column.column-30 {
+    flex: 0 0 30%;
+    max-width: 30%
+}
+
 .row .column.column-33, .row .column.column-34 {
     flex: 0 0 33.3333%;
     max-width: 33.3333%
