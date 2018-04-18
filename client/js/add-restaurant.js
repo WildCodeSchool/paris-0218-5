@@ -9,8 +9,8 @@ form.addEventListener('submit', event => {
   const name = document.getElementById('name-etab').value
   const location = document.getElementById('adress-etab').value
   const category = document.getElementById('catego-etab').value
+  // const url = ''
   const budget = document.getElementById('budget-etab').value
-  /* const file = document.getElementById('file').value */
   const description = document.getElementById('description-etab').value
   const cart = document.getElementById('cb-etab').value
   const vegetarian = document.getElementById('vege-etab').value
@@ -21,7 +21,7 @@ form.addEventListener('submit', event => {
       name: name,
       location: location,
       category: category,
-      // file
+      // url: url,
       budget: budget,
       description: description,
       cart: cart,

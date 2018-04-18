@@ -16,6 +16,9 @@ window.addEventListener('load', () => {
       if (cat) {
         document.querySelector('h2').innerHTML = `${cat}`
         let restoCat = restaurants.filter(restaurants => restaurants.category === cat)
+
+        console.log(restoCat)
+
         return restoCat
       } else if (budget) {
         // budget = budget === '1' ? 'Moins de 5€' : budget === '2' ? 'De 5 à 10€' : budget === '3' ? 'Plus de 10€' :
