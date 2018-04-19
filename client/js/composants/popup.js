@@ -17,15 +17,15 @@ export const popup =
 
       </form>
 
-      <form class="form-content" id="form-registre">
+      <form class="form-content" id="form-register">
         <h3>Créer un compte</h3>
         <p>Pas encore inscrit ? Remplis le formulaire !</p>
 
-        <input type="email" placeholder="Ton email" name="email" id="registemail" required>
+        <input type="email" placeholder="Ton email" name="email" id="register-mail" required>
 
-        <input type="password" placeholder="Choisir un mot de passe" name="psw" id="registpsw" required>
+        <input type="password" placeholder="Choisir un mot de passe" name="psw" id="register-psw" required>
 
-        <input type="password" placeholder="Confirmer le mot de passe" name="regist-psw-repeat" id="confirmpsw" required>
+        <input type="password" placeholder="Confirmer le mot de passe" name="regist-psw-repeat" id="confirm-psw" required>
 
         <p>En créant un compte j' accepte les <a href="#" style="color:dodgerblue">termes et conditions</a>.</p>
 

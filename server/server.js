@@ -43,7 +43,7 @@ app.get('/', (request, response) => {
   response.send('ok')
 })
 
-app.post('/ins', (request, response, next) => {
+app.post('/registrer', (request, response, next) => {
   console.log(request.method, request.url, request.body)
   const id = Math.random().toString(36).slice(2).padEnd(11, '0')
   const fileName = `users${id}.json`
@@ -72,13 +72,6 @@ app.get('/categories', (request, response) => {
 app.post('/restaurants', (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(11, '0')
   const filePath = path.join(__dirname, '../mocks/restos.json')
-
-  // ecrire danbs le JSON :
-  // 1 Lire le fichier et convertir le buffer en string (utf8)
-  // 2 convertir la string en objet JS
-  // 3 ajouter le nouveau bloc en array
-  // 4 convertir l'array en string
-  // 5 écrire le fichier
 
   // 1 Lire le fichier et convertir le buffer en string (utf8)
   readFile(filePath, 'utf8')
