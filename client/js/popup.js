@@ -32,4 +32,3 @@ window.addEventListener('load', () => {
     }).then(res => console.log(res.status))
   })
 })
-
