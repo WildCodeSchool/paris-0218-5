@@ -1,12 +1,12 @@
 export const profilPage = myprofil => {
   return `
-  <form>
+  <form id="profil-form">
     <label>Email</label>
-    <input type='text' value='${myprofil.email}' disabled>
+    <input type='text' value='${myprofil.email}' id="mail-input" disabled>
     <label>Password</label>
-    <input type='text' value='${myprofil.password}' disabled>
+    <input type='text' value='${myprofil.password}' id="password-input" disabled>
     <button class='button-general' id='modify' type='button' >Modifier</button>
-    <button class='button-general' id='valid' type='submit' disabled>Valider</button>
+    <button class='button-general' id='valid' type='submit' >Valider</button>
   <form>
   `
 }
