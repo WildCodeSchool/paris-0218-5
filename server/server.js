@@ -86,11 +86,12 @@ app.post('/restaurants', (request, response, next) => {
         name: request.body.name,
         location: request.body.location,
         category: request.body.category,
+        url: '',
         budget: request.body.budget,
-        // file
         description: request.body.description,
         cart: request.body.cart,
-        vegetarian: request.body.vegetarian
+        vegetarian: request.body.vegetarian,
+        like: []
       })
 
       // 4 convertir l'array en string
