@@ -25,9 +25,9 @@ const displayTop = () => {
   window.fetch('http://localhost:3333/restaurants')
     .then(res => res.json())
     .then(restaurants => {
-      let bestrestau = restaurants.sort(compareNombres)
-      bestrestau = bestrestau.slice(0, 12)
-      categoElement.innerHTML = bestrestau.map(restaurantElement).join('')
+      let bestResto = restaurants.sort(compareNombres)
+      bestResto = bestResto.slice(0, 12)
+      categoElement.innerHTML = bestResto.map(restaurantElement).join('')
     })
 }
 const compareNombres = (a, b) => {

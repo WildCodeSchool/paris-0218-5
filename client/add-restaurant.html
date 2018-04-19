@@ -25,26 +25,26 @@
 			<form id="form">
 				<div>
 					<label>Nom :
-						<input type="text" id="name-etab" required name="nom" value="nameresto" />
+						<input type="text" id="name-etab" name="nom" placeholder="Nom du restaurant" required/>
 					</label>
 				</div>
 
 				<div>
 					<label>Adresse :
-						<input type="text" id="adress-etab" name="adresse" value="Adresse" />
+						<input type="text" id="adress-etab" name="adresse" placeholder="Adresse complète" required/>
 					</label>
 				</div>
 
 				<div>
 					<label>Catégorie :
-						<select name="category" id="catego-etab">
+						<select name="category" id="catego-etab" required>
 							<option value="Choisir">Choisir</option>
-							<option value="asiatique">Asiatique</option>
-							<option value="burger">Burger</option>
-							<option value="francais">Français</option>
-							<option value="healthy">Healthy</option>
-							<option value="pizza">Pizza</option>
-							<option value="snack">Snack</option>
+							<option value="Asiatique">Asiatique</option>
+							<option value="Burger">Burger</option>
+							<option value="French">French</option>
+							<option value="Healthy">Healthy</option>
+							<option value="Italien">Italien</option>
+							<option value="Snack">Snack</option>
 						</select>
 					</label>
 				</div>
@@ -58,19 +58,18 @@
 
 				<div>
 					<label>Budget :
-						<select name="budget" id="budget-etab">
+						<select name="budget" id="budget-etab" required>
 							<option value="Choisir">Choisir</option>
-							<option value="0-5">Entre 0 et 5 €</option>
-							<option value="5-10">Entre 5 et 10 €</option>
-							<option value="10-15">Entre 10 et 15 €</option>
-							<option value="+15">Plus de 15 €</option>
+							<option value="0-5">Moins de 5€</option>
+							<option value="5-10">Entre 5 et 10€</option>
+							<option value="10-50">Plus de 10€</option>
 						</select>
 					</label>
 				</div>
 
 				<div>
 					<label>Description :
-						<textarea name="description" id="description-etab">deja rempli</textarea>
+						<textarea name="description" id="description-etab" required></textarea>
 					</label>
 				</div>
 
@@ -86,13 +85,10 @@
 					</label>
 				</div>
 
-				<div class="button-general">
-					<button type="submit" value="Envoyer"> Envoyer</button>
+				<div>
+					<button class="button-general" type="submit" value="Envoyer"> Envoyer</button>
 				</div>
-
-
 			</form>
-
 		</div>
 
 		<div id="popup-cnx" class="popup-outline">
@@ -103,7 +99,7 @@
 
 	</footer>
 	<script type="module" src="/js/app.js"></script>
-	<script type="module" src="/js/ajout-etab.js"></script>
+	<script type="module" src="/js/add-restaurant.js"></script>
 	<script type="module" src="/js/script.js"></script>
 	<script type="module" src="/js/popup.js"></script>
 </body>
