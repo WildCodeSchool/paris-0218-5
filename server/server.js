@@ -10,8 +10,8 @@ const path = require('path')
 const readFile = util.promisify(fs.readFile)
 const writeFile = util.promisify(fs.writeFile)
 
-const categories = require('../mocks/categories.json')
-const restaurants = require('../mocks/restos.json')
+// const categories = require('../mocks/categories.json')
+// const restaurants = require('../mocks/restos.json')
 const users = require('../mocks/user.json')
 
 const app = express()
@@ -49,7 +49,7 @@ app.get('/', (request, response) => {
 
 app.get('/restaurants', (request, response) => {
   const filePath = path.join(__dirname, '../mocks/restos.json')
-// promise
+  // promise
   readFile(filePath)
   // traitement de la donnéee
     .then(data => {
@@ -59,12 +59,14 @@ app.get('/restaurants', (request, response) => {
   // gestion de l'erreur
     .catch(err => {
       response.status(404).end('not found')
+      // il faut utiliser le parametre 'err' pour éviter une erreur de lint
+      console.log(err)
     })
 })
 
 app.get('/categories', (request, response) => {
   const filePath2 = path.join(__dirname, '../mocks/categories.json')
-// promise
+  // promise
   readFile(filePath2)
   // traitement de la donnéee
     .then(data => {
@@ -74,6 +76,8 @@ app.get('/categories', (request, response) => {
   // gestion de l'erreur
     .catch(err => {
       response.status(404).end('not found')
+      // il faut utiliser le parametre 'err' pour éviter une erreur de lint
+      console.log(err)
     })
 })
 
