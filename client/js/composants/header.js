@@ -6,7 +6,7 @@ export const header =
                 <img src="images/logo.svg" alt="logo" />
             </a>
         </div>
-        <h1>On mange où ?</h1>
+        <h1>Take eat easy</h1>
     </div>
 
     <div id="choice-wrapper" class="column column-xs-10 column-md-40 flex">

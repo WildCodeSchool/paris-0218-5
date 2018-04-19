@@ -17,7 +17,6 @@ window.addEventListener('load', () => {
 
   /* ***** GESTION SEARCH RESPONSIVE **** */
   const btnSearchMobile = document.getElementById('btn-search-mobile')
-  console.log(btnSearchMobile)
   const searchInput = document.getElementById('search-wrapper')
 
   btnSearchMobile.addEventListener('click', () => {
