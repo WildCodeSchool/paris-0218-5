@@ -8,6 +8,7 @@
     .randomeal-wrapper span{
         display : inline-block;
     }
+
 }
 
 @media (max-width: 80rem)  {
@@ -53,9 +54,14 @@
     #logo-wrapper img{
         max-width: 150px;
     }
+
     #filter-simple .item-filter span{
         display: block;
         margin: 0 auto;
+    }
+
+    #popup-cnx #popup-content {
+    width:90%;    
     }
 
 }
