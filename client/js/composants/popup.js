@@ -1,4 +1,5 @@
-<span class="close-popup-btn" title="Close Modal" id="close-popup">x</span>
+export const popup =
+`<span class="close-popup-btn" title="Close Modal" id="close-popup">x</span>
     <div class="row row-responsive" id="popup-content">
         <form class="form-content column-30" id="form-connect">>
             <h3>Connexion</h3>
@@ -31,4 +32,4 @@
 
             <button class='button-general' id='registsubmit' type='submit'>S'inscrire</button>
         </form>
-  </div>
+  </div>`
