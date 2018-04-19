@@ -148,3 +148,4 @@ app.get('/profil/:id', (request, response) => {
 
 // port ecouter
 app.listen(3333, () => console.log('jecoute sur le port 3333'))
+  
