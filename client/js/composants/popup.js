@@ -1,8 +1,6 @@
-export const popup =
-  `
 <span class="close-popup-btn" title="Close Modal" id="close-popup">x</span>
     <div class="row row-responsive" id="popup-content">
-        <form class="form-content column-30">
+        <form class="form-content column-30" id="form-connect">>
             <h3>Connexion</h3>
             <p>Déjà inscrit ? <br> Connecte toi ici.</p>
             <div class ="input-container">
@@ -15,11 +13,10 @@ export const popup =
                 <a href="#">Mot de passe oublié ?</a>
             </p>
 
-            <a href="#" class="button-general" id="logsubmit">
-                <span>Se connecter</span>
-            </a>
+            <button class='button-general' id='logsubmit' type='submit'>Se connecter</button>
+
         </form>
-        <form class="form-content column-30">
+        <form class="form-content column-30" id="form-register">
             <h3>Créer un compte</h3>
             <p>Pas encore inscrit ? <br>Remplis le formulaire !</p>
             <div class ="input-container">
@@ -32,9 +29,6 @@ export const popup =
             <p>En créant un compte j'accepte les<br>
                 <a href="#" style="color:dodgerblue">termes et conditions</a>.</p>
 
-            <a href="#" class="button-general" id="registsubmit">
-                <span>S'inscrire</span>
-            </a>
+            <button class='button-general' id='registsubmit' type='submit'>S'inscrire</button>
         </form>
-  </div></div>
-`
+  </div>

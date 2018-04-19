@@ -62,6 +62,27 @@ app.get('/restaurants', (request, response) => {
       // console.log pour éviter une erreur de lint
       console.log(err)
     })
+
+app.post('/registrer', (request, response, next) => {
+  console.log(request.method, request.url, request.body)
+  const id = Math.random().toString(36).slice(2).padEnd(11, '0')
+  const fileName = `users${id}.json`
+  const filePath = path.join(__dirname, '../mocks', fileName)
+
+  const content = {
+    id: id,
+    email: request.body.email,
+    password: request.body.password,
+    createdAt: Date.now()
+  }
+
+  writeFile(filePath, JSON.stringify(content), 'utf8')
+    .then(() => response.json('OK'))
+    .catch(next)
+})
+
+app.get('/restaurants', (req, res) => {
+  res.json(restaurants)
 })
 
 app.get('/categories', (request, response) => {
@@ -84,13 +105,6 @@ app.get('/categories', (request, response) => {
 app.post('/restaurants', (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(11, '0')
   const filePath = path.join(__dirname, '../mocks/restos.json')
-
-  // ecrire dans le JSON :
-  // 1 Lire le fichier et convertir le buffer en string (utf8)
-  // 2 convertir la string en objet JS
-  // 3 ajouter le nouveau bloc en array
-  // 4 convertir l'array en string
-  // 5 écrire le fichier
 
   // 1 Lire le fichier et convertir le buffer en string (utf8)
   readFile(filePath, 'utf8')
