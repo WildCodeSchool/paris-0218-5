@@ -28,6 +28,6 @@ form.addEventListener('submit', event => {
       vegetarian: vegetarian
     })
   })
-  .then(res => console.log(res.status))
-  .then(res => window.location.href = 'index.html')
+    .then(res => console.log(res.status))
+    .then(res => window.location.replace('index.html'))
 })
