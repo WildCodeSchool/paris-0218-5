@@ -51,49 +51,32 @@ app.get('/restaurants', (request, response) => {
   const filePath = path.join(__dirname, '../mocks/restos.json')
   // promise
   readFile(filePath)
-  // traitement de la donnéee
+    // traitement de la donnéee
     .then(data => {
       response.header('Content-Type', 'application/json; charset=utf-8')
       response.end(data)
     })
-  // gestion de l'erreur
+    // gestion de l'erreur
     .catch(err => {
       response.status(404).end('not found')
-      // il faut utiliser le parametre 'err' pour éviter une erreur de lint
+      // console.log pour éviter une erreur de lint
       console.log(err)
     })
-
-app.post('/registrer', (request, response, next) => {
-  console.log(request.method, request.url, request.body)
-  const id = Math.random().toString(36).slice(2).padEnd(11, '0')
-  const fileName = `users${id}.json`
-  const filePath = path.join(__dirname, '../mocks', fileName)
-
-  const content = {
-    id: id,
-    email: request.body.email,
-    password: request.body.password,
-    createdAt: Date.now()
-  }
-
-  writeFile(filePath, JSON.stringify(content), 'utf8')
-    .then(() => response.json('OK'))
-    .catch(next)
 })
 
 app.get('/categories', (request, response) => {
   const filePath2 = path.join(__dirname, '../mocks/categories.json')
   // promise
   readFile(filePath2)
-  // traitement de la donnéee
+    // traitement de la donnéee
     .then(data => {
       response.header('Content-Type', 'application/json; charset=utf-8')
       response.end(data)
     })
-  // gestion de l'erreur
+    // gestion de l'erreur
     .catch(err => {
       response.status(404).end('not found')
-      // il faut utiliser le parametre 'err' pour éviter une erreur de lint
+      // console.log pour éviter une erreur de lint
       console.log(err)
     })
 })
@@ -101,6 +84,13 @@ app.get('/categories', (request, response) => {
 app.post('/restaurants', (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(11, '0')
   const filePath = path.join(__dirname, '../mocks/restos.json')
+
+  // ecrire dans le JSON :
+  // 1 Lire le fichier et convertir le buffer en string (utf8)
+  // 2 convertir la string en objet JS
+  // 3 ajouter le nouveau bloc en array
+  // 4 convertir l'array en string
+  // 5 écrire le fichier
 
   // 1 Lire le fichier et convertir le buffer en string (utf8)
   readFile(filePath, 'utf8')
