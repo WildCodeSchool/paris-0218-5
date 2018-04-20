@@ -27,12 +27,15 @@
 .icn.icn-search{
     background-image: url('../images/icones/search.svg')
 }
-.active .icn.icn-cook{
+.icn.icn-search-white{
+    background-image: url('../images/icones/search-white.svg')
+}
+.item-filter.active .icn.icn-cook{
     background-image: url('../images/icones/hat-cook-white.svg')
 }
-.active .icn.icn-budget{
+.item-filter.active .icn.icn-budget{
     background-image: url('../images/icones/pig-white.svg')
 }
-.active .icn.icn-like{
+.item-filter.active .icn.icn-like{
     background-image: url('../images/icones/like-white.svg')
 }

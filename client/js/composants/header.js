@@ -6,7 +6,7 @@ export const header =
                 <img src="images/logo.svg" alt="logo" />
             </a>
         </div>
-        <h1>On mange où ?</h1>
+        <h1>Take eat easy</h1>
     </div>
 
     <div id="choice-wrapper" class="column column-xs-10 column-md-40 flex">
@@ -14,7 +14,7 @@ export const header =
             <form class="search">
                 <input type="text" placeholder="Chercher un restaurant">
                 <button class="btn-search" type="submit">
-                <span class="icn icn-search"></span>
+                <span class="icn icn-search-white"></span>
                 </button>
             </form>
         </div>
@@ -32,7 +32,7 @@ export const header =
         <span class="icn icn-dice"></span>
       </div>
         <div id="btn-search-mobile" class="btn-red btn-search mobile-only">
-          <span class="icn icn-search"></span>
+          <span class="icn icn-search-white"></span>
         </div>
     </div>
     `
