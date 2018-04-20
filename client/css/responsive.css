@@ -18,6 +18,7 @@
         flex: 0 0 30%;
         max-width: 30%;
     }
+
 }
 
 @media (max-width: 80rem) {
@@ -69,8 +70,14 @@
     #logo-wrapper img {
         max-width: 150px;
     }
-    #filter-simple .item-filter span {
+
+    #filter-simple .item-filter span{
         display: block;
         margin: 0 auto;
     }
+
+    #popup-cnx #popup-content {
+    width:90%;    
+    }
+
 }

@@ -1,16 +1,20 @@
 const express = require('express')
-const categories = require('../mocks/categories.json')
-const restaurants = require('../mocks/restos.json')
+const fs = require('fs')
+
+// variable convertir les callbacks en promises :
+const util = require('util')
+
+const path = require('path')
+
+// fonction pour convertir les callbacks en promises :
+const readFile = util.promisify(fs.readFile)
+const writeFile = util.promisify(fs.writeFile)
+
+// const categories = require('../mocks/categories.json')
+// const restaurants = require('../mocks/restos.json')
 const users = require('../mocks/user.json')
 
 const app = express()
-const fs = require('fs')
-const path = require('path')
-
-const util = require('util')
-
-const writeFile = util.promisify(fs.writeFile)
-const readFile = util.promisify(fs.readFile)
 
 // autorisation
 app.use((request, response, next) => {
@@ -43,19 +47,45 @@ app.get('/', (request, response) => {
   response.send('ok')
 })
 
-app.get('/restaurants', (req, res) => {
-  res.json(restaurants)
+app.get('/restaurants', (request, response) => {
+  const filePath = path.join(__dirname, '../mocks/restos.json')
+  // promise
+  readFile(filePath)
+    // traitement de la donnéee
+    .then(data => {
+      response.header('Content-Type', 'application/json; charset=utf-8')
+      response.end(data)
+    })
+    // gestion de l'erreur
+    .catch(err => {
+      response.status(404).end('not found')
+      // console.log pour éviter une erreur de lint
+      console.log(err)
+    })
 })
 
 app.get('/categories', (request, response) => {
-  response.json(categories)
+  const filePath2 = path.join(__dirname, '../mocks/categories.json')
+  // promise
+  readFile(filePath2)
+    // traitement de la donnéee
+    .then(data => {
+      response.header('Content-Type', 'application/json; charset=utf-8')
+      response.end(data)
+    })
+    // gestion de l'erreur
+    .catch(err => {
+      response.status(404).end('not found')
+      // console.log pour éviter une erreur de lint
+      console.log(err)
+    })
 })
 
 app.post('/restaurants', (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(11, '0')
   const filePath = path.join(__dirname, '../mocks/restos.json')
 
-  // ecrire danbs le JSON :
+  // ecrire dans le JSON :
   // 1 Lire le fichier et convertir le buffer en string (utf8)
   // 2 convertir la string en objet JS
   // 3 ajouter le nouveau bloc en array
@@ -68,9 +98,9 @@ app.post('/restaurants', (request, response, next) => {
     // 2 convertir la string en objet JS
 
     .then(JSON.parse)
-    .then(restaurants => {
+    .then(restos => {
       // 3 ajouter le nouveau bloc en array
-      restaurants.push({
+      restos.push({
         id: id,
         name: request.body.name,
         location: request.body.location,
@@ -84,7 +114,7 @@ app.post('/restaurants', (request, response, next) => {
       })
 
       // 4 convertir l'array en string
-      const content = JSON.stringify(restaurants, null, 2)
+      const content = JSON.stringify(restos, null, 2)
 
       // 5 écrire dans le fichier
       return writeFile(filePath, content, 'utf8')
@@ -101,6 +131,5 @@ app.get('/profil/:id', (request, response) => {
   const profil = users.find(profil => profil.id === id)
   response.json(profil)
 })
-
 // port ecouter
 app.listen(3333, () => console.log('jecoute sur le port 3333'))
