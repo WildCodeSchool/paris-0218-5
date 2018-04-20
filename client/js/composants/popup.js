@@ -1,5 +1,5 @@
 export const popup =
-/* html*/`<span class="close-popup-btn" title="Close Modal" id="close-popup">x</span>
+/* html */ `<span class="close-popup-btn" title="Close Modal" id="close-popup">x</span>
     <div class="row row-responsive" id="popup-content">
         <form class="form-content column column-md-50 column-xs-100" id="form-connect">
             <h3>Connexion</h3>

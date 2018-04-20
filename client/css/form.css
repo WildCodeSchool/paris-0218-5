@@ -4,8 +4,8 @@
 }
 
 main input, 
-main select, 
-main textarea {
+select, 
+textarea {
   display: inline-block;
   background: #fff;
   margin-top: 5px;
@@ -15,8 +15,8 @@ input:disabled{
   background: transparent;
 }
 main input:focus,
-main select:focus, 
-main textarea:focus {
+select:focus, 
+textarea:focus {
   outline: none;
   border: 0.1rem solid #0ddbd5;
 }
