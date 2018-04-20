@@ -63,15 +63,6 @@ window.addEventListener('load', () => {
             that.previousElementSibling.previousElementSibling.classList.add('same-row')
           }
 
-          // if(that.classList.contains('pos-3')){
-          //   console.log(that.previousSibling)
-          // }
-          // console.log(listResto.childNodes[])
-          // if(that.classList.contains('3')){
-          //   column.style.order = 2
-          //   column.previousElementSibling.style.order=3
-          // }
-
         })
       }
     })
