@@ -14,9 +14,10 @@ textarea {
 input:disabled{
   background: transparent;
 }
+
 main input:focus,
-select:focus, 
-textarea:focus {
+select:focus,
+#description-etab:focus {
   outline: none;
   border: 0.1rem solid #0ddbd5;
 }
