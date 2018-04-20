@@ -50,19 +50,18 @@ window.addEventListener('load', () => {
           that.classList.add('active')
 
           // Pour améliorer la mise en page, on rétrécit les éléments adjacents
-          //On vise le premier élément de chaque ligne
+          // On vise le premier élément de chaque ligne
           if (thatIndex === 0 || (thatIndex) % 3 === 0) {
-            //On diminue la taille des deux suivants
+            // On diminue la taille des deux suivants
             that.nextElementSibling.classList.add('same-row')
             that.nextElementSibling.nextElementSibling.classList.add('same-row')
-          }else if (thatIndex-1 === 0 || (thatIndex-1) % 3 === 0) {
+          } else if (thatIndex - 1 === 0 || (thatIndex - 1) % 3 === 0) {
             that.previousElementSibling.classList.add('same-row')
             that.nextElementSibling.classList.add('same-row')
-          }else if (thatIndex-2 === 0 || (thatIndex-2) % 3 === 0) {
+          } else if (thatIndex - 2 === 0 || (thatIndex - 2) % 3 === 0) {
             that.previousElementSibling.classList.add('same-row')
             that.previousElementSibling.previousElementSibling.classList.add('same-row')
           }
-
         })
       }
     })

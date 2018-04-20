@@ -1,5 +1,4 @@
 export const restaurantElement = restaurant => {
-
   return `
       <div class='column column-md-33 column-sm-50 xs-100'>
         <div class="restaurant">
