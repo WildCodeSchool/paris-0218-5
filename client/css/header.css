@@ -91,6 +91,9 @@ header form.search .btn-search{
 header form.search .btn-search:hover{
     background-color : #B0002C;
 }
+header input{
+    border : none;
+}
 
 form.search::after{
     width : 1px;

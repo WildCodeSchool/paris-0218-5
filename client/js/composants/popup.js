@@ -1,14 +1,14 @@
 export const popup =
-`<span class="close-popup-btn" title="Close Modal" id="close-popup">x</span>
+/* html*/`<span class="close-popup-btn" title="Close Modal" id="close-popup">x</span>
     <div class="row row-responsive" id="popup-content">
-        <form class="form-content column-30" id="form-connect">>
+        <form class="form-content column column-md-50 column-xs-100" id="form-connect">
             <h3>Connexion</h3>
-            <p>Déjà inscrit ? <br> Connecte toi ici.</p>
+            <h5>Déjà inscrit ? </h5>
             <div class ="input-container">
             <input type="text" placeholder="Ton email" name="email" id="logemail" required>
 
             <input type="password" placeholder="Ton mot de passe" name="psw" id="logpsw" required>
-            </div
+            </div>
 
             <p>
                 <a href="#">Mot de passe oublié ?</a>
@@ -17,18 +17,16 @@ export const popup =
             <button class='button-general' id='logsubmit' type='submit'>Se connecter</button>
 
         </form>
-        <form class="form-content column-30" id="form-register">
+        <form class="form-content column column-md-50 column-xs-100" id="form-register">
             <h3>Créer un compte</h3>
-            <p>Pas encore inscrit ? <br>Remplis le formulaire !</p>
+            <h5>Pas encore inscrit ? </h5>
             <div class ="input-container">
-            <input type="text" placeholder="Ton email" name="email" id="registemail" required>
+            <input type="text" placeholder="Ton email" name="email" id="register-email" required>
 
-            <input type="password" placeholder="Choisir un mot de passe" name="psw" id="registpsw" required>
+            <input type="password" placeholder="Choisir un mot de passe" name="psw" id="register-psw" required>
 
-            <input type="password" placeholder="Confirmer le mot de passe" name="regist-psw-repeat" id="confirmpsw" required>
+            <input type="password" placeholder="Confirmer le mot de passe" name="regist-psw-repeat" id="confirm-psw" required>
             </div>
-            <p>En créant un compte j'accepte les<br>
-                <a href="#" style="color:dodgerblue">termes et conditions</a>.</p>
 
             <button class='button-general' id='registsubmit' type='submit'>S'inscrire</button>
         </form>
