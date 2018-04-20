@@ -1,20 +1,32 @@
-  .input-container {
-    display: flex;
-    flex-direction: column;
-  }
-    
-  input[type=text], 
-  input[type=password] {
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
 
-  /* Add a background color when the inputs get focus */
-input[type=text]:focus, 
-input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
+main input, 
+select, 
+textarea {
+  display: inline-block;
+  background: #fff;
+  margin-top: 5px;
+  max-width : 700px;
+}
+input:disabled{
+  background: transparent;
+}
+
+main input:focus,
+select:focus,
+#description-etab:focus {
+  outline: none;
+  border: 0.1rem solid #0ddbd5;
+}
+
+#form label {
+  margin: 10px 0;
+  max-width: 750px;
+}
+textarea{
+  height : auto
+}
+

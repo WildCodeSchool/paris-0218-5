@@ -20,13 +20,24 @@
   background-color: rgba(193, 193, 193, 0.6);
   padding-top: 50px;
 }
-
+.popup-outline .row{
+  padding : 40px;
+}
+.popup-outline .row .column{
+  margin-bottom : 0px;
+  padding-left : 30px;
+  padding-right : 30px;
+}
+.popup-outline input{
+  margin : 5px 0;
+}
 #popup-content {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
-  width: 70%; /* Could be more or less, depending on screen size */
+  width: 80%; /* Could be more or less, depending on screen size */
   justify-content: space-around;
+  max-width: 1200px;
   
 }
 /* Modal Content/Box */
