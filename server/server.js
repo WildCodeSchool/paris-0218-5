@@ -81,10 +81,6 @@ app.post('/registrer', (request, response, next) => {
     .catch(next)
 })
 
-app.get('/restaurants', (req, res) => {
-  res.json(restaurants)
-})
-
 app.get('/categories', (request, response) => {
   const filePath2 = path.join(__dirname, '../mocks/categories.json')
   // promise
