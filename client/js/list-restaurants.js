@@ -24,6 +24,10 @@ window.addEventListener('load', () => {
         let restoCat = restaurants.filter(restaurants => restaurants.budget === budget)
         return restoCat
       }
+      else{
+        let restoCat = restaurants
+        return restoCat
+      }
     })
     .then(restoCat => {
       listResto.innerHTML = restoCat.map(restaurantElement).join('')

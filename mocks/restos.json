@@ -336,5 +336,17 @@
       5,
       6
     ]
+  },
+  {
+    "id": "ezvrb0qj5l4",
+    "name": "restorant",
+    "location": "rue des restos",
+    "category": "Asiatique",
+    "url": "",
+    "budget": "0-5",
+    "description": "restaurant",
+    "cart": "on",
+    "vegetarian": "on",
+    "like": []
   }
 ]

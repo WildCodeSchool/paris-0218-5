@@ -30,6 +30,9 @@
 .icn.icn-search-white{
     background-image: url('../images/icones/search-white.svg')
 }
+.icn.icn-filter-white{
+    background-image: url('../images/icones/filter-white.svg')
+}
 .item-filter.active .icn.icn-cook{
     background-image: url('../images/icones/hat-cook-white.svg')
 }
