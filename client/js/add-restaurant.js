@@ -27,6 +27,7 @@ form.addEventListener('submit', event => {
       cart: cart,
       vegetarian: vegetarian
     })
-  }).then(res => console.log(res.status))
-    .then(res => window.location.href === 'index.html')
+  })
+  .then(res => console.log(res.status))
+  .then(res => window.location.href = 'index.html')
 })
