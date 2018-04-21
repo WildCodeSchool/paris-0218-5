@@ -23,8 +23,7 @@ window.addEventListener('load', () => {
         document.querySelector('h2').innerHTML = `${budget}`
         let restoCat = restaurants.filter(restaurants => restaurants.budget === budget)
         return restoCat
-      }
-      else{
+      } else {
         let restoCat = restaurants
         return restoCat
       }
@@ -55,14 +54,14 @@ window.addEventListener('load', () => {
 
           // Pour améliorer la mise en page, on rétrécit les éléments adjacents
           // On vise le premier élément de chaque ligne
-          if (thatIndex === 0 || (thatIndex) % 3 === 0) {
+          if (thatIndex % 3 === 0) {
             // On diminue la taille des deux suivants
             that.nextElementSibling.classList.add('same-row')
             that.nextElementSibling.nextElementSibling.classList.add('same-row')
-          } else if (thatIndex - 1 === 0 || (thatIndex - 1) % 3 === 0) {
+          } else if (thatIndex % 3 === 1) {
             that.previousElementSibling.classList.add('same-row')
             that.nextElementSibling.classList.add('same-row')
-          } else if (thatIndex - 2 === 0 || (thatIndex - 2) % 3 === 0) {
+          } else if (thatIndex % 3 === 2) {
             that.previousElementSibling.classList.add('same-row')
             that.previousElementSibling.previousElementSibling.classList.add('same-row')
           }
