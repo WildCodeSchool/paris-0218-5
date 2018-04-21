@@ -36,8 +36,11 @@ window.addEventListener('load', () => {
 
       // Pour chaque fiche de resto on ajoute un event au click
       for (let column of columns) {
+        const nbColumn = Math.round(listResto.offsetWidth / column.offsetWidth)
+
         column.addEventListener('click', (e) => {
           const that = e.currentTarget
+          // thatIndex recupère la position de l'élément
           const thatIndex = Array.from(columns).indexOf(that)
 
           // on enlève les classes déjà présentes
@@ -49,22 +52,17 @@ window.addEventListener('load', () => {
               column.classList.remove('same-row')
             }
           }
-          // on ajoute une classe active à la fiche visée
-          that.classList.add('active')
-
-          // Pour améliorer la mise en page, on rétrécit les éléments adjacents
-          // On vise le premier élément de chaque ligne
-          if (thatIndex % 3 === 0) {
-            // On diminue la taille des deux suivants
-            that.nextElementSibling.classList.add('same-row')
-            that.nextElementSibling.nextElementSibling.classList.add('same-row')
-          } else if (thatIndex % 3 === 1) {
-            that.previousElementSibling.classList.add('same-row')
-            that.nextElementSibling.classList.add('same-row')
-          } else if (thatIndex % 3 === 2) {
-            that.previousElementSibling.classList.add('same-row')
-            that.previousElementSibling.previousElementSibling.classList.add('same-row')
+          // On récupère le numéro de la ligne
+          const posRow = Math.floor(thatIndex / nbColumn)
+          // On récupère le premier élément de la ligne
+          const thatRow = posRow * nbColumn
+          // On ajoute la classe same-row sur chaque élément
+          for (let i = thatRow; i < thatRow + nbColumn; i++) {
+            columns.item(i).classList.add('same-row')
           }
+          // on enlève same-row et ajoute une classe active à la fiche visée
+          that.classList.remove('same-row')
+          that.classList.add('active')
         })
       }
     })
