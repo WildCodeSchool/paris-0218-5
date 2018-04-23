@@ -2,18 +2,51 @@ export const restaurantElement = restaurant => {
   let str = `
   <div class='column column-md-33 column-sm-50 xs-100'>
   <div class="restaurant">
-    <img src="${restaurant.url}">
-    <h5>${restaurant.name}</h5>
-    <h6>${restaurant.category}</h6>
+    <div class="simple-infos">
+      <img src="${restaurant.url}">
+      <h5>${restaurant.name}</h5>
+      <h6>${restaurant.category}</h6>
+    </div>
     <p class="more-infos">${restaurant.description}</p>
-    <span class="icn icn-like"></span>${restaurant.like.length}
-    <p>${restaurant.budget}</p>
-  </div>
-</div>
-  `
-  if()
-  return `
+    <a target="_blank" href="https://maps.google.com/?q=${restaurant.location}" class="more-infos">
+      <span class="icn icn-location"></span>
+      <span class="text">${restaurant.location}</span>
+    </a>
+   `
 
-    `
-
+  if (restaurant.takeAway === "Oui") {
+    str = `${str}
+    <p class="more-infos">
+      <span class="icn icn-bag"></span>
+      <span>Propose à emporter</span>
+    </p> `
+  }
+  if (restaurant.cart === "Oui") {
+    str =
+    /* html */ `${str}
+    <p class="more-infos">
+      <span class="icn icn-card"></span>
+      <span>Accepte la CB</span>
+    </p> `
+  }
+  if (restaurant.vegetarian === "Oui") {
+    str =
+    /* html */ `${str}
+    <p class="more-infos">
+      <span class="icn icn-carrot"></span>
+      <span>Propose un plat végétarien</span>
+    </p>`
+  }
+  str = /*html*/ `${str}
+    <div class="like-wrapper" id="liker">
+      <span class="icn icn-like"></span>
+      <span>${restaurant.like.length}</span>
+    </div>
+    <p>
+      <span class="icn icn-price"></span>
+      <span>${restaurant.budget}</span>
+    </p>
+      </div>
+    </div>`
+  return str
 }

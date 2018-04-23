@@ -1,4 +1,4 @@
-@media (min-width: 80rem) {
+@media (min-width: 1280px) {
     .mobile-only {
         display: none;
     }
@@ -20,7 +20,7 @@
     }
 }
 
-@media (max-width: 80rem) {
+@media (max-width: 1280px) {
     header h1 {
         font-size: 2.5rem;
     }
@@ -54,7 +54,7 @@
     }
 }
 
-@media (min-width: 40rem) and (max-width: 80rem) {
+@media (min-width: 641px) and (max-width: 1260px) {
     .row.row-responsive .column.column-sm-50.active {
         flex: 0 0 60%;
         max-width: 60%;
@@ -67,7 +67,7 @@
     }
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 640px) {
     main {
         padding: 80px 20px 0 20px;
     }

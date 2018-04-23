@@ -44,12 +44,11 @@
 					<label>Budget * :
 						<select name="budget" id="budget-etab" required>
 							<option value="Choisir">Choisir</option>
-							<option value="0-5">Moins de 5€</option>
-							<option value="5-10">Entre 5 et 10€</option>
-							<option value="10-50">Plus de 10€</option>
+							<option value="Moins de 5€">Moins de 5€</option>
+							<option value="Entre 5 et 10€">Entre 5 et 10€</option>
+							<option value="Plus de 10€">Plus de 10€</option>
 						</select>
 					</label>
-
 
 				</div>
 				<div class="column column-md-50 column-xs-100">
@@ -60,11 +59,14 @@
 						<input id="file" type="file" />
 					</label>
 					<label>Carte bleue acceptée :
-						<input type="radio" name="cb" id="cb-etab" />
+						<input type="checkbox" name="cb" id="cb-etab" />
 					</label>
 
 					<label>Adapté pour les végétariens :
-						<input type="radio" name="vege" id="vege-etab" />
+						<input type="checkbox" name="vege" id="vege-etab" />
+					</label>
+					<label>Vente à emporter :
+						<input type="checkbox" name="away" id="away-etab" />
 					</label>
 				</div>
 

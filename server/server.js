@@ -85,13 +85,6 @@ app.post('/restaurants', (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(11, '0')
   const filePath = path.join(__dirname, '../mocks/restos.json')
 
-  // ecrire dans le JSON :
-  // 1 Lire le fichier et convertir le buffer en string (utf8)
-  // 2 convertir la string en objet JS
-  // 3 ajouter le nouveau bloc en array
-  // 4 convertir l'array en string
-  // 5 écrire le fichier
-
   // 1 Lire le fichier et convertir le buffer en string (utf8)
   readFile(filePath, 'utf8')
 
@@ -105,11 +98,12 @@ app.post('/restaurants', (request, response, next) => {
         name: request.body.name,
         location: request.body.location,
         category: request.body.category,
-        url: '',
+        url: request.body.url,
         budget: request.body.budget,
         description: request.body.description,
         cart: request.body.cart,
         vegetarian: request.body.vegetarian,
+        takeAway: request.body.takeAway,
         like: []
       })
 
