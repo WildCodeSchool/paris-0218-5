@@ -56,9 +56,14 @@
 
 @media (min-width: 40rem) and (max-width: 80rem) {
     .row.row-responsive .column.column-sm-50.active {
-        flex: 0 0 100%;
-        max-width: 100%;
-        transition: all 0.2s ease;
+        flex: 0 0 60%;
+        max-width: 60%;
+        transition: all 0.5s ease;
+    }
+    .row.row-responsive .column.column-sm-50.same-row {
+        transition: all 0.4s ease;
+        flex: 0 0 40%;
+        max-width: 40%;
     }
 }
 

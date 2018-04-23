@@ -1,6 +1,6 @@
 #categories{
     max-width : 1200px;
-    margin : 0 auto;
+    margin : 0 auto 20px auto;
 }
 .image-wrapper{
     background-color: black;
@@ -75,4 +75,10 @@
     display: inline-block;
     vertical-align: middle;
     margin : 0 5px;
+}
+.btns-home{
+    justify-content : center;
+}
+.btns-home .button-general{
+    margin : 0 20px;
 }
