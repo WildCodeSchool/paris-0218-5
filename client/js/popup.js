@@ -16,10 +16,10 @@ window.addEventListener('load', () => {
 
   document.getElementById('form-register').addEventListener('submit', event => {
     event.preventDefault()
-    const email = document.getElementById('register-mail').value
+    const email = document.getElementById('register-email').value
     const password = document.getElementById('register-psw').value
-    const confirmpsw = document.getElementById('confirm-psw').value
-    if (password !== confirmpsw) {
+    const confirmpsw = document.getElementById('confirm-psw')
+    if (password !== confirmpsw.value) {
       confirmpsw.setCustomValidity('Yours passwords do not match')
       return
     }
