@@ -19,13 +19,14 @@ const app = express()
 // autorisation
 app.use((request, response, next) => {
   response.header('Access-Control-Allow-Origin', '*')
+  response.header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT')
   response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   next()
 })
 
 // middleware pour gerer la requete post du formulaire
 app.use((request, response, next) => {
-  if (request.method === 'GET') return next()
+  if (request.method !== 'POST' && request.method !== 'PUT') return next()
   let accumulator = ''
 
   request.on('data', data => {
@@ -105,12 +106,11 @@ app.post('/restaurants', (request, response, next) => {
         name: request.body.name,
         location: request.body.location,
         category: request.body.category,
-        url: '',
         budget: request.body.budget,
+        // file
         description: request.body.description,
         cart: request.body.cart,
-        vegetarian: request.body.vegetarian,
-        like: []
+        vegetarian: request.body.vegetarian
       })
 
       // 4 convertir l'array en string
@@ -131,5 +131,31 @@ app.get('/profil/:id', (request, response) => {
   const profil = users.find(profil => profil.id === id)
   response.json(profil)
 })
-// port ecouter
+
+app.put('/profil/:id', (request, response, next) =>{
+  const id = Number(request.params.id)
+  const filePath = path.join(__dirname, `../mocks/user.json`)
+
+
+  readFile(filePath, 'utf8')
+  .then(JSON.parse)
+  .then(users => {
+    const user = {
+      id: request.body.id,
+      email: request.body.email,
+      password: request.body.password,
+      createdAt: Date.now()
+    }
+    console.log(user)
+
+    // users.push(user)
+    const content = JSON.stringify(user, null, 2)
+    return writeFile(filePath, content, 'utf8')
+  })
+
+  .then(() => response.json('ItsOK'))
+  .catch(next)
+})
+
+  // port ecouter
 app.listen(3333, () => console.log('jecoute sur le port 3333'))

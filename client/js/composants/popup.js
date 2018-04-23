@@ -21,14 +21,13 @@ export const popup =
             <h3>Créer un compte</h3>
             <p>Pas encore inscrit ? <br>Remplis le formulaire !</p>
             <div class ="input-container">
-            <input type="text" placeholder="Ton email" name="email" id="registemail" required>
+            <input type="text" placeholder="Ton email" name="email" id="register-mail" required>
 
-            <input type="password" placeholder="Choisir un mot de passe" name="psw" id="registpsw" required>
+            <input type="password" placeholder="Choisir un mot de passe" name="psw" id="register-psw" required>
 
-            <input type="password" placeholder="Confirmer le mot de passe" name="regist-psw-repeat" id="confirmpsw" required>
+            <input type="password" placeholder="Confirmer le mot de passe" name="regist-psw-repeat" id="confirm-psw" required>
             </div>
             <p>En créant un compte j'accepte les<br>
-                <a href="#" style="color:dodgerblue">termes et conditions</a>.</p>
 
             <button class='button-general' id='registsubmit' type='submit'>S'inscrire</button>
         </form>
