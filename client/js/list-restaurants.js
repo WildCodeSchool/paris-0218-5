@@ -13,14 +13,14 @@ window.addEventListener('load', () => {
   window.fetch(`http://localhost:3333/restaurants/`)
     .then(res => res.json())
     .then(restaurants => {
+      // On affiche les bons restos en fonction du budget ou de la catégorie
       if (cat) {
-        document.querySelector('h2').innerHTML = `${cat}`
+        document.querySelector('h2').innerHTML = cat
         let restoCat = restaurants.filter(restaurants => restaurants.category === cat)
         return restoCat
       } else if (budget) {
         budget = budget === '1' ? 'Moins de 5€' : budget === '2' ? 'De 5 à 10€' : 'Plus de 10€'
-
-        document.querySelector('h2').innerHTML = `${budget}`
+        document.querySelector('h2').innerHTML = budget
         let restoCat = restaurants.filter(restaurants => restaurants.budget === budget)
         return restoCat
       } else {
@@ -33,15 +33,17 @@ window.addEventListener('load', () => {
     })
     .then(() => {
       let columns = listResto.getElementsByClassName('column')
-
+      const nbColumn = Math.round(listResto.offsetWidth / columns[0].offsetWidth)
       // Pour chaque fiche de resto on ajoute un event au click
       for (let column of columns) {
-        const nbColumn = Math.round(listResto.offsetWidth / column.offsetWidth)
+        let resto = column.querySelector('.restaurant .simple-infos')
 
-        column.addEventListener('click', (e) => {
+        resto.addEventListener('click', e => {
           const that = e.currentTarget
+          // On récupère la colonne liée à l'élément cliquable
+          const thatColumn = that.parentNode.parentNode
           // thatIndex recupère la position de l'élément
-          const thatIndex = Array.from(columns).indexOf(that)
+          const thatIndex = Array.from(columns).indexOf(thatColumn)
 
           // on enlève les classes déjà présentes
           for (let column of columns) {
@@ -58,11 +60,13 @@ window.addEventListener('load', () => {
           const thatRow = posRow * nbColumn
           // On ajoute la classe same-row sur chaque élément
           for (let i = thatRow; i < thatRow + nbColumn; i++) {
-            columns.item(i).classList.add('same-row')
+            if (columns.item(i) !== null) {
+              columns.item(i).classList.add('same-row')
+            }
           }
-          // on enlève same-row et ajoute une classe active à la fiche visée
-          that.classList.remove('same-row')
-          that.classList.add('active')
+          // on enlève same-row et ajoute une classe active à la colonne visée
+          thatColumn.classList.remove('same-row')
+          thatColumn.classList.add('active')
         })
       }
     })

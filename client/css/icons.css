@@ -42,3 +42,19 @@
 .item-filter.active .icn.icn-like{
     background-image: url('../images/icones/like-white.svg')
 }
+.icn.icn-location{
+    background-image: url('../images/icones/location.svg')
+}
+.icn.icn-card{
+    background-image: url('../images/icones/credit-card.svg')
+}
+.icn.icn-carrot{
+    background-image: url('../images/icones/carrot.svg')
+}
+.icn.icn-bag{
+    background-image: url('../images/icones/bag.svg')
+}
+.icn.icn-price{
+    background-image: url('../images/icones/price.svg')
+}
+
