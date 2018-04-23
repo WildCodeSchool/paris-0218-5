@@ -55,7 +55,7 @@ app.post('/registrer', (request, response, next) => {
     password: request.body.password,
     createdAt: Date.now()
   }
-
+  //jecrit
   writeFile(filePath, JSON.stringify(content), 'utf8')
     .then(() => response.json('OK'))
     .catch(next)
