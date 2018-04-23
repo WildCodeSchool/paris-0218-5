@@ -15,28 +15,22 @@
 
 	</header>
 
-	<main>
+	<main class="page-content">
 		<div id="add-resto">
 
 			<h3>Ajouter un nouveau restaurant</h3>
 
-			<p>Remplissez les champs ci-dessous :</p>
-
-			<form id="form">
-				<div>
-					<label>Nom :
+			<form id="form" class="row row-responsive">
+				<div class="column column-md-50 column-xs-100">
+					<label>Nom * :
 						<input type="text" id="name-etab" name="nom" placeholder="Nom du restaurant" required/>
 					</label>
-				</div>
 
-				<div>
 					<label>Adresse :
 						<input type="text" id="adress-etab" name="adresse" placeholder="Adresse complète" required/>
 					</label>
-				</div>
 
-				<div>
-					<label>Catégorie :
+					<label>Catégorie * :
 						<select name="category" id="catego-etab" required>
 							<option value="Choisir">Choisir</option>
 							<option value="Asiatique">Asiatique</option>
@@ -47,41 +41,32 @@
 							<option value="Snack">Snack</option>
 						</select>
 					</label>
-				</div>
+					<label>Budget * :
+						<select name="budget" id="budget-etab" required>
+							<option value="Choisir">Choisir</option>
+							<option value="Moins de 5€">Moins de 5€</option>
+							<option value="Entre 5 et 10€">Entre 5 et 10€</option>
+							<option value="Plus de 10€">Plus de 10€</option>
+						</select>
+					</label>
 
-				<div>
+				</div>
+				<div class="column column-md-50 column-xs-100">
+					<label>Description :
+						<textarea name="description" id="description-etab" rows="4" cols="50"></textarea>
+					</label>
 					<label>Photo :
 						<input id="file" type="file" />
 					</label>
-				</div>
-
-
-				<div>
-					<label>Budget :
-						<select name="budget" id="budget-etab" required>
-							<option value="Choisir">Choisir</option>
-							<option value="0-5">Moins de 5€</option>
-							<option value="5-10">Entre 5 et 10€</option>
-							<option value="10-50">Plus de 10€</option>
-						</select>
-					</label>
-				</div>
-
-				<div>
-					<label>Description :
-						<textarea name="description" id="description-etab" required></textarea>
-					</label>
-				</div>
-
-				<div>
 					<label>Carte bleue acceptée :
-						<input type="radio" name="cb" id="cb-etab" />
+						<input type="checkbox" name="cb" id="cb-etab" />
 					</label>
-				</div>
 
-				<div>
 					<label>Adapté pour les végétariens :
-						<input type="radio" name="vege" id="vege-etab" />
+						<input type="checkbox" name="vege" id="vege-etab" />
+					</label>
+					<label>Vente à emporter :
+						<input type="checkbox" name="away" id="away-etab" />
 					</label>
 				</div>
 

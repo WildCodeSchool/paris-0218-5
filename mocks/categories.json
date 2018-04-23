@@ -4,7 +4,7 @@
         {
             "id" :  1,
             "title" : "Asiatique",
-            "url" : "images/categories/asiat4.jpg"
+            "url" : "images/categories/asiatique.jpg"
         },
         {
             "id" :  2,
@@ -14,17 +14,17 @@
         {
             "id" :  3,
             "title" : "French",
-            "url" : "images/categories/french2.jpg"
+            "url" : "images/categories/french.jpg"
         },
         {
             "id" :  4,
             "title" : "Healthy",
-            "url" : "images/categories/healthy2.jpg"
+            "url" : "images/categories/healthy.jpg"
         },
         {
             "id" :  5,
             "title" : "Italien",
-            "url" : "images/categories/pizza.jpg"
+            "url" : "images/categories/italien.jpg"
         },
         {
             "id" :  6,
