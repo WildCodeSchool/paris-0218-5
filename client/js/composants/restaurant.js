@@ -6,7 +6,7 @@ export const restaurantElement = restaurant => {
           <h5>${restaurant.name}</h5>
           <h6>${restaurant.category}</h6>
           <p class="more-infos">${restaurant.description}</p>
-          <p class="more-infos">A emporter ?</p>
+          <p class="more-infos">A emporter ? ${restaurant.takeAway}</p>
           <p class="more-infos">Végétarien ? ${restaurant.vegetarian}</p>
           <p class="more-infos">Carte bancaire ? ${restaurant.cart}</p>
           <p class="more-infos">${restaurant.location}</p>
