@@ -14,14 +14,14 @@ export const restaurantElement = restaurant => {
     </a>
    `
 
-  if (restaurant.takeAway === "Oui") {
+  if (restaurant.takeAway === 'Oui') {
     str = `${str}
     <p class="more-infos">
       <span class="icn icn-bag"></span>
       <span>Propose à emporter</span>
     </p> `
   }
-  if (restaurant.cart === "Oui") {
+  if (restaurant.cart === 'Oui') {
     str =
     /* html */ `${str}
     <p class="more-infos">
@@ -29,7 +29,7 @@ export const restaurantElement = restaurant => {
       <span>Accepte la CB</span>
     </p> `
   }
-  if (restaurant.vegetarian === "Oui") {
+  if (restaurant.vegetarian === 'Oui') {
     str =
     /* html */ `${str}
     <p class="more-infos">
@@ -37,7 +37,7 @@ export const restaurantElement = restaurant => {
       <span>Propose un plat végétarien</span>
     </p>`
   }
-  str = /*html*/ `${str}
+  str = /* html */ `${str}
     <div class="like-wrapper" id="liker">
       <span class="icn icn-like"></span>
       <span>${restaurant.like.length}</span>

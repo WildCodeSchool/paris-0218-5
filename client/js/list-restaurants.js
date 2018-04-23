@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
   window.fetch(`http://localhost:3333/restaurants/`)
     .then(res => res.json())
     .then(restaurants => {
-      //On affiche les bons restos en fonction du budget ou de la catégorie
+      // On affiche les bons restos en fonction du budget ou de la catégorie
       if (cat) {
         document.querySelector('h2').innerHTML = cat
         let restoCat = restaurants.filter(restaurants => restaurants.category === cat)
@@ -34,11 +34,9 @@ window.addEventListener('load', () => {
     .then(() => {
       let columns = listResto.getElementsByClassName('column')
       const nbColumn = Math.round(listResto.offsetWidth / columns[0].offsetWidth)
-      console.log(nbColumn);
       // Pour chaque fiche de resto on ajoute un event au click
       for (let column of columns) {
         let resto = column.querySelector('.restaurant .simple-infos')
-        console.log(resto);
 
         resto.addEventListener('click', e => {
           const that = e.currentTarget
@@ -62,10 +60,9 @@ window.addEventListener('load', () => {
           const thatRow = posRow * nbColumn
           // On ajoute la classe same-row sur chaque élément
           for (let i = thatRow; i < thatRow + nbColumn; i++) {
-            if(columns.item(i) !== null){
+            if (columns.item(i) !== null) {
               columns.item(i).classList.add('same-row')
             }
-            console.log(columns.item(i));
           }
           // on enlève same-row et ajoute une classe active à la colonne visée
           thatColumn.classList.remove('same-row')
