@@ -50,7 +50,7 @@ app.get('/', (request, response) => {
 app.post('/registrer', (request, response, next) => {
   console.log(request.method, request.url, request.body)
   const id = Math.random().toString(36).slice(2).padEnd(11, '0')
-  const fileName = `users${id}.json`
+  const fileName = `${id}.json`
   const filePath = path.join(__dirname, '../mocks', fileName)
 
   const content = {
