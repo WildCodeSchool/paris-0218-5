@@ -103,6 +103,7 @@ app.post('/restaurants', (request, response, next) => {
         description: request.body.description,
         cart: request.body.cart,
         vegetarian: request.body.vegetarian,
+        takeAway: request.body.takeAway,
         like: []
       })
 

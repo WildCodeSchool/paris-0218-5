@@ -1,19 +1,19 @@
 // import { addtEtab } from './composants/addrest.js'
 const isChecked = (checkBox) => {
   if (checkBox === true) {
-    return "Oui"
+    return 'Oui'
   }
-  return "Non"
+  return 'Non'
 }
 
 const nameFirstLowerCase = (nameRest) => {
-  const listWords = nameRest.split(" ") // les mots de la phrase se transforment en liste
+  const listWords = nameRest.split(' ') // les mots de la phrase se transforment en liste
   const maj = (cel) => { // chaque premiere lettre de chaque élément est mis en majuscule
     const wordMaj = cel.charAt(0).toUpperCase() + cel.substring(1).toLowerCase()
     return wordMaj
   }
   const listWordsMaj = listWords.map(maj)
-  const nameRestMaj = listWordsMaj.join(" "); // le tableau est transformé en phrase dont les mots sont séparés par des espaces
+  const nameRestMaj = listWordsMaj.join(' ')
   return nameRestMaj
 }
 
@@ -36,11 +36,11 @@ form.addEventListener('submit', event => {
     url = `images/categories/${category.toLowerCase()}.jpg`
   }
 
-cart = isChecked(cart)
-vegetarian = isChecked(vegetarian)
-takeAway = isChecked(takeAway)
-name = nameFirstLowerCase(name)
-location = nameFirstLowerCase(location)
+  cart = isChecked(cart)
+  vegetarian = isChecked(vegetarian)
+  takeAway = isChecked(takeAway)
+  name = nameFirstLowerCase(name)
+  location = nameFirstLowerCase(location)
 
   window.fetch('http://localhost:3333/restaurants', {
     method: 'post',
@@ -52,7 +52,8 @@ location = nameFirstLowerCase(location)
       budget: budget,
       description: description,
       cart: cart,
-      vegetarian: vegetarian
+      vegetarian: vegetarian,
+      takeAway: takeAway
     })
   })
     .then(res => console.log(res.status))
