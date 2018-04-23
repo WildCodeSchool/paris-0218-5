@@ -16,7 +16,6 @@ window.addEventListener('load', () => {
 
   document.getElementById('form-register').addEventListener('submit', event => {
     event.preventDefault()
-    console.log(document.getElementById('register-email'));
     const email = document.getElementById('register-email').value
     const password = document.getElementById('register-psw').value
     const confirmpsw = document.getElementById('confirm-psw')
