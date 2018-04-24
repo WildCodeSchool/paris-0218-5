@@ -12,15 +12,19 @@
 
 <body>
     <header class="row row-responsive"></header>
-    <main>
-        <!-- <div class="advanced-filter column column-20">
-            <ul>
-                Types de cuisine
+    <main class="row">
+        <div id="advanced-filter" class="filter-wrapper column column-15">
+            <h6 class="title-cat">Types de cuisine</h6>
+            <ul id="list-by-type">
             </ul>
-        </div> -->
+            <h6 class="title-cat">Types de cuisine</h6>
+            <ul id="list-by-budget">
+                <li class="title-cat">Par budget</li>
+            </ul>
+        </div>
 
-        <div class="column column-80">
-                <h2></h2>
+        <div class="column">
+            <h2></h2>
             <div id="list-restos" class="row row-responsive">
 
             </div>
@@ -33,6 +37,7 @@
 
     <script type="module" src="/js/app.js"></script>
     <script type="module" src="/js/list-restaurants.js"></script>
+    <script type="module" src="/js/filter-advanced.js"></script>
     <script type="module" src="/js/script.js"></script>
     <script type="module" src="/js/popup.js"></script>
 </body>
