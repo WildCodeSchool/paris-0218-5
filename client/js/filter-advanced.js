@@ -3,8 +3,6 @@ const filterAdvanced = document.getElementById('advanced-filter')
 const listByType = document.getElementById('list-by-type')
 const listByBudget = document.getElementById('list-by-budget')
 
-
-
 window.fetch('http://localhost:3333/categories')
   .then(res => res.json())
   .then(categories => {
@@ -13,7 +11,6 @@ window.fetch('http://localhost:3333/categories')
   })
   .then(() => {
     const filters = filterAdvanced.getElementsByTagName('input')
-    console.log(filters);
 
     for(let filter of filters){
       filter.addEventListener('click', () => {

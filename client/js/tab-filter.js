@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+document.addEventListener("DOMContentLoaded", () => {
   const itemsFilter = document.getElementsByClassName('item-filter')
 
   for (let item of itemsFilter) {

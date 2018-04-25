@@ -14,9 +14,7 @@ window.fetch('http://localhost:3333/categories')
     document.getElementById('cuisine').addEventListener('click', () => {
       categoElement.innerHTML = categories['cuisine'].map(categoriesElement).join('')
     })
-    document.getElementById('top').addEventListener('click', () => {
-      displayTop()
-    })
+    document.getElementById('top').addEventListener('click', displayTop)
     categoElement.innerHTML = categories['cuisine'].map(categoriesElement).join('')
   })
 

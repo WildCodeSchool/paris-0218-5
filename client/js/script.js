@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+document.addEventListener("DOMContentLoaded", () => {
   /* ***** GESTION SEARCH RESPONSIVE **** */
   const btnSearchMobile = document.getElementById('btn-search-mobile')
   const searchInput = document.getElementById('search-wrapper')
