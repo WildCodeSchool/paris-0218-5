@@ -1,5 +1,4 @@
-import { categoriesElement } from './composants/categories.js'
-import { budgetElement } from './composants/budgets.js'
+import { budgetElement, categoriesElement } from './composants/categories.js'
 import { restaurantElement } from './composants/restaurant.js'
 import { restaurantScale } from './restaurant-scale.js'
 
