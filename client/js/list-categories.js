@@ -1,6 +1,7 @@
 import { categoriesElement } from './composants/categories.js'
 import { budgetElement } from './composants/budgets.js'
 import { restaurantElement } from './composants/restaurant.js'
+import { restaurantScale } from './restaurant-scale.js'
 
 const categoElement = document.getElementById('categories')
 
@@ -26,6 +27,7 @@ const displayTop = () => {
       let bestResto = restaurants.sort(compareNombres)
       bestResto = bestResto.slice(0, 12)
       categoElement.innerHTML = bestResto.map(restaurantElement).join('')
+      restaurantScale(categoElement)
     })
 }
 const compareNombres = (a, b) => {

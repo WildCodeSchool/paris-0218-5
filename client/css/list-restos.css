@@ -51,12 +51,12 @@ main h2::after {
     height: auto;
 }
 
-#list-restos .restaurant span{
+.restaurant span{
     display : inline-block;
     vertical-align: middle;
     margin-right : 5px;
 }
-#list-restos .restaurant .like-wrapper{
+.restaurant .like-wrapper{
     float : right;
     cursor : pointer;
 }
