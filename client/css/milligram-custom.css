@@ -54,7 +54,6 @@ blockquote *:last-child {
     white-space: nowrap
 }
 
-
 .button[disabled], button[disabled], input[type='button'][disabled], input[type='reset'][disabled], input[type='submit'][disabled] {
     cursor: default;
     opacity: .5
@@ -251,6 +250,11 @@ input[type='checkbox'], input[type='radio'] {
 .row .column.column-10 {
     flex: 0 0 10%;
     max-width: 10%
+}
+
+.row .column.column-15 {
+    flex: 0 0 15%;
+    max-width: 15%
 }
 
 .row .column.column-20 {

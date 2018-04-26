@@ -1,6 +1,6 @@
-import { categoriesElement } from './composants/categories.js'
-import { budgetElement } from './composants/budgets.js'
+import { budgetElement, categoriesElement } from './composants/categories.js'
 import { restaurantElement } from './composants/restaurant.js'
+import { restaurantScale } from './restaurant-scale.js'
 
 const categoElement = document.getElementById('categories')
 
@@ -14,9 +14,7 @@ window.fetch('http://localhost:3333/categories')
     document.getElementById('cuisine').addEventListener('click', () => {
       categoElement.innerHTML = categories['cuisine'].map(categoriesElement).join('')
     })
-    document.getElementById('top').addEventListener('click', () => {
-      displayTop()
-    })
+    document.getElementById('top').addEventListener('click', displayTop)
     categoElement.innerHTML = categories['cuisine'].map(categoriesElement).join('')
   })
 
@@ -28,6 +26,7 @@ const displayTop = () => {
       let bestResto = restaurants.sort(compareNombres)
       bestResto = bestResto.slice(0, 12)
       categoElement.innerHTML = bestResto.map(restaurantElement).join('')
+      restaurantScale(categoElement)
     })
 }
 const compareNombres = (a, b) => {

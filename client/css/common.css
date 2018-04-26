@@ -51,6 +51,8 @@ main .row .column {
     padding: 10px 20px;
     margin-top: 30px;
     font-weight: 700;
+    transition: background-color 0.2s ease;
+
 }
 
 .button-general span {
@@ -71,6 +73,7 @@ main .row .column {
 
 .button-general:hover {
     background-color: #0ddbd5;
+    transition: background-color 0.2s ease;
 }
 
 body .row {
