@@ -1,12 +1,10 @@
 import { filterElement } from './composants/filter-advanced.js'
 import { restaurantElement } from './composants/restaurant.js'
 
-
 const filterAdvanced = document.getElementById('advanced-filter')
 const listByType = document.getElementById('list-by-type')
 const listByBudget = document.getElementById('list-by-budget')
 const listResto = document.getElementById('list-restos')
-
 
 window.fetch('http://localhost:3333/categories')
   .then(res => res.json())
@@ -30,7 +28,7 @@ window.fetch('http://localhost:3333/categories')
         } else {
           filterChecked.type.splice(filterChecked.type.indexOf(filter.value), 1)
         }
-        displayRestoFilter(filterChecked)
+        displayRestoFilter(filterChecked, 'type')
       })
     }
 
@@ -42,33 +40,35 @@ window.fetch('http://localhost:3333/categories')
         } else {
           filterChecked.budget.splice(filterChecked.budget.indexOf(value), 1)
         }
-        displayRestoFilter(filterChecked)
+        displayRestoFilter(filterChecked, 'budget')
       })
     }
   })
 
-const displayRestoFilter = filterChecked => {
+const displayRestoFilter = (filterChecked, filter) => {
   window.fetch('http://localhost:3333/restaurants')
     .then(res => res.json())
     .then(restaurants => {
       let results = []
       const arrBudget = filterChecked.budget
       const arrType = filterChecked.type
-
-        for (let type of arrType) {
-          results = results.concat(restaurants.filter(restaurant => restaurant.category == type))
-          for (let budget of arrBudget) {
-            results = results.filter(restaurant => restaurant.budget == budget)
+      if(filter === 'budget'){
+          for (let budget of arrBudget){
+            results = results.concat(restaurants.filter(restaurant => restaurant.budget == budget))
+            for (let type of arrType) {
+              results = results.filter(restaurant => restaurant.category == arrType)
+            }
+          }
+        }else{
+          for (let type of arrType) {
+            results = results.concat(restaurants.filter(restaurant => restaurant.category === type))
+            for (let budget of arrBudget) {
+              results = results.filter(restaurant => restaurant.budget === budget)
+            }
           }
         }
-        // for (let budget of arrBudget){
-        //   results = results.concat(restaurants.filter(restaurant => restaurant.budget == budget))
-        //   for (let type of arrType) {
-        //     results = results.filter(restaurant => restaurant.category == arrType)
-        //   }
-        // }
+        console.log(results);
       listResto.innerHTML = results.map(restaurantElement).join('')
-
     })
 }
 
