@@ -14,6 +14,7 @@ window.addEventListener('load', () => {
     showModal.style.display = 'block'
   })
 
+  // formulaire d'inscription
   document.getElementById('form-register').addEventListener('submit', event => {
     event.preventDefault()
     const email = document.getElementById('register-email').value
@@ -32,3 +33,55 @@ window.addEventListener('load', () => {
     }).then(res => console.log(res.status))
   })
 })
+
+// formulaire de connection
+const authElement = document.getElementById('auth')
+const messageElement = document.getElementById('message')
+const signInForm = document.getElementById('form-connect')
+const signOutForm = document.getElementById('sign-out-form')
+
+const handleAuth = res => {
+  const login = res.login
+
+  authElement.innerHTML = login ? `Hi ${login}` : 'Not connected, please login'
+
+  signInForm.style.display = login ? 'none' : 'block'
+  signOutForm.style.display = login ? 'block' : 'none'
+
+  // handle errors
+  messageElement.innerHTML = res.error || ''
+}
+
+signInForm.addEventListener('submit', e => {
+  e.preventDefault()
+
+  const formData = new window.FormData(e.target)
+  console.log(formData) // Comme ca travis est happy
+  const credentials = {
+    login: document.getElementById('logemail').value,
+    password: document.getElementById('logpsw').value
+  }
+
+  window.fetch('http://localhost:3333/sign-in', {
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    'credentials': 'include', // Always send user credentials (cookies, basic http auth, etc..), even for cross-origin calls.
+    body: JSON.stringify(credentials)
+  })
+    .then(res => res.json())
+    .then(handleAuth)
+})
+
+signOutForm.addEventListener('submit', e => {
+  e.preventDefault()
+
+  window.fetch('http://localhost:3333/sign-out', { 'credentials': 'include' })
+    .then(res => res.json())
+    .then(handleAuth)
+})
+
+window.fetch('http://localhost:3333/', { 'credentials': 'include' })
+  .then(res => res.json())
+  .then(handleAuth)
