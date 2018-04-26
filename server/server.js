@@ -1,9 +1,11 @@
 const express = require('express')
 const fs = require('fs')
+const bodyParser = require('body-parser')
+const session = require('express-session')
+const FileStore = require('session-file-store')(session)
 
 // variable convertir les callbacks en promises :
 const util = require('util')
-
 const path = require('path')
 
 // fonction pour convertir les callbacks en promises :
@@ -16,35 +18,39 @@ const users = require('../mocks/user.json')
 
 const app = express()
 
+// systeme authentification
+const secret = 'something unbelievable'
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+
 // autorisation
 app.use((request, response, next) => {
-  response.header('Access-Control-Allow-Origin', '*')
+  // response.header('Access-Control-Allow-Origin', '*')
+  response.header('Access-Control-Allow-Origin', request.headers.origin)
   response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
+  response.header('Access-Control-Allow-Credentials', 'true') // important
   next()
 })
 
-// middleware pour gerer la requete post du formulaire
-app.use((request, response, next) => {
-  if (request.method === 'GET') return next()
-  let accumulator = ''
+// initialisation gestionnaire de sessions
+app.use(session({
+  secret,
+  saveUninitialized: false,
+  resave: true,
+  store: new FileStore({ secret })
+}))
 
-  request.on('data', data => {
-    accumulator += data
-  })
-
-  request.on('end', () => {
-    try {
-      request.body = JSON.parse(accumulator)
-      next()
-    } catch (err) {
-      next(err)
-    }
-  })
+// login middleware
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`, { user: req.session.user, cookie: req.headers.cookie })
+  next()
 })
 
 // routes
 app.get('/', (request, response) => {
-  response.send('ok')
+  const user = request.session.user || {}
+  response.json(user)
 })
 
 app.post('/registrer', (request, response, next) => {
@@ -143,5 +149,39 @@ app.get('/profil/:id', (request, response) => {
   const profil = users.find(profil => profil.id === id)
   response.json(profil)
 })
+
+app.post('/sign-in', (req, res, next) => {
+  // does user exists ?
+  const user = users.find(u => req.body.login === u.email)
+
+  // Error handling
+  if (!user) {
+    return res.json({ error: 'User not found' })
+  }
+
+  if (user.password !== req.body.password) {
+    return res.json({ error: 'Wrong password' })
+  }
+
+  // else, set the user into the session
+  req.session.user = user
+  res.json(user)
+})
+
+app.get('/sign-out', (req, res, next) => {
+  req.session.user = {}
+
+  res.json('ok')
+})
+
+app.use((err, req, res, next) => {
+  if (err) {
+    res.json({ message: err.message })
+    console.error(err)
+  }
+
+  next(err)
+})
+
 // port ecouter
 app.listen(3333, () => console.log('jecoute sur le port 3333'))

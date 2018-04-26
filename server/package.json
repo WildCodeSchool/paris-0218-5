@@ -19,6 +19,8 @@
   "homepage": "https://github.com/WildCodeSchool/paris-0218-les-tontons-fringale#readme",
   "dependencies": {
     "express": "^4.16.3",
-    "nodemon": "^1.17.3"
+    "nodemon": "^1.17.3",
+    "express-session": "^1.15.6",
+    "session-file-store": "^1.2.0"
   }
 }

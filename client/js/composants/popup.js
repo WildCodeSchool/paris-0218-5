@@ -1,5 +1,6 @@
 export const popup =
 /* html */ `<span class="close-popup-btn" title="Close Modal" id="close-popup">x</span>
+    <div id="message"></div>
     <div class="row row-responsive" id="popup-content">
         <form class="form-content column column-md-50 column-xs-100" id="form-connect">
             <h3>Connexion</h3>
@@ -16,6 +17,10 @@ export const popup =
 
             <button class='button-general' id='logsubmit' type='submit'>Se connecter</button>
 
+        </form>
+        <div id="auth"></div>
+        <form id="sign-out-form" style="display: none">
+            <input type="submit" value="logout">
         </form>
         <form class="form-content column column-md-50 column-xs-100" id="form-register">
             <h3>Créer un compte</h3>
