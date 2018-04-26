@@ -20,33 +20,17 @@ const app = express()
 
 // systeme authentification
 const secret = 'something unbelievable'
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
+
 // autorisation
 app.use((request, response, next) => {
-  response.header('Access-Control-Allow-Origin', '*')
+  // response.header('Access-Control-Allow-Origin', '*')
   response.header('Access-Control-Allow-Origin', request.headers.origin)
   response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   response.header('Access-Control-Allow-Credentials', 'true') // important
   next()
-})
-
-// middleware pour gerer la requete post du formulaire
-app.use((request, response, next) => {
-  if (request.method !== 'POST' || request.method !== 'PUT') return next()
-  let accumulator = ''
-
-  request.on('data', data => {
-    accumulator += data
-  })
-  request.on('end', () => {
-    try {
-      request.body = JSON.parse(accumulator)
-      next()
-    } catch (err) {
-      next(err)
-    }
-  })
 })
 
 // initialisation gestionnaire de sessions
@@ -174,7 +158,7 @@ app.get('/profil/:id', (request, response) => {
 
 app.post('/sign-in', (req, res, next) => {
   // does user exists ?
-  const user = utilisateur.find(u => req.body.login === u.login)
+  const user = users.find(u => req.body.login === u.email)
 
   // Error handling
   if (!user) {

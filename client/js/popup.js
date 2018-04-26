@@ -41,12 +41,12 @@ const signInForm = document.getElementById('form-connect')
 const signOutForm = document.getElementById('sign-out-form')
 
 const handleAuth = res => {
-  const login = res.login
+  const name = res.name
 
-  authElement.innerHTML = login ? `Hi ${login}` : 'Not connected, please login'
+  authElement.innerHTML = name ? `Hi ${name}` : 'Not connected, please login'
 
-  signInForm.style.display = login ? 'none' : 'block'
-  signOutForm.style.display = login ? 'block' : 'none'
+  signInForm.style.display = name ? 'none' : 'block'
+  signOutForm.style.display = name ? 'block' : 'none'
 
   // handle errors
   messageElement.innerHTML = res.error || ''
