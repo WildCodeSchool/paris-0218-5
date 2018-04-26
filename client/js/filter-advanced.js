@@ -1,7 +1,6 @@
 import { filterElement } from './composants/filter-advanced.js'
 import { restaurantElement } from './composants/restaurant.js'
 
-const filterAdvanced = document.getElementById('advanced-filter')
 const listByType = document.getElementById('list-by-type')
 const listByBudget = document.getElementById('list-by-budget')
 const listResto = document.getElementById('list-restos')
@@ -52,25 +51,22 @@ const displayRestoFilter = (filterChecked, filter) => {
       let results = []
       const arrBudget = filterChecked.budget
       const arrType = filterChecked.type
-      if(filter === 'budget'){
-          for (let budget of arrBudget){
-            results = results.concat(restaurants.filter(restaurant => restaurant.budget == budget))
-            for (let type of arrType) {
-              results = results.filter(restaurant => restaurant.category == arrType)
-            }
-          }
-        }else{
+      if (filter === 'budget') {
+        for (let budget of arrBudget) {
+          results = results.concat(restaurants.filter(restaurant => restaurant.budget === budget))
           for (let type of arrType) {
-            results = results.concat(restaurants.filter(restaurant => restaurant.category === type))
-            for (let budget of arrBudget) {
-              results = results.filter(restaurant => restaurant.budget === budget)
-            }
+            results = results.filter(restaurant => restaurant.category === type)
           }
         }
-        console.log(results);
+      } else {
+        for (let type of arrType) {
+          results = results.concat(restaurants.filter(restaurant => restaurant.category === type))
+          for (let budget of arrBudget) {
+            results = results.filter(restaurant => restaurant.budget === budget)
+          }
+        }
+      }
+      console.log(results)
       listResto.innerHTML = results.map(restaurantElement).join('')
     })
 }
-
-
-

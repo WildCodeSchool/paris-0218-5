@@ -28,5 +28,7 @@ window.fetch(`http://localhost:3333/restaurants/`)
       return restoCat
     }
   })
-  .then(restoCat => listResto.innerHTML = restoCat.map(restaurantElement).join(''))
-  .then(() => restaurantScale(listResto))
+  .then(restoCat => {
+    listResto.innerHTML = restoCat.map(restaurantElement).join('')
+    restaurantScale(listResto)
+  })
