@@ -52,23 +52,24 @@ const displayRestoFilter = filterChecked => {
     .then(res => res.json())
     .then(restaurants => {
       let results = []
-      for (let restaurant of restaurants) {
-        if (filterChecked.budget != null && filterChecked.budget.includes(restaurant.budget)) {
-          console.log(filterChecked.budget);
-          results.push(restaurant)
-        }
-        if (filterChecked.type != null && filterChecked.type.includes(restaurant.category)) {
-          console.log(filterChecked.type);
-          console.log(filterChecked.category);
+      const arrBudget = filterChecked.budget
+      const arrType = filterChecked.type
 
-          results.push(restaurant)
+        for (let type of arrType) {
+          results = results.concat(restaurants.filter(restaurant => restaurant.category == type))
+          for (let budget of arrBudget) {
+            results = results.filter(restaurant => restaurant.budget == budget)
+          }
         }
-      }
+        // for (let budget of arrBudget){
+        //   results = results.concat(restaurants.filter(restaurant => restaurant.budget == budget))
+        //   for (let type of arrType) {
+        //     results = results.filter(restaurant => restaurant.category == arrType)
+        //   }
+        // }
       listResto.innerHTML = results.map(restaurantElement).join('')
-      //return results
-    })
 
-  // console.log(restaurants['category'].filter(resto => resto.category == filter.value))
+    })
 }
 
 
