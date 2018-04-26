@@ -47,12 +47,6 @@ app.use((req, res, next) => {
   next()
 })
 
-// Users (hard coded here but consider it comes from database)
-const utilisateur = [
-  { login: 'bertrand', password: '123' },
-  { login: 'martine', password: 'rosedamour' }
-]
-
 // routes
 app.get('/', (request, response) => {
   const user = request.session.user || {}
