@@ -39,7 +39,7 @@ main h2::after {
     display: block;
 }
 .column.restos-wrapper{
-    padding-top: 50px;
+    padding: 50px 20px;
 }
 #list-restos .row.row-responsive .column {
     transition: height 0.6s ease;

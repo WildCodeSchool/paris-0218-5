@@ -35,20 +35,17 @@ window.addEventListener('load', () => {
         email: email,
         password: password
       })
-    }).then(res => console.log(res.status))
+    })
   })
 })
 
 // formulaire de connection
-// const authElement = document.getElementById('auth')
 const messageElement = document.getElementById('message')
 const signInForm = document.getElementById('form-connect')
 const signOutForm = document.getElementById('sign-out-form')
 
 const handleAuth = res => {
   const name = res.name
-
-  // authElement.innerHTML = name ? `Hi ${name}` : 'Not connected, please login'
 
   signInForm.style.display = name ? 'none' : 'block'
   signOutForm.style.display = name ? 'block' : 'none'
@@ -64,7 +61,6 @@ signInForm.addEventListener('submit', e => {
     login: document.getElementById('logemail').value,
     password: document.getElementById('logpsw').value
   }
-
   window.fetch('http://localhost:3333/sign-in', {
     method: 'post',
     headers: {

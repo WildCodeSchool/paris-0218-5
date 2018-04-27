@@ -168,6 +168,10 @@ app.post('/sign-in', (req, res, next) => {
   res.json(user)
 })
 
+app.get('/session', (req, res, next) => {
+  res.json(req.session.user || {})
+})
+
 app.get('/sign-out', (req, res, next) => {
   req.session.user = {}
 

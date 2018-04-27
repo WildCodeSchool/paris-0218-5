@@ -6,7 +6,6 @@ body {
     font-family: 'montserrat', sans-serif;
     background-color: #eee;
     position: relative;
-    padding-bottom: 70px;
     overflow-x: hidden;
 }
 
@@ -31,7 +30,7 @@ h3{
     font-size: 3rem;
 }
 main{
-    padding : 120px 70px 0 70px
+    padding : 120px 70px 60px 70px
 }
 
 main .row .column {

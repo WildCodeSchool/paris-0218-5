@@ -59,6 +59,5 @@ form.addEventListener('submit', event => {
       takeAway: takeAway
     })
   })
-    .then(res => console.log(res.status))
     .then(res => window.location.replace('index.html'))
 })
