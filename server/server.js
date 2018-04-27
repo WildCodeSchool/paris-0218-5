@@ -55,11 +55,6 @@ app.get('/', (request, response) => {
 
 app.post('/registrer', (request, response, next) => {
   const filePath = path.join(__dirname, '../mocks/user.json')
-  console.log('===============================================================')
-  console.log(JSON.stringify(request.body, null, 2))
-  console.log('===============================================================')
-console.log(request.body);
-console.log('===============================================================')
   readFile(filePath, 'utf8')
     .then(JSON.parse)
     .then(user => {

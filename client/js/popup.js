@@ -20,24 +20,11 @@ window.addEventListener('load', () => {
     const email = document.getElementById('register-email').value
     const password = document.getElementById('register-psw').value
     const confirmpsw = document.getElementById('confirm-psw')
-    console.log(email)
-    console.log(password)
-
 
     if (password !== confirmpsw.value) {
       confirmpsw.setCustomValidity('Yours passwords do not match')
-      console.log('rrrrrrrrrrrr+++++++++++++++++++++++++++++++++++++++++++')
       return
     }
-    console.log('JE TENM PLUS QUE TOUT')
-
-let pon = {
-  email: email,
-  password: password
-}
-
-console.log(pon);
-console.log(JSON.stringify(pon));
 
     window.fetch('http://localhost:3333/registrer', {
       method: 'post',
@@ -47,13 +34,13 @@ console.log(JSON.stringify(pon));
       body: JSON.stringify({
         email: email,
         password: password
-      }),
+      })
     }).then(res => console.log(res.status))
   })
 })
 
 // formulaire de connection
-const authElement = document.getElementById('auth')
+// const authElement = document.getElementById('auth')
 const messageElement = document.getElementById('message')
 const signInForm = document.getElementById('form-connect')
 const signOutForm = document.getElementById('sign-out-form')
