@@ -20,16 +20,34 @@ window.addEventListener('load', () => {
     const email = document.getElementById('register-email').value
     const password = document.getElementById('register-psw').value
     const confirmpsw = document.getElementById('confirm-psw')
+    console.log(email)
+    console.log(password)
+
+
     if (password !== confirmpsw.value) {
       confirmpsw.setCustomValidity('Yours passwords do not match')
+      console.log('rrrrrrrrrrrr+++++++++++++++++++++++++++++++++++++++++++')
       return
     }
+    console.log('JE TENM PLUS QUE TOUT')
+
+let pon = {
+  email: email,
+  password: password
+}
+
+console.log(pon);
+console.log(JSON.stringify(pon));
+
     window.fetch('http://localhost:3333/registrer', {
       method: 'post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
-        email,
-        password
-      })
+        email: email,
+        password: password
+      }),
     }).then(res => console.log(res.status))
   })
 })
@@ -43,7 +61,7 @@ const signOutForm = document.getElementById('sign-out-form')
 const handleAuth = res => {
   const name = res.name
 
-  authElement.innerHTML = name ? `Hi ${name}` : 'Not connected, please login'
+  // authElement.innerHTML = name ? `Hi ${name}` : 'Not connected, please login'
 
   signInForm.style.display = name ? 'none' : 'block'
   signOutForm.style.display = name ? 'block' : 'none'
@@ -55,8 +73,6 @@ const handleAuth = res => {
 signInForm.addEventListener('submit', e => {
   e.preventDefault()
 
-  const formData = new window.FormData(e.target)
-  console.log(formData) // Comme ca travis est happy
   const credentials = {
     login: document.getElementById('logemail').value,
     password: document.getElementById('logpsw').value
