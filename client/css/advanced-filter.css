@@ -1,4 +1,10 @@
-.filter-wrapper{
+.row .filter-wrapper{
     background-image : url('../images/food-pattern.png');
     background-size: 500px;
+    padding : 100px 30px;
+    height : 100%;
 }
+.filter-wrapper ul{
+    list-style : none;
+}
+
