@@ -1,10 +1,22 @@
 .row .filter-wrapper{
-    background-image : url('../images/food-pattern.png');
+    background : url('../images/food-pattern.png') #fff;
     background-size: 500px;
     padding : 100px 30px;
     height : 100%;
 }
 .filter-wrapper ul{
     list-style : none;
+}
+.filter-wrapper label{
+    font-weight : 300;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left : 7px;
+}
+.filter-wrapper input{
+
+}
+.filter-wrapper h6{
+    font-size: 2rem;
 }
 

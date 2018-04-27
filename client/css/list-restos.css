@@ -38,7 +38,9 @@ main h2::after {
 .active .more-infos {
     display: block;
 }
-
+.column.restos-wrapper{
+    padding-top: 50px;
+}
 #list-restos .row.row-responsive .column {
     transition: height 0.6s ease;
     max-height: 500px;
@@ -56,15 +58,29 @@ main h2::after {
     vertical-align: middle;
     margin-right : 5px;
 }
-.restaurant .like-wrapper{
-    float : right;
-    cursor : pointer;
-}
 
 .restaurant .simple-infos{
     cursor : pointer;   
 }
 .active .restaurant .simple-infos{
     cursor : auto;   
+}
+
+.restaurant .like-wrapper{
+    text-align: right;
+    margin-bottom: 10px;
+    cursor : pointer;
+}
+
+.restaurant .price-wrapper{
+    border-top: 1px solid #d7d7d7;
+    padding-top: 10px;
+}
+.restaurant a{
+    margin-bottom : 1em;
+}
+
+.filter-wrapper h6{
+    font-family: 'Paytone One', sans-serif;
 }
 

@@ -42,7 +42,7 @@ export const restaurantElement = restaurant => {
       <span class="icn icn-like"></span>
       <span>${restaurant.like.length}</span>
     </div>
-    <p>
+    <p class="price-wrapper">
       <span class="icn icn-price"></span>
       <span>${restaurant.budget}</span>
     </p>
