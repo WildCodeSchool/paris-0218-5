@@ -27,7 +27,7 @@ window.fetch('http://localhost:3333/categories')
         if (filter.checked) {
           filterChecked.category.push(filter.value)
         } else {
-        // On les enlève si le tableau est décoché
+          // On les enlève si le tableau est décoché
           filterChecked.category.splice(filterChecked.category.indexOf(filter.value), 1)
         }
         displayRestoFilter(filterChecked)
@@ -42,7 +42,7 @@ window.fetch('http://localhost:3333/categories')
         } else {
           filterChecked.budget.splice(filterChecked.budget.indexOf(value), 1)
         }
-          displayRestoFilter(filterChecked)
+        displayRestoFilter(filterChecked)
       })
     }
   })
