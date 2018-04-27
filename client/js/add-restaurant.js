@@ -44,6 +44,9 @@ form.addEventListener('submit', event => {
 
   window.fetch('http://localhost:3333/restaurants', {
     method: 'post',
+    headers: {
+      'Content-Type': 'application/json'
+    },
     body: JSON.stringify({
       name: name,
       location: location,

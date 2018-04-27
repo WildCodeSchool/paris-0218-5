@@ -21,8 +21,8 @@ const app = express()
 // systeme authentification
 const secret = 'something unbelievable'
 
-app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 // autorisation
 app.use((request, response, next) => {
@@ -54,20 +54,20 @@ app.get('/', (request, response) => {
 })
 
 app.post('/registrer', (request, response, next) => {
-  console.log(request.method, request.url, request.body)
-  const id = Math.random().toString(36).slice(2).padEnd(11, '0')
-  const fileName = `${id}.json`
-  const filePath = path.join(__dirname, '../mocks', fileName)
-
-  const content = {
-    id: id,
-    email: request.body.email,
-    password: request.body.password,
-    createdAt: Date.now()
-  }
-
-  writeFile(filePath, JSON.stringify(content), 'utf8')
-    .then(() => response.json('OK'))
+  const filePath = path.join(__dirname, '../mocks/user.json')
+  readFile(filePath, 'utf8')
+    .then(JSON.parse)
+    .then(user => {
+      user.push({
+        id: user.length + 1,
+        email: request.body.email,
+        password: request.body.password,
+        createdAt: Date.now()
+      })
+      const content = JSON.stringify(user, null, 2)
+      return writeFile(filePath, content, 'utf8')
+    })
+    .then(() => response.end('OK'))
     .catch(next)
 })
 
