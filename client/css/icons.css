@@ -2,6 +2,8 @@
     background-repeat: no-repeat;
     width: 25px;
     height: 25px;
+    background-size: 100%;
+    display: inline-block;
 }
 
 .icn.icn-dice{
@@ -19,7 +21,6 @@
 }
 .icn.icn-like{
     background-image: url('../images/icones/like-red.svg');
-    display: inline-block;
 }
 .icn.icn-profile{
     background-image: url('../images/icones/profile-white.svg')
@@ -56,5 +57,8 @@
 }
 .icn.icn-price{
     background-image: url('../images/icones/price.svg')
+}
+.icn.icn-logout{
+    background-image: url('../images/icones/logout.svg')
 }
 
