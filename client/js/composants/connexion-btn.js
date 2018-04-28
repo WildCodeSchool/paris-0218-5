@@ -15,5 +15,3 @@ export const isNotConnected =
     <span class="text">Connexion</span>
   </div>
 `
-
-

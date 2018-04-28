@@ -1,7 +1,6 @@
 
 export const footer = date => {
-
-return `
+  return `
   <span>© Copyright - WildAndHungry -
     <span id="year">${date}</span>
     <a href="#">Mentions légales -</a>

@@ -33,7 +33,6 @@ export const scriptPopup = () => {
       })
     })
   })
-
   // formulaire de connection
   const messageElement = document.getElementById('message')
   const signInForm = document.getElementById('form-connect')
@@ -42,7 +41,7 @@ export const scriptPopup = () => {
   const handleAuth = res => {
     // handle errors
     messageElement.innerHTML = res.error || ''
-    location.reload()
+    window.location.reload()
   }
 
   signInForm.addEventListener('submit', e => {

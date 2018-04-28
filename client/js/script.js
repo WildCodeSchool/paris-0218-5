@@ -2,7 +2,7 @@
 const btnSearchMobile = document.getElementById('btn-search-mobile')
 const searchInput = document.getElementById('search-wrapper')
 
-if (btnSearchMobile != undefined) {
+if (btnSearchMobile !== undefined) {
   btnSearchMobile.addEventListener('click', () => {
     if (searchInput.classList.contains('visible')) {
       console.log('active')
@@ -12,4 +12,3 @@ if (btnSearchMobile != undefined) {
     }
   })
 }
-

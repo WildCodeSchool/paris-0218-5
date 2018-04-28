@@ -1,5 +1,5 @@
-export const header =  `
-    <div class="first-column column column-md-40 column-xs-80 flex">
+export const header =
+  `<div class="first-column column column-md-40 column-xs-80 flex">
         <div id="logo-wrapper">
             <a href="index.html">
                 <img src="images/logo.svg" alt="logo" />
