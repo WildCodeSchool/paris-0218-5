@@ -124,18 +124,25 @@ header .last-column{
     align-items: flex-end;
     justify-content: center;
 }
-header .btn-red{
+.btn-red{
     padding : 10px 20px;
-    min-width: 65px;
     background-color : #ca3045;
     border-bottom : 2px solid #B0002C;
+}
+.btn-red span{
     cursor: pointer;
 }
-header .btn-red:hover{
+.btn-red:hover{
     background-color : #B0002C;
 }
-header .btn-red .text{ 
+.btn-red .text{ 
     margin-left : 10px;
     display: inline-block;
+
+}
+.btn-red.connected .text{
+    border-right: 1px solid rgba(255,255,255,0.6);
+    margin-right: 16px;
+    padding-right: 20px;
 }
 

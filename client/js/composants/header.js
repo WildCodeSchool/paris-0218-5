@@ -1,5 +1,4 @@
-export const header = props =>
-  `
+export const header =  `
     <div class="first-column column column-md-40 column-xs-80 flex">
         <div id="logo-wrapper">
             <a href="index.html">
@@ -24,9 +23,7 @@ export const header = props =>
         </div>
     </div>
     <div class="last-column column column-md-20 column-xs-10 flex">
-        <div id="connexion-button" class="btn-red connexion-wrapper">
-            <span class="icn icn-profile"></span>
-            <span class="text desktop-only">${props}</span>
+        <div id="connexion-button">
         </div>
         <div id="randomeal-btn" class="btn-red btn-randomeal mobile-only">
         <span class="icn icn-dice"></span>
@@ -36,4 +33,3 @@ export const header = props =>
         </div>
     </div>
     `
-
