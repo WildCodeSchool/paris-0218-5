@@ -53,7 +53,7 @@ app.get('/', (request, response) => {
   response.json(user)
 })
 
-app.post('/registrer', (request, response, next) => {
+app.post('/register', (request, response, next) => {
   const filePath = path.join(__dirname, '../mocks/user.json')
   readFile(filePath, 'utf8')
     .then(JSON.parse)

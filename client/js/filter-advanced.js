@@ -6,11 +6,17 @@ const listByType = document.getElementById('list-by-type')
 const listByBudget = document.getElementById('list-by-budget')
 const listResto = document.getElementById('list-restos')
 
+const btnFilter = document.getElementById('open-filter')
+
 let restaurants
 
 const filterChecked = {
   category: [],
   budget: []
+}
+
+const switchFilter = () => {
+  console.log('pouet');
 }
 
 const inputsListener = filtersType => {
@@ -62,4 +68,6 @@ window.fetch('http://localhost:3333/categories')
   .then(res => {
     restaurants = res
   })
+
+  btnFilter.addEventListener('click', switchFilter)
 

@@ -18,11 +18,11 @@ export const scriptPopup = () => {
     const confirmpsw = document.getElementById('confirm-psw')
 
     if (password !== confirmpsw.value) {
-      confirmpsw.setCustomValidity('Yours passwords do not match')
+      confirmpsw.setCustomValidity('Your passwords do not match')
       return
     }
 
-    window.fetch('http://localhost:3333/registrer', {
+    window.fetch('http://localhost:3333/register', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json'
