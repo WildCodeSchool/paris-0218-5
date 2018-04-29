@@ -59,16 +59,8 @@ export const scriptPopup = () => {
       'credentials': 'include', // Always send user credentials (cookies, basic http auth, etc..), even for cross-origin calls.
       body: JSON.stringify(credentials)
     })
-      .then(res => res.json())
-      .then(handleAuth)
-
-    signOutForm.addEventListener('submit', e => {
-      e.preventDefault()
-
-      window.fetch('http://localhost:3333/sign-out', { 'credentials': 'include' })
-        .then(res => res.json())
-        .then(handleAuth)
-    })
+    .then(res => res.json())
+    .then(handleAuth)
 
     window.fetch('http://localhost:3333/', { 'credentials': 'include' })
       .then(res => res.json())
