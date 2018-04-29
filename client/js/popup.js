@@ -36,7 +36,6 @@ export const scriptPopup = () => {
   // formulaire de connection
   const messageElement = document.getElementById('message')
   const signInForm = document.getElementById('form-connect')
-  const signOutForm = document.getElementById('sign-out-form')
 
   const handleAuth = res => {
     // handle errors
@@ -59,8 +58,8 @@ export const scriptPopup = () => {
       'credentials': 'include', // Always send user credentials (cookies, basic http auth, etc..), even for cross-origin calls.
       body: JSON.stringify(credentials)
     })
-    .then(res => res.json())
-    .then(handleAuth)
+      .then(res => res.json())
+      .then(handleAuth)
 
     window.fetch('http://localhost:3333/', { 'credentials': 'include' })
       .then(res => res.json())

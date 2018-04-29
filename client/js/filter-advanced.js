@@ -16,7 +16,7 @@ const filterChecked = {
 }
 
 const switchFilter = () => {
-  console.log('pouet');
+  console.log('pouet')
 }
 
 const inputsListener = filtersType => {
@@ -24,9 +24,9 @@ const inputsListener = filtersType => {
     filter.addEventListener('click', () => {
       // On ajoute dans un tableau les valeurs de catégories cochées
       filter.checked
-      ? filterChecked.category.push(filter.value)
-      // Et on les enlève si le tableau est décoché
-      : filterChecked.category.splice(filterChecked.category.indexOf(filter.value), 1)
+        ? filterChecked.category.push(filter.value)
+        // Et on les enlève si le tableau est décoché
+        : filterChecked.category.splice(filterChecked.category.indexOf(filter.value), 1)
       filterRestaurants(filterChecked, restaurants)
     })
   }
@@ -63,11 +63,10 @@ window.fetch('http://localhost:3333/categories')
     inputsListener(filtersByBudget)
   })
 
-  window.fetch('http://localhost:3333/restaurants')
+window.fetch('http://localhost:3333/restaurants')
   .then(res => res.json())
   .then(res => {
     restaurants = res
   })
 
-  btnFilter.addEventListener('click', switchFilter)
-
+btnFilter.addEventListener('click', switchFilter)
