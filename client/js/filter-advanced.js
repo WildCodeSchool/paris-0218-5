@@ -27,7 +27,6 @@ const switchFilter = () => {
     advancedFilter.classList.remove('visible')
     advancedFilter.classList.add('hidden')
     filterBlack.classList.remove('visible')
-
   }
 }
 

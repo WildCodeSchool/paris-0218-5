@@ -1,8 +1,8 @@
 export const restaurantScale = emplacement => {
-
   const columns = emplacement.getElementsByClassName('column')
   let nbColumn
 
+  // Pour chaque fiche de resto on ajoute un event au click
   const scale = e => {
     const that = e.currentTarget
     // On récupère la colonne liée à l'élément cliquable
@@ -33,11 +33,9 @@ export const restaurantScale = emplacement => {
     thatColumn.classList.remove('same-row')
     thatColumn.classList.add('active')
   }
-
-  if(columns.length){
+  if (columns.length) {
     nbColumn = Math.round(emplacement.offsetWidth / columns[0].offsetWidth)
     for (let column of columns) {
-       // Pour chaque fiche de resto on ajoute un event au click
       let resto = column.querySelector('.restaurant .simple-infos')
       resto.addEventListener('click', scale)
     }
