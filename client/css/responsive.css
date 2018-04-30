@@ -19,14 +19,20 @@
         max-width: 30%;
     }
     #advanced-filter {
-        width : 20%;    
+        width : 20%;
+        position: relative;
+        top :0%;
+        padding-top : 70px;
+    } 
+    #advanced-filter .filter-wrapper{
+        position : fixed;
     }
-    #advanced-filter {
-        left : -20%;    
+    #advanced-filter.hidden {
+        width : 0%    
     }
-    /* .btn-filter{
-        visibility: hidden;
-    } */
+    #advanced-filter.hidden .filter-wrapper{
+        margin-left: -250px;   
+    }
 }
 @media (max-width: 1280px) {
     header h1 {
@@ -64,6 +70,8 @@
         position: fixed;
         width : 40%;
         z-index: 10;
+        top: 160px;
+        border-radius: 0 15px 22px 0;
     }
     #advanced-filter.hidden{
         left: -40%;

@@ -81,4 +81,7 @@ window.fetch('http://localhost:3333/restaurants')
     restaurants = res
   })
 
+if (window.innerWidth > 1280) {
+  switchFilter()
+}
 btnFilter.addEventListener('click', switchFilter)
