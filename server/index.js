@@ -5,7 +5,6 @@ const session = require('express-session')
 const FileStore = require('session-file-store')(session)
 const multer = require('multer')
 
-
 // variable convertir les callbacks en promises :
 const util = require('util')
 const path = require('path')
@@ -44,12 +43,11 @@ app.use(session({
 }))
 
 // login middleware
-/*
+
 app.use((req, res, next) => {
-console.log(`${req.method} ${req.url}`, { user: req.session.user, cookie: req.headers.cookie }"bonjour")
+  console.log(`${req.method} ${req.url}`, { user: req.session.user, cookie: req.headers.cookie })
   next()
 })
-*/
 
 // upload images
 const publicImagesPath = path.join(__dirname, '../client/images/restaurants')
@@ -63,7 +61,7 @@ const storage = multer.diskStorage({
 const upload = multer({
   storage: storage,
   limits: {
-    fileSize: 500000, // 500 KB
+    fileSize: 500000 // 500 KB
   }
 })
 
@@ -142,7 +140,7 @@ app.post('/restaurants', upload.single('url'), (request, response, next) => {
         name: request.body.name,
         location: request.body.location,
         category: request.body.category,
-        url: request.file ? `images/restaurants/${request.file.filename}` :`images/categories/${request.body.category.toLowerCase()}.jpg`,
+        url: request.file ? `images/restaurants/${request.file.filename}` : `images/categories/${request.body.category.toLowerCase()}.jpg`,
         budget: request.body.budget,
         description: request.body.description,
         cart: request.body.cart,
@@ -162,7 +160,6 @@ app.post('/restaurants', upload.single('url'), (request, response, next) => {
 
     // le catch permet de montrer l'erreur s'il y en a une
     .catch(next)
-
 })
 
 app.get('/profil/:id', (request, response) => {

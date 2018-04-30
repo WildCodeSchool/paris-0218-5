@@ -1,4 +1,5 @@
 // import { addtEtab } from './composants/addrest.js'
+const form = document.getElementById('form')
 form.addEventListener('submit', event => {
   event.preventDefault()
 
@@ -33,8 +34,8 @@ form.addEventListener('submit', event => {
   nameFirstLowerCase('name', nameValue)
   nameFirstLowerCase('location', locValue)
 
-    window.fetch('http://localhost:3333/restaurants', { method: 'post', body: formData })
-    .then(res => response.json())
+  window.fetch('http://localhost:3333/restaurants', { method: 'post', body: formData })
+    .then(res => res.json())
     .then(res => console.log(res))
     .catch(err => console.log(err))
     .then(res => window.location.replace('index.html'))
