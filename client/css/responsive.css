@@ -18,8 +18,16 @@
         flex: 0 0 30%;
         max-width: 30%;
     }
+    #advanced-filter {
+        width : 20%;    
+    }
+    #advanced-filter {
+        left : -20%;    
+    }
+    /* .btn-filter{
+        visibility: hidden;
+    } */
 }
-
 @media (max-width: 1280px) {
     header h1 {
         font-size: 2.5rem;
@@ -52,7 +60,20 @@
     #popup-cnx #popup-content {
         width: 90%;
     }
-
+    #advanced-filter {
+        position: fixed;
+        width : 40%;
+        z-index: 10;
+    }
+    #advanced-filter.hidden{
+        left: -40%;
+    }
+    #filter-black.visible {
+        display: block;
+    }
+    .btn-filter{
+        visibility: visible;
+    }
 }
 
 @media (min-width: 641px) and (max-width: 1260px) {
@@ -82,7 +103,13 @@
         display: block;
         margin: 0 auto;
     }
-    .popup-outline .row .column#form-connect{
-        margin-bottom : 20px;
+    .popup-outline .row .column#form-connect {
+        margin-bottom: 20px;
+    }
+    #advanced-filter {
+        width : 80%;
+    }
+    #advanced-filter.hidden{
+        left: -80%;
     }
 }

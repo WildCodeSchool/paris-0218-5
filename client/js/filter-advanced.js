@@ -6,7 +6,10 @@ const listByType = document.getElementById('list-by-type')
 const listByBudget = document.getElementById('list-by-budget')
 const listResto = document.getElementById('list-restos')
 
+const advancedFilter = document.getElementById('advanced-filter')
 const btnFilter = document.getElementById('open-filter')
+
+const filterBlack = document.getElementById('filter-black')
 
 let restaurants
 
@@ -16,7 +19,16 @@ const filterChecked = {
 }
 
 const switchFilter = () => {
-  console.log('pouet')
+  if (advancedFilter.classList.contains('hidden')) {
+    advancedFilter.classList.remove('hidden')
+    advancedFilter.classList.add('visible')
+    filterBlack.classList.add('visible')
+  } else {
+    advancedFilter.classList.remove('visible')
+    advancedFilter.classList.add('hidden')
+    filterBlack.classList.remove('visible')
+
+  }
 }
 
 const inputsListener = filtersType => {
