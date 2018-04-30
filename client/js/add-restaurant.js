@@ -4,7 +4,7 @@ form.addEventListener('submit', event => {
   event.preventDefault()
 
   // Objet special pour le traitement des formulaires : formData
-  const formData = new FormData(event.target)
+  const formData = new window.FormData(event.target)
 
   // On accede aux éléments de cet objet avec la méthode GET
   const isChecked = (item) => {
