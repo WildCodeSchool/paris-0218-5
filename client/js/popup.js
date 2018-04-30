@@ -18,11 +18,11 @@ export const scriptPopup = () => {
     const confirmpsw = document.getElementById('confirm-psw')
 
     if (password !== confirmpsw.value) {
-      confirmpsw.setCustomValidity('Yours passwords do not match')
+      confirmpsw.setCustomValidity('Your passwords do not match')
       return
     }
 
-    window.fetch('http://localhost:3333/registrer', {
+    window.fetch('http://localhost:3333/register', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json'
@@ -36,7 +36,6 @@ export const scriptPopup = () => {
   // formulaire de connection
   const messageElement = document.getElementById('message')
   const signInForm = document.getElementById('form-connect')
-  const signOutForm = document.getElementById('sign-out-form')
 
   const handleAuth = res => {
     // handle errors
@@ -61,14 +60,6 @@ export const scriptPopup = () => {
     })
       .then(res => res.json())
       .then(handleAuth)
-
-    signOutForm.addEventListener('submit', e => {
-      e.preventDefault()
-
-      window.fetch('http://localhost:3333/sign-out', { 'credentials': 'include' })
-        .then(res => res.json())
-        .then(handleAuth)
-    })
 
     window.fetch('http://localhost:3333/', { 'credentials': 'include' })
       .then(res => res.json())

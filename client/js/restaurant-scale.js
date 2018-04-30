@@ -5,11 +5,11 @@ export const restaurantScale = emplacement => {
   // Pour chaque fiche de resto on ajoute un event au click
   for (let column of columns) {
     let resto = column.querySelector('.restaurant .simple-infos')
-
     resto.addEventListener('click', e => {
       scale(e)
     })
   }
+
   const scale = e => {
     const that = e.currentTarget
     // On récupère la colonne liée à l'élément cliquable
