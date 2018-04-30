@@ -19,26 +19,6 @@
 
 
 
-      let name = document.getElementById('name-etab').value
-      let location = document.getElementById('adress-etab').value
-      const category = document.getElementById('catego-etab').value
-      let url = document.getElementById('fileup').value
-      const budget = document.getElementById('budget-etab').value
-      const description = document.getElementById('description-etab').value
-      let cart = document.getElementById('cb-etab').checked
-      let vegetarian = document.getElementById('vege-etab').checked
-      let takeAway = document.getElementById('away-etab').checked
-
-      /* if (url === '') {
-         url = `images/categories/${category.toLowerCase()}.jpg`
-       }*/
-
-      cart = isChecked(cart)
-      vegetarian = isChecked(vegetarian)
-      takeAway = isChecked(takeAway)
-      name = nameFirstLowerCase(name)
-      location = nameFirstLowerCase(location)
-
 
       form.addEventListener('submit', event => {
           event.preventDefault()
@@ -49,6 +29,11 @@
 
           // On l'obtient à partir d'un form :
           const data = new FormData(formTarget)
+
+          /* if (data.get('url') === '')
+          {data.append("url", `images/categories/${category.toLowerCase()}.jpg`)
+
+          }*/
 
           // C'est un objet un peu chelou, j'ai aucune idée de pourquoi c'est pas un
           // objet normal, c'est le DOM, on pause pas de question.
@@ -62,9 +47,33 @@
           // et il prend leur propriété "name" comme key
           // et la prop "value" comme valeur
 
+
+
+
+      let name = document.getElementById('name-etab').value
+      let location = document.getElementById('adress-etab').value
+      const category = document.getElementById('catego-etab').value
+      let url = document.getElementById('fileup').value
+      const budget = document.getElementById('budget-etab').value
+      const description = document.getElementById('description-etab').value
+      let cart = document.getElementById('cb-etab').checked
+      let vegetarian = document.getElementById('vege-etab').checked
+      let takeAway = document.getElementById('away-etab').checked
+
+       if (url === '') {
+         url = `images/categories/${category.toLowerCase()}.jpg`
+       }
+
+      cart = isChecked(cart)
+      vegetarian = isChecked(vegetarian)
+      takeAway = isChecked(takeAway)
+      name = nameFirstLowerCase(name)
+      location = nameFirstLowerCase(location)
+
           // avec fetch ça s'utilise comme ça:
           fetch('http://localhost:3333/restaurants', { method: 'post', body: data })
           .then(response => response.json())
+          .then(res => console.log(data.get('url')))
           .then(res => console.log(res))
           .catch(err => console.log(err))
           .then(res => window.location.replace('index.html'))

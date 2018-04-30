@@ -57,7 +57,7 @@ const publicImagesPath = path.join(__dirname, '../client/images/restaurants')
 const storage = multer.diskStorage({
   destination: publicImagesPath,
   filename: (req, file, cb) => {
-    cb(null, file.originalname)
+    cb(null, file.originalname + '-' + Date.now())
   }
 })
 const upload = multer({
@@ -125,7 +125,7 @@ app.get('/categories', (request, response) => {
     })
 })
 
-app.post('/restaurants', upload.single('photoresto'), (request, response, next) => {
+app.post('/restaurants', upload.single('url'), (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(11, '0')
   const filePath = path.join(__dirname, '../mocks/restos.json')
   console.log(request.file)
@@ -142,7 +142,7 @@ app.post('/restaurants', upload.single('photoresto'), (request, response, next) 
         name: request.body.name,
         location: request.body.location,
         category: request.body.category,
-        url: `images/restaurants/${request.file ? request.file.filename : id}`,
+        url: request.file ? `images/restaurants/${request.file.filename}` :`images/categories/${request.body.category.toLowerCase()}.jpg`,
         budget: request.body.budget,
         description: request.body.description,
         cart: request.body.cart,
