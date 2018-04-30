@@ -1,20 +1,26 @@
-html{
+
+html {
     overflow-x: hidden;
+    height : 100%;
 }
+
 body {
     line-height: 1.5;
     font-family: 'montserrat', sans-serif;
     background-color: #eee;
-    position: relative;
     overflow-x: hidden;
+    position: relative;
+    min-height: 100%;
 }
 
 a {
     color: #000;
 }
-a .text{
+
+a .text {
     text-decoration: underline;
 }
+
 a:hover {
     color: #ca3045;
 }
@@ -24,18 +30,27 @@ h2 {
     font-size: 3rem;
 }
 
-h3{
+h3 {
     font-family: 'Paytone One', sans-serif;
-    color :#ed3851;
+    color: #ed3851;
     font-size: 3rem;
 }
-main{
-    padding : 120px 70px 60px 70px
+
+main {
+    padding: 120px 70px 60px 70px
 }
 
 main .row .column {
     padding: 10px;
     position: relative;
+}
+#filter-black {
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    display: none;
 }
 
 .column.flex {
@@ -51,7 +66,6 @@ main .row .column {
     margin-top: 30px;
     font-weight: 700;
     transition: background-color 0.2s ease;
-
 }
 
 .button-general span {
@@ -83,3 +97,4 @@ body .row {
 h5 {
     font-weight: 700;
 }
+

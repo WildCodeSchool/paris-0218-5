@@ -6,7 +6,10 @@ const listByType = document.getElementById('list-by-type')
 const listByBudget = document.getElementById('list-by-budget')
 const listResto = document.getElementById('list-restos')
 
+const advancedFilter = document.getElementById('advanced-filter')
 const btnFilter = document.getElementById('open-filter')
+
+const filterBlack = document.getElementById('filter-black')
 
 let restaurants
 
@@ -16,17 +19,27 @@ const filterChecked = {
 }
 
 const switchFilter = () => {
-  console.log('pouet')
+  if (advancedFilter.classList.contains('hidden')) {
+    advancedFilter.classList.remove('hidden')
+    advancedFilter.classList.add('visible')
+    filterBlack.classList.add('visible')
+  } else {
+    advancedFilter.classList.remove('visible')
+    advancedFilter.classList.add('hidden')
+    filterBlack.classList.remove('visible')
+  }
 }
 
-const inputsListener = filtersType => {
-  for (let filter of filtersType) {
+const inputsListener = (filterType, filters) => {
+  for (let filter of filters) {
     filter.addEventListener('click', () => {
+      let typeFilters = filterChecked[filterType]
+      let value = filter.value.replace(/[-]/g, ' ')
       // On ajoute dans un tableau les valeurs de catégories cochées
       filter.checked
-        ? filterChecked.category.push(filter.value)
+        ? typeFilters.push(value)
         // Et on les enlève si le tableau est décoché
-        : filterChecked.category.splice(filterChecked.category.indexOf(filter.value), 1)
+        : typeFilters.splice(typeFilters.indexOf(value), 1)
       filterRestaurants(filterChecked, restaurants)
     })
   }
@@ -39,7 +52,6 @@ const displayRestaurants = restaurants => {
 
 const filterRestaurants = (filters, restaurants) => {
   let filteredData = restaurants
-
   const keys = Object.keys(filters)
   for (const k of keys) {
     if (filters[k].length) {
@@ -59,8 +71,16 @@ window.fetch('http://localhost:3333/categories')
     const filtersByCategory = listByType.getElementsByTagName('input')
     const filtersByBudget = listByBudget.getElementsByTagName('input')
 
-    inputsListener(filtersByCategory)
-    inputsListener(filtersByBudget)
+    const allFiltersType = {
+      category: filtersByCategory,
+      budget: filtersByBudget
+    }
+
+    const keys = Object.keys(allFiltersType)
+
+    for (const key of keys) {
+      inputsListener(key, allFiltersType[key])
+    }
   })
 
 window.fetch('http://localhost:3333/restaurants')
@@ -69,4 +89,9 @@ window.fetch('http://localhost:3333/restaurants')
     restaurants = res
   })
 
+if (window.innerWidth > 1280) {
+  switchFilter()
+}
+
+filterBlack.addEventListener('click', switchFilter)
 btnFilter.addEventListener('click', switchFilter)

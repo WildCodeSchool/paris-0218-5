@@ -8,6 +8,7 @@ header.row.row-responsive {
     color: #fff;
     position: relative;
     font-weight: 700;
+    z-index: 8;
 }
 
 header::after {

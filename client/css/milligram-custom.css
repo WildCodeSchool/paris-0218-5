@@ -383,6 +383,11 @@ input[type='checkbox'], input[type='radio'] {
     max-width: 10%
 }
 
+.row.row-responsive .column.column-xs-15 {
+    flex: 0 0 15%;
+    max-width: 15%
+}
+
 .row.row-responsive .column.column-xs-20 {
     flex: 0 0 20%;
     max-width: 20%
@@ -468,6 +473,10 @@ input[type='checkbox'], input[type='radio'] {
         flex: 0 0 10%;
         max-width: 10%
     }
+    .row.row-responsive .column.column-sm-15 {
+        flex: 0 0 15%;
+        max-width: 15%
+    }
     .row.row-responsive .column.column-sm-20 {
         flex: 0 0 20%;
         max-width: 20%
@@ -544,6 +553,10 @@ input[type='checkbox'], input[type='radio'] {
     .row.row-responsive .column.column-md-10 {
         flex: 0 0 10%;
         max-width: 10%
+    }
+    .row.row-responsive .column.column-md-15 {
+        flex: 0 0 15%;
+        max-width: 15%
     }
     .row.row-responsive .column.column-md-20 {
         flex: 0 0 20%;
