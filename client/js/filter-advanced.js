@@ -31,14 +31,16 @@ const switchFilter = () => {
   }
 }
 
-const inputsListener = filtersType => {
-  for (let filter of filtersType) {
+const inputsListener = (filterType, filters) => {
+  for (let filter of filters) {
     filter.addEventListener('click', () => {
+      let typeFilters = filterChecked[filterType]
+      let value = filter.value.replace(/[-]/g, ' ')
       // On ajoute dans un tableau les valeurs de catégories cochées
       filter.checked
-        ? filterChecked.category.push(filter.value)
+        ? typeFilters.push(value)
         // Et on les enlève si le tableau est décoché
-        : filterChecked.category.splice(filterChecked.category.indexOf(filter.value), 1)
+        : typeFilters.splice(typeFilters.indexOf(value), 1)
       filterRestaurants(filterChecked, restaurants)
     })
   }
@@ -51,7 +53,6 @@ const displayRestaurants = restaurants => {
 
 const filterRestaurants = (filters, restaurants) => {
   let filteredData = restaurants
-
   const keys = Object.keys(filters)
   for (const k of keys) {
     if (filters[k].length) {
@@ -71,8 +72,16 @@ window.fetch('http://localhost:3333/categories')
     const filtersByCategory = listByType.getElementsByTagName('input')
     const filtersByBudget = listByBudget.getElementsByTagName('input')
 
-    inputsListener(filtersByCategory)
-    inputsListener(filtersByBudget)
+    const allFiltersType = {
+      category: filtersByCategory,
+      budget: filtersByBudget
+    }
+
+    const keys = Object.keys(allFiltersType)
+
+    for (const key of keys) {
+      inputsListener(key, allFiltersType[key])
+    }
   })
 
 window.fetch('http://localhost:3333/restaurants')
@@ -84,4 +93,6 @@ window.fetch('http://localhost:3333/restaurants')
 if (window.innerWidth > 1280) {
   switchFilter()
 }
+
+filterBlack.addEventListener('click', switchFilter)
 btnFilter.addEventListener('click', switchFilter)
