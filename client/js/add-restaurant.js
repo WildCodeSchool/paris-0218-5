@@ -1,17 +1,14 @@
 // import { addtEtab } from './composants/addrest.js'
-
-
 form.addEventListener('submit', event => {
   event.preventDefault()
-  const formTarget = event.target
 
   // Objet special pour le traitement des formulaires : formData
-  const data = new FormData(formTarget)
+  const formData = new FormData(event.target)
 
   // On accede aux éléments de cet objet avec la méthode GET
   const isChecked = (item) => {
-    if (data.get(item) === 'on') {
-      return data.set(item, 'Oui')
+    if (formData.get(item) === 'on') {
+      return formData.set(item, 'Oui')
     }
   }
 
@@ -23,23 +20,22 @@ form.addEventListener('submit', event => {
     }
     const listWordsMaj = listWords.map(maj)
     const nameRestMaj = listWordsMaj.join(' ')
-    return data.set(item, nameRestMaj)
+    return formData.set(item, nameRestMaj)
   }
 
   isChecked('cart')
   isChecked('vegetarian')
   isChecked('takeAway')
 
-  const nameValue = data.get('name')
-  const locValue = data.get('location')
+  const nameValue = formData.get('name')
+  const locValue = formData.get('location')
 
   nameFirstLowerCase('name', nameValue)
   nameFirstLowerCase('location', locValue)
 
-  fetch('http://localhost:3333/restaurants', { method: 'post', body: data })
-    .then(response => response.json())
+    window.fetch('http://localhost:3333/restaurants', { method: 'post', body: formData })
+    .then(res => response.json())
     .then(res => console.log(res))
     .catch(err => console.log(err))
     .then(res => window.location.replace('index.html'))
 })
-

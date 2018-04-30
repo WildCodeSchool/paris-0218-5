@@ -57,7 +57,7 @@ const publicImagesPath = path.join(__dirname, '../client/images/restaurants')
 const storage = multer.diskStorage({
   destination: publicImagesPath,
   filename: (req, file, cb) => {
-    cb(null, file.originalname + '-' + Date.now())
+    cb(null, `${Date.now()} - ${file.originalname}`)
   }
 })
 const upload = multer({
