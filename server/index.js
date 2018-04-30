@@ -3,6 +3,8 @@ const fs = require('fs')
 const bodyParser = require('body-parser')
 const session = require('express-session')
 const FileStore = require('session-file-store')(session)
+const multer = require('multer')
+
 
 // variable convertir les callbacks en promises :
 const util = require('util')
@@ -42,9 +44,27 @@ app.use(session({
 }))
 
 // login middleware
+/*
 app.use((req, res, next) => {
-  console.log(`${req.method} ${req.url}`, { user: req.session.user, cookie: req.headers.cookie })
+console.log(`${req.method} ${req.url}`, { user: req.session.user, cookie: req.headers.cookie }"bonjour")
   next()
+})
+*/
+
+// upload images
+const publicImagesPath = path.join(__dirname, '../client/images/restaurants')
+
+const storage = multer.diskStorage({
+  destination: publicImagesPath,
+  filename: (req, file, cb) => {
+    cb(null, file.originalname)
+  }
+})
+const upload = multer({
+  storage: storage,
+  limits: {
+    fileSize: 500000, // 500 KB
+  }
 })
 
 // routes
@@ -105,15 +125,15 @@ app.get('/categories', (request, response) => {
     })
 })
 
-app.post('/restaurants', (request, response, next) => {
+app.post('/restaurants', upload.single('photoresto'), (request, response, next) => {
   const id = Math.random().toString(36).slice(2).padEnd(11, '0')
   const filePath = path.join(__dirname, '../mocks/restos.json')
+  console.log(request.file)
 
   // 1 Lire le fichier et convertir le buffer en string (utf8)
   readFile(filePath, 'utf8')
 
     // 2 convertir la string en objet JS
-
     .then(JSON.parse)
     .then(restos => {
       // 3 ajouter le nouveau bloc en array
@@ -122,7 +142,7 @@ app.post('/restaurants', (request, response, next) => {
         name: request.body.name,
         location: request.body.location,
         category: request.body.category,
-        url: request.body.url,
+        url: `images/restaurants/${request.file ? request.file.filename : id}`,
         budget: request.body.budget,
         description: request.body.description,
         cart: request.body.cart,
@@ -142,6 +162,7 @@ app.post('/restaurants', (request, response, next) => {
 
     // le catch permet de montrer l'erreur s'il y en a une
     .catch(next)
+
 })
 
 app.get('/profil/:id', (request, response) => {

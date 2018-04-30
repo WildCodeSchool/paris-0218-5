@@ -23,7 +23,7 @@
 			<form id="form" class="row row-responsive">
 				<div class="column column-md-50 column-xs-100">
 					<label>Nom * :
-						<input type="text" id="name-etab" name="nom" placeholder="Nom du restaurant" required/>
+						<input type="text" id="name-etab" name="title" placeholder="Nom du restaurant" required/>
 					</label>
 
 					<label>Adresse :
@@ -55,8 +55,9 @@
 					<label>Description :
 						<textarea name="description" id="description-etab" rows="4" cols="50"></textarea>
 					</label>
-					<label>Photo :
-						<input id="file" type="file" />
+					<label>
+						Photo :
+						<input id="fileup" type="file" name="photoresto" />
 					</label>
 					<label>Carte bleue acceptée :
 						<input type="checkbox" name="cb" id="cb-etab" />
@@ -71,7 +72,7 @@
 				</div>
 
 				<div>
-					<button class="button-general" type="submit" value="Envoyer"> Envoyer</button>
+					<button class="button-general" type="submit" value="Envoyer" id="addrest-send"> Envoyer</button>
 				</div>
 			</form>
 		</div>
@@ -90,3 +91,4 @@
 </body>
 
 </html>
+
