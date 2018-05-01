@@ -23,11 +23,11 @@
 			<form id="form" class="row row-responsive">
 				<div class="column column-md-50 column-xs-100">
 					<label>Nom * :
-						<input type="text" id="name-etab" name="nom" placeholder="Nom du restaurant" required/>
+						<input type="text" id="name-etab" name="name" placeholder="Nom du restaurant" required/>
 					</label>
 
 					<label>Adresse :
-						<input type="text" id="adress-etab" name="adresse" placeholder="Adresse complète" required/>
+						<input type="text" id="adress-etab" name="location" placeholder="Adresse complète" required/>
 					</label>
 
 					<label>Catégorie * :
@@ -55,23 +55,24 @@
 					<label>Description :
 						<textarea name="description" id="description-etab" rows="4" cols="50"></textarea>
 					</label>
-					<label>Photo :
-						<input id="file" type="file" />
+					<label>
+						Photo :
+						<input id="fileup" type="file" name="url" />
 					</label>
 					<label>Carte bleue acceptée :
-						<input type="checkbox" name="cb" id="cb-etab" />
+						<input type="checkbox" name="cart" id="cb-etab" />
 					</label>
 
 					<label>Adapté pour les végétariens :
-						<input type="checkbox" name="vege" id="vege-etab" />
+						<input type="checkbox" name="vegetarian" id="vege-etab" />
 					</label>
 					<label>Vente à emporter :
-						<input type="checkbox" name="away" id="away-etab" />
+						<input type="checkbox" name="takeAway" id="away-etab" />
 					</label>
 				</div>
 
 				<div>
-					<button class="button-general" type="submit" value="Envoyer"> Envoyer</button>
+					<button class="button-general" type="submit" value="Envoyer" id="addrest-send"> Envoyer</button>
 				</div>
 			</form>
 		</div>
@@ -90,3 +91,4 @@
 </body>
 
 </html>
+

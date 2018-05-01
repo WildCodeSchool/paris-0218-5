@@ -1,63 +1,42 @@
 // import { addtEtab } from './composants/addrest.js'
-const isChecked = (checkBox) => {
-  if (checkBox === true) {
-    return 'Oui'
-  }
-  return 'Non'
-}
-
-const nameFirstLowerCase = (nameRest) => {
-  const listWords = nameRest.split(' ') // les mots de la phrase se transforment en liste
-  const maj = (cel) => { // chaque premiere lettre de chaque élément est mis en majuscule
-    const wordMaj = cel.charAt(0).toUpperCase() + cel.substring(1).toLowerCase()
-    return wordMaj
-  }
-  const listWordsMaj = listWords.map(maj)
-  const nameRestMaj = listWordsMaj.join(' ')
-  return nameRestMaj
-}
-
 const form = document.getElementById('form')
-
 form.addEventListener('submit', event => {
   event.preventDefault()
 
-  let name = document.getElementById('name-etab').value
-  let location = document.getElementById('adress-etab').value
-  const category = document.getElementById('catego-etab').value
-  let url = document.getElementById('file').value
-  const budget = document.getElementById('budget-etab').value
-  const description = document.getElementById('description-etab').value
-  let cart = document.getElementById('cb-etab').checked
-  let vegetarian = document.getElementById('vege-etab').checked
-  let takeAway = document.getElementById('away-etab').checked
+  // Objet special pour le traitement des formulaires : formData
+  const formData = new window.FormData(event.target)
 
-  if (url === '') {
-    url = `images/categories/${category.toLowerCase()}.jpg`
+  // On accede aux éléments de cet objet avec la méthode GET
+  const isChecked = (item) => {
+    if (formData.get(item) === 'on') {
+      return formData.set(item, 'Oui')
+    }
   }
 
-  cart = isChecked(cart)
-  vegetarian = isChecked(vegetarian)
-  takeAway = isChecked(takeAway)
-  name = nameFirstLowerCase(name)
-  location = nameFirstLowerCase(location)
+  const nameFirstLowerCase = (item, valueGet) => {
+    const listWords = valueGet.split(' ') // les mots de la phrase se transforment en liste
+    const maj = (cel) => { // chaque premiere lettre de chaque élément est mis en majuscule
+      const wordMaj = cel.charAt(0).toUpperCase() + cel.substring(1).toLowerCase()
+      return wordMaj
+    }
+    const listWordsMaj = listWords.map(maj)
+    const nameRestMaj = listWordsMaj.join(' ')
+    return formData.set(item, nameRestMaj)
+  }
 
-  window.fetch('http://localhost:3333/restaurants', {
-    method: 'post',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      name: name,
-      location: location,
-      category: category,
-      url: url,
-      budget: budget,
-      description: description,
-      cart: cart,
-      vegetarian: vegetarian,
-      takeAway: takeAway
-    })
-  })
+  isChecked('cart')
+  isChecked('vegetarian')
+  isChecked('takeAway')
+
+  const nameValue = formData.get('name')
+  const locValue = formData.get('location')
+
+  nameFirstLowerCase('name', nameValue)
+  nameFirstLowerCase('location', locValue)
+
+  window.fetch('http://localhost:3333/restaurants', { method: 'post', body: formData })
+    .then(res => res.json())
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
     .then(res => window.location.replace('index.html'))
 })
