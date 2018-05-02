@@ -11,11 +11,15 @@ window.fetch(`http://localhost:3333/profil/${id}`)
     profilElement.innerHTML = profilPage(users)
   })
   .then(() => {
+    const validate = document.getElementById('valid')
+    validate.disabled = true
     const modify = document.getElementById('modify')
     modify.addEventListener('click', () => {
       const inputs = profilElement.querySelectorAll('input')
       for (let input of inputs) {
         input.removeAttribute('disabled')
       }
+      modify.disabled = true
+      validate.disabled = false
     })
   })
