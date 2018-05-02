@@ -119,22 +119,21 @@ header span {
     min-width: 65px;
     background-color: #ca3045;
     border-bottom: 2px solid #B0002C;
+    float: right;
 }
-.connexion-wrapper .btn-red{
-    display: inline-block;
-}
+
 .icn-connexion-wrapper{
     border-left: 1px solid rgba(255,255,255,0.4);
-}
-.btn-red span {
-    cursor: pointer;
 }
 
 .btn-red:hover {
     background-color: #B0002C;
 }
-.btn-red{
-    float: right;
+.btn-red span {
+    cursor: pointer;
+}
+.connexion-wrapper .btn-red{
+    display: inline-block;
 }
 .btn-red .text {
     margin-left: 10px;
