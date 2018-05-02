@@ -23,23 +23,3 @@ window.fetch(`http://localhost:3333/profil/${id}`)
       validate.disabled = false
     })
   })
-
-/*
-  const validate = document.getElementById('valid')
-
-  /* ****** GESTION MODAL *******
-export const scriptPopup = () => {
-  const getModal = document.getElementById('open-popup')
-  const showModal = document.getElementById('popup-cnx')
-
-  getModal.addEventListener('click', () => {
-    showModal.style.display = 'block'
-    const closePopup = document.getElementById('close-popup')
-    closePopup.addEventListener('click', () => {
-      showModal.style.display = 'none'
-    })
-  })
-
-  quand on clic sur modifyle bouton modify = disabled
-  le bouton valider = able
-*/
