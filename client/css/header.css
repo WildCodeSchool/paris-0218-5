@@ -1,6 +1,6 @@
 header.row.row-responsive {
     width: 100%;
-    height: 170px;
+    height: 188px;
     background-color: #ed3851;
     flex-direction: row;
     justify-content: space-between;
@@ -116,10 +116,16 @@ header span {
 }
 .btn-red {
     padding: 10px 20px;
+    min-width: 65px;
     background-color: #ca3045;
     border-bottom: 2px solid #B0002C;
 }
-
+.connexion-wrapper .btn-red{
+    display: inline-block;
+}
+.icn-connexion-wrapper{
+    border-left: 1px solid rgba(255,255,255,0.4);
+}
 .btn-red span {
     cursor: pointer;
 }
@@ -127,16 +133,12 @@ header span {
 .btn-red:hover {
     background-color: #B0002C;
 }
-
+.btn-red{
+    float: right;
+}
 .btn-red .text {
     margin-left: 10px;
     display: inline-block;
-}
-
-.btn-red.connected .text {
-    border-right: 1px solid rgba(255, 255, 255, 0.6);
-    margin-right: 16px;
-    padding-right: 20px;
 }
 
 .randomeal-wrapper {

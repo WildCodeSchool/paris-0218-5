@@ -26,13 +26,12 @@ window.fetch(`http://localhost:3333/restaurants/`)
       search = search.toLowerCase()
       restaurants = restaurants.filter(restaurant =>
         restaurant.category.toLowerCase() === search ||
-        restaurant.name.toLowerCase() === search
-      )
+        restaurant.name.toLowerCase() === search)
     }
     if (restaurants.length) {
       listResto.innerHTML = restaurants.map(restaurantElement).join('')
       restaurantScale(listResto)
     } else {
-      listResto.innerHTML = `<p>Votre recherche n'a abouti à aucun réultat</p>`
+      listResto.innerHTML = `<p>Votre recherche n'a abouti à aucun résultat</p>`
     }
   })
