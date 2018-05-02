@@ -61,4 +61,10 @@
 .icn.icn-logout{
     background-image: url('../images/icones/logout.svg')
 }
+.icn.icn-grid{
+    background-image: url('../images/icones/grid.svg');
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
 
