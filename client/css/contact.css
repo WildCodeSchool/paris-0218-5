@@ -1,0 +1,141 @@
+
+/* CONTACT PAGE BEGINNING */
+
+.contactform {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 10px 0;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.contactformsmall {
+    margin-top: 50px;
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+.socialicon {
+
+    width: 30px;
+    height: auto;
+    margin: 15px;
+
+}
+
+
+.sociallogoline {
+    text-align: center;
+    padding-bottom: 75px;
+}
+
+.sociallogo {
+    text-align: center;
+    color:#EB3B54;
+    opacity: 1.0;
+    padding: 5px;
+}
+
+.sociallogo:hover {
+    opacity: 0.5;
+    transition: .5s ease;
+}
+
+.sociallink {
+    display: inline;
+}
+
+.fab {
+    opacity: 1.0;
+}
+
+.fab:hover {
+    opacity: 0.5;
+    transition: .5s ease;  
+}
+
+.Contact {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 6rem;
+    color:#EB3B54;
+    padding-top: 1em;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.legend {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 3em;
+    color: #EB3B54;
+    border: none;
+    padding-left: 5vw;
+    padding-top: 0.75em;
+    padding-bottom: 0.5em;
+}
+
+.lead-big {
+    font-size: 28px;
+    line-height: 48px;
+    color: #535353;
+}
+
+.form-inline input,
+.form-inline textarea,
+.form-inline select {
+    max-width: 235px;
+    height: 45px;
+    overflow: hidden;
+    line-height: 40px;
+    /*background-color: #EFF0F1;*/
+    border: 1px dotted;
+    border-radius: 5px;
+    vertical-align: text-bottom;
+    cursor: pointer;
+}
+
+.form-inline .form-group label {
+    position: relative;
+}
+
+.form-inline .form-group label > span {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    font-size: 14px;
+    color: #EB3B54;
+    opacity: 1;
+    font-family: 'Montserrat', monospace;
+}
+
+.submit.btn.btn-lg {
+    font-size: 28px;
+    color: #EB3B54;
+    border: 1px dotted;
+    border-radius: 0;
+    transition: .5s ease;
+}
+
+iframe {
+	filter: grayscale();
+	margin-bottom: -5px;
+}
+
+/* MEDIA QUERIES FOR CONTACT */
+
+@media screen and (max-width: 568px) {
+    .Contact {
+    	font-size: 3.4em !important;
+    	padding-top: 10vh !important; 
+    	text-align: center;
+    	padding-bottom: 5vh;
+    }
+	.contactformsmall {
+	    margin-top: 30px;
+	}
+}
+
+/* CONTACT PAGE END */
