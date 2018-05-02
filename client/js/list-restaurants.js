@@ -9,6 +9,7 @@ const params = new URLSearchParams(window.location.search)
 //  On récupère le nom de la catégorie
 const cat = params.get('cat')
 let budget = params.get('budget')
+let search = params.get('search')
 
 window.fetch(`http://localhost:3333/restaurants/`)
   .then(res => res.json())
@@ -16,19 +17,22 @@ window.fetch(`http://localhost:3333/restaurants/`)
     // On affiche les bons restos en fonction du budget ou de la catégorie
     if (cat) {
       document.querySelector('h2').innerHTML = cat
-      let restoCat = restaurants.filter(restaurants => restaurants.category === cat)
-      return restoCat
+      restaurants = restaurants.filter(restaurant => restaurant.category === cat)
     } else if (budget) {
-      budget = budget === '5' ? 'Moins de 5€' : budget === '5-10' ? 'De 5 à 10€' : 'Plus de 10€'
       document.querySelector('h2').innerHTML = budget
-      let restoCat = restaurants.filter(restaurants => restaurants.budget === budget)
-      return restoCat
-    } else {
-      let restoCat = restaurants
-      return restoCat
+      restaurants = restaurants.filter(restaurant => restaurant.budget === budget)
+    } else if (search) {
+      document.querySelector('h2').innerHTML = `Résultat(s) de recherche : ${search}`
+      search = search.toLowerCase()
+      restaurants = restaurants.filter(restaurant =>
+        restaurant.category.toLowerCase() === search ||
+        restaurant.name.toLowerCase() === search
+      )
     }
-  })
-  .then(restoCat => {
-    listResto.innerHTML = restoCat.map(restaurantElement).join('')
-    restaurantScale(listResto)
+    if (restaurants.length) {
+      listResto.innerHTML = restaurants.map(restaurantElement).join('')
+      restaurantScale(listResto)
+    } else {
+      listResto.innerHTML = `<p>Votre recherche n'a abouti à aucun réultat</p>`
+    }
   })
