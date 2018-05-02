@@ -12,7 +12,7 @@ export const categoriesElement = mycatego => {
 }
 
 export const budgetElement = mybudget => {
-  //let url = mybudget.title.replace(/['à'/]/, '-').replace(/[a-zA-Z/'€'/\s]/g, '')
+  // let url = mybudget.title.replace(/['à'/]/, '-').replace(/[a-zA-Z/'€'/\s]/g, '')
   return `
   <div class='category column column-sm-33 column-xs-100'>
     <a href="list-restaurants.html?budget=${mybudget.title}">

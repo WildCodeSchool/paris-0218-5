@@ -4,7 +4,6 @@ import { searchBar } from './search-bar.js'
 import { popup } from './composants/popup.js'
 import { scriptComponentsConnexion } from './script-connexion.js'
 
-
 const date = new Date().getFullYear()
 
 document.querySelector('footer').innerHTML = footer(date)
