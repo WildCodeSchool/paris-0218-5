@@ -82,6 +82,7 @@
 }
 .btns-home{
     justify-content : center;
+    padding-top: 10px;
 }
 .btns-home .button-general{
     margin : 0 20px;
