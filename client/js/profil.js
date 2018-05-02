@@ -21,7 +21,6 @@ window.fetch(`http://localhost:3333/profil/${id}`)
       }
       modify.disabled = true
       validate.disabled = false
-
     })
   })
 
