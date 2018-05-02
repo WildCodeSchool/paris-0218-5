@@ -89,6 +89,26 @@ app.post('/register', (request, response, next) => {
     .catch(next)
 })
 
+app.post('/modify-profil/:id', (request, response, next) => {
+  const id = Number(request.params.id)
+  const filePath = path.join(__dirname, '../mocks/user.json')
+  readFile(filePath, 'utf8')
+    .then(JSON.parse)
+    .then(user => {
+      user.forEach(element => {
+        if (id === element.id) {
+          element.email = request.body.email
+          element.password = request.body.password
+        }
+      })
+      console.log(user)
+      const content = JSON.stringify(user, null, 2)
+      return writeFile(filePath, content, 'utf8')
+    })
+    .then(() => response.end('OKay'))
+    .catch(next)
+})
+
 app.get('/restaurants', (request, response) => {
   const filePath = path.join(__dirname, '../mocks/restos.json')
   // promise
