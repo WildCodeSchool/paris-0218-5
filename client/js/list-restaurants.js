@@ -2,6 +2,7 @@
 
 import { restaurantElement } from './composants/restaurant.js'
 import { restaurantScale } from './restaurant-scale.js'
+//import { randomIt } from './randomeal.js'
 
 const listResto = document.getElementById('list-restos')
 const params = new URLSearchParams(window.location.search)
@@ -10,6 +11,7 @@ const params = new URLSearchParams(window.location.search)
 const cat = params.get('cat')
 let budget = params.get('budget')
 let search = params.get('search')
+const random = params.get('random')
 
 window.fetch(`http://localhost:3333/restaurants/`)
   .then(res => res.json())
@@ -29,10 +31,14 @@ window.fetch(`http://localhost:3333/restaurants/`)
         restaurant.name.toLowerCase() === search
       )
     }
+    else if (random) {
+      document.querySelector('h2').innerHTML = 'Randomeal'
+      restaurants = restaurants.filter(restaurant => restaurant.id.toString() === random)
+    }
     if (restaurants.length) {
       listResto.innerHTML = restaurants.map(restaurantElement).join('')
       restaurantScale(listResto)
     } else {
-      listResto.innerHTML = `<p>Votre recherche n'a abouti à aucun réultat</p>`
+      listResto.innerHTML = `<p>Votre recherche n'a abouti à aucun résultat</p>`
     }
   })
