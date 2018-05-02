@@ -10,8 +10,8 @@ export const header =
 
     <div id="choice-wrapper" class="column column-xs-10 column-md-40 flex">
         <div id="search-wrapper" class="">
-            <form class="search">
-                <input type="text" placeholder="Chercher un restaurant">
+            <form class="search" id="search-form">
+                <input type="text" id="search-input" placeholder="Chercher un restaurant">
                 <button class="btn-search" type="submit">
                 <span class="icn icn-search-white"></span>
                 </button>
