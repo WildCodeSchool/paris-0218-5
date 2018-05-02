@@ -20,21 +20,20 @@
     <h1 class="Contact">Contact</h1>
 
     <section class="contactform">
-        <div class="row row-responsive">
+      <form id="form" class="row row-responsive">
+				<div class="column column-md-100">
             <form method='POST' action="send" class="form-inline lead-big" role="form" id="contact-form">
                 <div class="form-group">
-                    <label for="name">Je m'appelle <span>Ton nom</span></label>
+                    <label for="name">Bonjour. Je m'appelle</label>
                     <input type="text" id="name" placeholder="" required>
-                    et voici
                 </div>
 
             <div class="form-group">
-              <label for="company">mon adresse mail<span>Ton mail</span></label>
+              <label for="company">et voici mon adresse mail.</label>
               <input type="text" id="mail" placeholder="@">
-              .
             </div>
             <div class="form-group">
-              <label for="reason"> Je vous contacte parce que je souhaite <span>Sujet</span></label>
+              <label for="reason"> Je vous contacte car je souhaite </label>
               <select id="reason">
                   <option value="0" selected>Choisir</option>
                   <option value="1">ajouter mon resto.</option>
@@ -45,22 +44,21 @@
               </select>
               
             </div>
+            
             <div class="form-group">
-              <label for="details"> Voici plus de détails <span>Détails</span></label>
+              <label for="details"> Voici plus de détails</label>
               <textarea id="details" placeholder="" required></textarea>
             </div>
+            
             <div class="form-group">
-              
-              . Vous pouvez aussi me rejoindre sur
-            </div>
-            <div class="form-group">
-              <label for="telnum"> mon portable au <span>Your phone</span></label>
+              <label for="telnum">Vous pouvez aussi me rejoindre sur mon portable au</label>
               <input type="tel" id="telnum"  placeholder="mobile #" required>
               Merci et bon appétit!
             </div>
-            <button type="submit" class="btn btn-default btn-lg submit">Send</button>
             
-          
+            <div>
+              <button class="button-general" type="submit" value="Envoyer" id="addrest-send"> Envoyer</button>
+            </div>
 
         </form>
   </div>
@@ -99,6 +97,7 @@
 	</footer>
 
 </body>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     <script type="module" src="/js/app.js"></script>
 	  <script type="module" src="/js/script.js"></script>
 	  <script type="module" src="/js/popup.js"></script>

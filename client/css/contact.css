@@ -15,7 +15,6 @@
     padding: 10px 0;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-
 }
 
 
@@ -24,7 +23,6 @@
     width: 30px;
     height: auto;
     margin: 15px;
-
 }
 
 
@@ -62,7 +60,6 @@
     font-family: 'Paytone One', sans-serif;
     font-size: 6rem;
     color:#EB3B54;
-    padding-top: 1em;
     margin-left: 5vw;
     margin-right: 5vw;
 }
@@ -111,12 +108,12 @@
     font-family: 'Montserrat', monospace;
 }
 
-.submit.btn.btn-lg {
-    font-size: 28px;
-    color: #EB3B54;
-    border: 1px dotted;
-    border-radius: 0;
-    transition: .5s ease;
+#form-group {
+    display: inline-block;
+}
+
+input {
+    display: inline-block;
 }
 
 iframe {
