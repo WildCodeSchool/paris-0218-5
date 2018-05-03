@@ -38,7 +38,7 @@ export const restaurantElement = restaurant => {
     </p>`
   }
   str = /* html */ `${str}
-    <div class="like-wrapper" id="liker">
+    <div class="like-wrapper">
       <span class="icn icn-like"></span>
       <span>${restaurant.like.length}</span>
     </div>

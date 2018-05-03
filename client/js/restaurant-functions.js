@@ -1,3 +1,5 @@
+import { showModal } from './popup.js'
+
 export const restaurantScale = emplacement => {
   const columns = emplacement.getElementsByClassName('column')
   let nbColumn
@@ -41,3 +43,22 @@ export const restaurantScale = emplacement => {
     }
   }
 }
+
+export const restaurantLikes = () => {
+  const btnLikes = document.getElementsByClassName('like-wrapper')
+
+  window.fetch('http://localhost:3333/session', { credentials: 'include' })
+    .then(res => res.json())
+    .then(user => {
+      for (let like of btnLikes) {
+        like.addEventListener('click', (e) => {
+          if (!user.name) {
+            showModal()
+          } else {
+            console.log(user.id);
+          }
+        })
+      }
+    })
+}
+
