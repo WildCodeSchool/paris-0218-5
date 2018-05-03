@@ -1,14 +1,11 @@
 /* ****** GESTION MODAL ******* */
-export const scriptPopup = () => {
-  const getModal = document.getElementById('open-popup')
+export const showModal = () => {
   const showModal = document.getElementById('popup-cnx')
 
-  getModal.addEventListener('click', () => {
-    showModal.style.display = 'block'
-    const closePopup = document.getElementById('close-popup')
-    closePopup.addEventListener('click', () => {
-      showModal.style.display = 'none'
-    })
+  showModal.style.display = 'block'
+  const closePopup = document.getElementById('close-popup')
+  closePopup.addEventListener('click', () => {
+    showModal.style.display = 'none'
   })
   // formulaire d'inscription
   document.getElementById('form-register').addEventListener('submit', event => {
@@ -22,7 +19,6 @@ export const scriptPopup = () => {
       confirmpsw.setCustomValidity('Your passwords do not match')
       return
     }
-
     window.fetch('http://localhost:3333/register', {
       method: 'post',
       headers: {

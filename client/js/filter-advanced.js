@@ -1,6 +1,6 @@
 import { filterElement } from './composants/filter-advanced.js'
 import { restaurantElement } from './composants/restaurant.js'
-import { restaurantScale } from './restaurant-scale.js'
+import { restaurantScale, restaurantLikes } from './restaurant-functions.js'
 
 const listByType = document.getElementById('list-by-type')
 const listByBudget = document.getElementById('list-by-budget')
@@ -48,6 +48,7 @@ const inputsListener = (filterType, filters) => {
 const displayRestaurants = restaurants => {
   listResto.innerHTML = restaurants.map(restaurantElement).join('')
   restaurantScale(listResto)
+  restaurantLikes()
 }
 
 const filterRestaurants = (filters, restaurants) => {

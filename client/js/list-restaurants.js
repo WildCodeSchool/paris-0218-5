@@ -1,7 +1,7 @@
 /* global URLSearchParams */
 
 import { restaurantElement } from './composants/restaurant.js'
-import { restaurantScale } from './restaurant-scale.js'
+import { restaurantScale, restaurantLikes } from './restaurant-functions.js'
 
 const listResto = document.getElementById('list-restos')
 const params = new URLSearchParams(window.location.search)
@@ -39,6 +39,7 @@ window.fetch(`http://localhost:3333/restaurants/`)
     if (restaurants.length) {
       listResto.innerHTML = restaurants.map(restaurantElement).join('')
       restaurantScale(listResto)
+      restaurantLikes()
     } else {
       listResto.innerHTML = `<p>Votre recherche n'a abouti à aucun résultat</p>`
     }
