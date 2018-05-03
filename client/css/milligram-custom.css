@@ -59,14 +59,9 @@ blockquote *:last-child {
     opacity: .5
 }
 
-.button[disabled]:focus, .button[disabled]:hover, button[disabled]:focus, button[disabled]:hover, input[type='button'][disabled]:focus, input[type='button'][disabled]:hover, input[type='reset'][disabled]:focus, input[type='reset'][disabled]:hover, input[type='submit'][disabled]:focus, input[type='submit'][disabled]:hover {
-    background-color: #9b4dca;
-    border-color: #9b4dca
-}
 
 .button.button-outline, button.button-outline, input[type='button'].button-outline, input[type='reset'].button-outline, input[type='submit'].button-outline {
     background-color: transparent;
-    color: #9b4dca
 }
 
 .button.button-outline:focus, .button.button-outline:hover, button.button-outline:focus, button.button-outline:hover, input[type='button'].button-outline:focus, input[type='button'].button-outline:hover, input[type='reset'].button-outline:focus, input[type='reset'].button-outline:hover, input[type='submit'].button-outline:focus, input[type='submit'].button-outline:hover {
@@ -77,7 +72,6 @@ blockquote *:last-child {
 
 .button.button-outline[disabled]:focus, .button.button-outline[disabled]:hover, button.button-outline[disabled]:focus, button.button-outline[disabled]:hover, input[type='button'].button-outline[disabled]:focus, input[type='button'].button-outline[disabled]:hover, input[type='reset'].button-outline[disabled]:focus, input[type='reset'].button-outline[disabled]:hover, input[type='submit'].button-outline[disabled]:focus, input[type='submit'].button-outline[disabled]:hover {
     border-color: inherit;
-    color: #9b4dca
 }
 
 .button.button-clear, button.button-clear, input[type='button'].button-clear, input[type='reset'].button-clear, input[type='submit'].button-clear {
@@ -246,7 +240,10 @@ input[type='checkbox'], input[type='radio'] {
 .row .column.column-offset-90 {
     margin-left: 90%
 }
-
+.row .column.column-0 {
+    flex: 0 0 0%;
+    max-width: 0%
+}
 .row .column.column-10 {
     flex: 0 0 10%;
     max-width: 10%
@@ -378,6 +375,11 @@ input[type='checkbox'], input[type='radio'] {
     margin-left: 90%
 }
 
+.row.row-responsive .column.column-xs-0 {
+    flex: 0 0 0%;
+    max-width: 0%
+}
+
 .row.row-responsive .column.column-xs-10 {
     flex: 0 0 10%;
     max-width: 10%
@@ -468,6 +470,10 @@ input[type='checkbox'], input[type='radio'] {
     }
     .row.row-responsive .column.column-offset-sm-90 {
         margin-left: 90%
+    }
+    .row.row-responsive .column.column-sm-0 {
+        flex: 0 0 0%;
+        max-width: 0%
     }
     .row.row-responsive .column.column-sm-10 {
         flex: 0 0 10%;

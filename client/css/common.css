@@ -17,10 +17,6 @@ a {
     color: #000;
 }
 
-a .text {
-    text-decoration: underline;
-}
-
 a:hover {
     color: #ca3045;
 }

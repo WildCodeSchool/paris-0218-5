@@ -27,13 +27,11 @@ window.fetch(`http://localhost:3333/restaurants/`)
       search = search.toLowerCase()
       restaurants = restaurants.filter(restaurant =>
         restaurant.category.toLowerCase() === search ||
-        restaurant.name.toLowerCase() === search
-      )
+        restaurant.name.toLowerCase() === search)
     } else if (random) {
       document.querySelector('h2').innerHTML = 'Randomeal'
       let randomId = restaurants[Math.floor(Math.random() * restaurants.length)].id
       restoRandom.push(restaurants[randomId])
-    }
 
     if (restoRandom.length) {
       listResto.innerHTML = restoRandom.map(restaurantElement)
