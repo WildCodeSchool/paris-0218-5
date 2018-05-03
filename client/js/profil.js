@@ -9,8 +9,7 @@ window.fetch(`http://localhost:3333/profil/${id}`)
   .then(res => res.json())
   .then(users => {
     profilElement.innerHTML = profilPage(users)
-  })
-  .then(() => {
+
     const validate = document.getElementById('valid')
     validate.disabled = true
     const modify = document.getElementById('modify')
@@ -21,5 +20,22 @@ window.fetch(`http://localhost:3333/profil/${id}`)
       }
       modify.disabled = true
       validate.disabled = false
+    })
+
+    const form = document.getElementById('profil-form')
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      const email = document.getElementById('mail-input').value
+      const password = document.getElementById('password-input').value
+      window.fetch(`http://localhost:3333/modify-profil/${id}`, {
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password
+        })
+      })
     })
   })
