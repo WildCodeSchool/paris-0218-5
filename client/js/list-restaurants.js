@@ -32,7 +32,7 @@ window.fetch(`http://localhost:3333/restaurants/`)
       document.querySelector('h2').innerHTML = 'Randomeal'
       let randomId = restaurants[Math.floor(Math.random() * restaurants.length)].id
       restoRandom.push(restaurants[randomId])
-
+    }
     if (restoRandom.length) {
       listResto.innerHTML = restoRandom.map(restaurantElement)
       restaurantScale(listResto)
