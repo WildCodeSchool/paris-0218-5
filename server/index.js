@@ -78,6 +78,7 @@ app.post('/register', (request, response, next) => {
     .then(user => {
       user.push({
         id: user.length + 1,
+        name: request.body.name,
         email: request.body.email,
         password: request.body.password,
         createdAt: Date.now()
