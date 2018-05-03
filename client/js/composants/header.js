@@ -1,5 +1,5 @@
 export const header =
-  `<div class="first-column column column-md-40 column-xs-80 flex">
+  /* html */ `<div class="first-column column column-md-40 column-xs-80 flex">
         <div id="logo-wrapper">
             <a href="index.html">
                 <img src="images/logo.svg" alt="logo" />
@@ -17,9 +17,10 @@ export const header =
                 </button>
             </form>
         </div>
-        <div id="randomeal-btn" class="randomeal-wrapper desktop-only">
+        <div id="randomeal-btn" class="randomeal-wrapper desktop-only"><a href = "list-restaurants.html?random=eat">
               <span class="icn icn-dice"></span>
               <span class='text-randomeal'>Randomeal</span>
+              </a>
         </div>
     </div>
     <div class="last-column column column-md-20 column-xs-10 flex">
