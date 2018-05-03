@@ -12,7 +12,7 @@ const cat = params.get('cat')
 let budget = params.get('budget')
 let search = params.get('search')
 const random = params.get('random')
-
+const restoRandom = []
 window.fetch(`http://localhost:3333/restaurants/`)
   .then(res => res.json())
   .then(restaurants => {
@@ -33,12 +33,21 @@ window.fetch(`http://localhost:3333/restaurants/`)
     }
     else if (random) {
       document.querySelector('h2').innerHTML = 'Randomeal'
-      restaurants = restaurants.filter(restaurant => restaurant.id.toString() === random)
+      let randomId = restaurants[Math.floor(Math.random() * restaurants.length)].id
+     restoRandom.push(restaurants[randomId])
+
     }
-    if (restaurants.length) {
+    if (restoRandom.length) {
+      listResto.innerHTML = restoRandom.map(restaurantElement)
+      restaurantScale(listResto)
+    }
+
+   else if (restaurants.length) {
       listResto.innerHTML = restaurants.map(restaurantElement).join('')
       restaurantScale(listResto)
     } else {
       listResto.innerHTML = `<p>Votre recherche n'a abouti à aucun résultat</p>`
     }
+
+
   })
