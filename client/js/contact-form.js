@@ -1,4 +1,4 @@
-const express = require('express')
+/* const express = require('express')
 const app = express()
 const router = express.Router()
 const nodemailer = require('nodemailer')
@@ -33,13 +33,13 @@ router.get('/send', (req, res, next) => {
              </ul>
          `
     // cree le transporter
-      const transporter = nodemailer.createTransport({
-        host: 'smtp.ethereal.email',
-        port: 587,
-        auth: {
-          user: 'jt3vfgego6giu4ym@ethereal.email',
-          pass: 'Fzvhh4KQbpBbw8N2Ut'
-        }
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.ethereal.email',
+      port: 587,
+      auth: {
+        user: 'jt3vfgego6giu4ym@ethereal.email',
+        pass: 'Fzvhh4KQbpBbw8N2Ut'
+      }
     })
     // Mise en forme du mail
     const mailOptions = {
@@ -50,14 +50,14 @@ router.get('/send', (req, res, next) => {
       html: contactContent
 
     }
-    // on gere l'erreur
+    /* on gere l'erreur
     transporter.sendMail(mailOptions, (err, data => {
-             if (err) {
+      if (err) {
       return console.log(err)
       }
       console.log(data)
-         }))
-     })
+    }))
+  })
 })
 
-module.exports = router
+module.exports = router */
