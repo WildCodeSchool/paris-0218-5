@@ -55,17 +55,18 @@ export const restaurantLikes = () => {
           if (!user.name) {
             showModal()
           } else {
-            const idResto = like.id
-            window.fetch(`http://localhost:3333/restaurants/add-like/${idResto}`, {
+            const idResto = e.target.getAttribute('id')
+            window.fetch(`http://localhost:3333/like`, {
               method: 'post',
               headers: {
                 'Content-Type': 'application/json'
               },
               body: JSON.stringify({
-                user: user.id,
+                idUser: user.id,
                 idResto: idResto
               })
             })
+            .then(res => window.location = window.location)
           }
         })
       }

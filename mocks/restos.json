@@ -124,7 +124,6 @@
     "vegetarian": "Oui",
     "takeAway": "Oui",
     "like": [
-      1,
       2,
       3,
       4,
@@ -163,10 +162,10 @@
     "vegetarian": "Oui",
     "takeAway": "",
     "like": [
-      1,
       2,
       3,
-      4
+      4,
+      1
     ]
   },
   {
