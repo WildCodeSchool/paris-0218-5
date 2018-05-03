@@ -46,5 +46,12 @@
     "email": "monmail@gmail.com",
     "password": "qqq",
     "createdAt": 1524816463450
+  },
+  {
+    "id": 8,
+    "name": "Bleuparis",
+    "email": "lala@lolo.com",
+    "password": "1234",
+    "createdAt": 1525352543441
   }
 ]

@@ -11,6 +11,7 @@ export const showModal = () => {
   // formulaire d'inscription
   document.getElementById('form-register').addEventListener('submit', event => {
     event.preventDefault()
+    let name = document.getElementById('register-name').value.charAt(0).toUpperCase() + document.getElementById('register-name').value.substring(1).toLowerCase()
     const email = document.getElementById('register-email').value
     const password = document.getElementById('register-psw').value
     const confirmpsw = document.getElementById('confirm-psw')
@@ -26,6 +27,7 @@ export const showModal = () => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
+        name: name,
         email: email,
         password: password
       })
