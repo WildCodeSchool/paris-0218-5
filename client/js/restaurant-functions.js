@@ -61,7 +61,7 @@ export const restaurantLikes = () => {
               headers: {
                 'Content-Type': 'application/json'
               },
-              body: new URL({
+              body: JSON.stringify({
                 user: user.id,
                 idResto: idResto
               })
@@ -71,4 +71,3 @@ export const restaurantLikes = () => {
       }
     })
 }
-

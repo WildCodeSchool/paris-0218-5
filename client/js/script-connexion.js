@@ -6,12 +6,11 @@ export const scriptComponentsConnexion = () => {
   window.fetch('http://localhost:3333/session', { credentials: 'include' })
     .then(res => res.json())
     .then(user => {
-      const connected = user.name ? true : false
-      connected
-      ? btnConnexion.innerHTML = isConnected(user)
-      : btnConnexion.innerHTML = isNotConnected
+      user.name
+        ? btnConnexion.innerHTML = isConnected(user)
+        : btnConnexion.innerHTML = isNotConnected
 
-      if (!connected) {
+      if (!user.name) {
         btnConnexion.addEventListener('click', showModal)
       } else {
         document.getElementById('sign-out').addEventListener('click', () => {

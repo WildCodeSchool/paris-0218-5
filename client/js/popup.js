@@ -1,6 +1,5 @@
 /* ****** GESTION MODAL ******* */
 export const showModal = () => {
-
   const showModal = document.getElementById('popup-cnx')
 
   showModal.style.display = 'block'
@@ -20,7 +19,6 @@ export const showModal = () => {
       confirmpsw.setCustomValidity('Your passwords do not match')
       return
     }
-
     window.fetch('http://localhost:3333/register', {
       method: 'post',
       headers: {
