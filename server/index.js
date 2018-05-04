@@ -102,7 +102,6 @@ app.post('/modify-profil/:id', (request, response, next) => {
           element.password = request.body.password
         }
       })
-      console.log(user)
       const content = JSON.stringify(user, null, 2)
       return writeFile(filePath, content, 'utf8')
     })
@@ -180,6 +179,32 @@ app.post('/restaurants', upload.single('url'), (request, response, next) => {
     .then(() => response.end('OK'))
 
     // le catch permet de montrer l'erreur s'il y en a une
+    .catch(next)
+})
+
+app.post('/like', (req, res, next) => {
+  const filePath = path.join(__dirname, '../mocks/restos.json')
+  const idUser = req.body.idUser
+  const idRestau = Number(req.body.idResto)
+  readFile(filePath, 'utf8')
+    .then(JSON.parse)
+    .then(restau => {
+      restau.forEach(element => {
+        if (idRestau === element.id) {
+          const index = element.like.findIndex(el => {
+            return el === idUser
+          })
+          if (index !== -1) {
+            element.like.splice(index, 1)
+          } else {
+            element.like.push(idUser)
+          }
+        }
+      })
+      const content = JSON.stringify(restau, null, 2)
+      return writeFile(filePath, content, 'utf8')
+    })
+    .then(() => res.end('OKaydac'))
     .catch(next)
 })
 
