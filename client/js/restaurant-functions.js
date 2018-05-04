@@ -66,7 +66,7 @@ export const restaurantLikes = () => {
                 idResto: idResto
               })
             })
-            .then(res => window.location = window.location)
+              .then(res => window.location.reload())
           }
         })
       }

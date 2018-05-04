@@ -189,16 +189,14 @@ app.post('/like', (req, res, next) => {
   readFile(filePath, 'utf8')
     .then(JSON.parse)
     .then(restau => {
-    console.log('nimporte quoi------')
-    // console.log(restau)
       restau.forEach(element => {
         if (idRestau === element.id) {
           const index = element.like.findIndex(el => {
             return el === idUser
           })
-          if (index !== -1){
+          if (index !== -1) {
             element.like.splice(index, 1)
-          }else {
+          } else {
             element.like.push(idUser)
           }
         }
@@ -209,8 +207,6 @@ app.post('/like', (req, res, next) => {
     .then(() => res.end('OKaydac'))
     .catch(next)
 })
-
-
 
 app.get('/profil/:id', (request, response) => {
   const id = Number(request.params.id)
