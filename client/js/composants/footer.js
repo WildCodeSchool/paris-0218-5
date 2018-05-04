@@ -4,7 +4,7 @@ export const footer = date => {
   <span>© Copyright - WildAndHungry -
     <span id="year">${date}</span>
     <a href="#">Mentions légales -</a>
-    <a href="#">Contact</a>
+    <a href="contact.html">Contact</a>
   </span>
 `
 }

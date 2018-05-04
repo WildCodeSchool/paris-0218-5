@@ -25,6 +25,7 @@ select:focus,
 #form label {
   margin: 10px 0;
   max-width: 750px;
+  display: inline-block;
 }
 textarea{
   height : auto
